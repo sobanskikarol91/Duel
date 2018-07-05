@@ -5,4 +5,5 @@ using UnityEngine;
 public class Card : MonoBehaviour
 {
 
+    int price;
 }

@@ -1,0 +1,1 @@
+﻿enum RESOURCES {WOOD, BRICK, ROCK}
