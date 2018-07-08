@@ -680,6 +680,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coveredCards:
   - {fileID: 879764822}
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 0
+    glass: 0
+    sign: 0
 --- !u!61 &756435553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -865,6 +873,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coveredCards: []
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 0
+    glass: 0
+    sign: 0
 --- !u!61 &834079620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1050,6 +1066,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coveredCards: []
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 0
+    glass: 0
+    sign: 0
 --- !u!61 &879764823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1790,6 +1814,14 @@ MonoBehaviour:
   coveredCards:
   - {fileID: 1310275338}
   - {fileID: 756435552}
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 0
+    glass: 0
+    sign: 0
 --- !u!61 &1276042560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1905,6 +1937,14 @@ MonoBehaviour:
   coveredCards:
   - {fileID: 879764822}
   - {fileID: 834079619}
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 0
+    glass: 0
+    sign: 0
 --- !u!61 &1310275339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2057,6 +2097,14 @@ MonoBehaviour:
   coveredCards:
   - {fileID: 1310275338}
   - {fileID: 1950671761}
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 0
+    glass: 0
+    sign: 0
 --- !u!61 &1370556234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2470,6 +2518,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coveredCards:
   - {fileID: 834079619}
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 0
+    glass: 0
+    sign: 0
 --- !u!61 &1950671762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2621,6 +2677,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coveredCards:
   - {fileID: 1950671761}
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 0
+    glass: 0
+    sign: 0
 --- !u!61 &1969490677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2698,7 +2762,7 @@ Camera:
   far clip plane: 1000
   field of view: 54.9
   orthographic: 1
-  orthographic size: 0.4
+  orthographic size: 0.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2816,6 +2880,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coveredCards:
   - {fileID: 756435552}
+  price:
+    money: 0
+    wood: 0
+    brick: 0
+    rock: 0
+    papyrus: 1
+    glass: 0
+    sign: 0
 --- !u!61 &2029057076
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1,1 +1,1 @@
-﻿enum RESOURCES {WOOD, BRICK, ROCK}
+﻿public enum SIGN {NULL}

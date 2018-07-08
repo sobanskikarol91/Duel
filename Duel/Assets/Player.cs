@@ -5,10 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     List<Card> cards = new List<Card>();
-    List<Wonder> wonders= new List<Wonder>();
+    List<Wonder> wonders = new List<Wonder>();
     List<Token> tokens = new List<Token>();
-
+    public Resources Resources { get; set;}
     int id;
-    int money;
-    
+
+    private void Start()
+    {
+        Resources = new Resources();
+    }  
 }

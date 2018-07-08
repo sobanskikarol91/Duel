@@ -5,7 +5,9 @@ using System.Linq;
 
 public class Card : MonoBehaviour
 {
-    public List<Card> coveredCards = new List<Card>();
+    [SerializeField] public List<Card> coveredCards = new List<Card>();
+    [SerializeField] public Resources price;
+
     List<Card> coveredByCards = new List<Card>();
 
     private void Start()
