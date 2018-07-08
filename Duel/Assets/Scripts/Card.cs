@@ -10,7 +10,7 @@ public class Card : MonoBehaviour
 
     List<Card> coveredByCards = new List<Card>();
 
-    private void Start()
+    private void Awake()
     {
         CoverAllReferenceCards();
     }
@@ -54,6 +54,8 @@ public class Card : MonoBehaviour
     {
         if (IsCardCovered())
         {
+            // TODO: check if player has enough resources to buy this card
+
             GameManager.instance.SelectedCard(this);
             gameObject.SetActive(false);
             DiscoverAllReferenceCards();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public List<Card> Cards { get; set; }
+    List<Card> cards = new List<Card>();
     List<Wonder> wonders = new List<Wonder>();
     List<Token> tokens = new List<Token>();
     public Resources Resources { get; set; }
@@ -12,8 +12,14 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Cards = new List<Card>();
-        Resources = new Resources();
+        Resources = new Resources(7);
+    }
+
+    public void AddCard(Card card)
+    {
+        cards.Add(card);
+        Resources = Resources + card.price;
+        Resources.Info();
     }
 
 }

@@ -9,8 +9,7 @@ public class GameManager : Singleton<GameManager>
 
     public void SelectedCard(Card card)
     {
-        CurrentPlayer.Cards.Add(card);
-        Debug.Log("Cards Amount: " + CurrentPlayer.Cards.Count);
+        CurrentPlayer.AddCard(card);
         ChangePlayerTurn();
     }
 

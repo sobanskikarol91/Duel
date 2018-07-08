@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 1276042560}
   - component: {fileID: 1276042559}
   m_Layer: 0
-  m_Name: civilian-buildings (3)
+  m_Name: CardMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1815,7 +1815,7 @@ MonoBehaviour:
   - {fileID: 1310275338}
   - {fileID: 756435552}
   price:
-    money: 0
+    money: 4
     wood: 0
     brick: 0
     rock: 0
@@ -2600,7 +2600,7 @@ GameObject:
   - component: {fileID: 1969490677}
   - component: {fileID: 1969490676}
   m_Layer: 0
-  m_Name: civilian-buildings (5)
+  m_Name: Brick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2680,7 +2680,7 @@ MonoBehaviour:
   price:
     money: 0
     wood: 0
-    brick: 0
+    brick: 2
     rock: 0
     papyrus: 0
     glass: 0
