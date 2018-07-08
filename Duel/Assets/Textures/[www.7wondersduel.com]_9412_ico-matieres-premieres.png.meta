@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 8e3be8de06f0b094daf1d5fadeefb817
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: '[www.7wondersduel.com]_9412_ico-matieres-premieres_0'
+    21300002: '[www.7wondersduel.com]_9412_ico-matieres-premieres_1'
+    21300004: '[www.7wondersduel.com]_9412_ico-matieres-premieres_2'
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -38,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -80,11 +83,71 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: '[www.7wondersduel.com]_9412_ico-matieres-premieres_0'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a791e1c9a5b0074e8e5ac0b9f5ee37e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[www.7wondersduel.com]_9412_ico-matieres-premieres_1'
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee6c01fc46a2404cb12d11211a2a3cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[www.7wondersduel.com]_9412_ico-matieres-premieres_2'
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cd1e1faaa0fc942b7328ec9e60a6b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d4bfe76e8efc6964ea82338f11a4e28e
     vertices: []
     indices: 
     edges: []

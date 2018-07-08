@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: 3d218308c92d6614582c39779a323f90
+guid: b607ce2a90cf5d74daa714e86f120157
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: '[www.7wondersduel.com]_c4e7_ico-produits-manufactures_0'
-    21300002: '[www.7wondersduel.com]_c4e7_ico-produits-manufactures_1'
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -40,7 +38,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,51 +80,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: '[www.7wondersduel.com]_c4e7_ico-produits-manufactures_0'
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 68
-        height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22dcebbdacc7f9c45a489b601745890d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: '[www.7wondersduel.com]_c4e7_ico-produits-manufactures_1'
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 0
-        width: 68
-        height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a841bf2cf1468643b31cf94332a326a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0105b9eeded343044a4c5f5cfdbf00c0
+    spriteID: 
     vertices: []
     indices: 
     edges: []
