@@ -11,9 +11,17 @@ public class GameManager : Singleton<GameManager>
 
     public void SelectedCard(Card card)
     {
+        // TODO: check if player has enough resources to buy this card
+
         CurrentPlayer.AddCard(card);
         uiManager.UpdateStats(CurrentPlayer.Resources);
         ChangePlayerTurn();
+    }
+
+    bool CheckIfPlayerCanBuyCard(Card card)
+    {
+
+        return true;
     }
 
     void SetPlayersID()
