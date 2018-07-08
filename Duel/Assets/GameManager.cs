@@ -7,9 +7,12 @@ public class GameManager : Singleton<GameManager>
     public Player[] players = new Player[playersCount];
     public Player CurrentPlayer { get; private set; }
 
+   [SerializeField] UIManager uiManager;
+
     public void SelectedCard(Card card)
     {
         CurrentPlayer.AddCard(card);
+        uiManager.UpdateStats(CurrentPlayer.Resources);
         ChangePlayerTurn();
     }
 
@@ -33,10 +36,5 @@ public class GameManager : Singleton<GameManager>
     {
         SetPlayersID();
         RandomPlayer();
-    }
-
-    void Update()
-    {
-
     }
 }
