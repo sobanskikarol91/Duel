@@ -5,13 +5,12 @@ using System.Linq;
 
 public class Card : MonoBehaviour
 {
-    public List<Card> coveredCards;
-    public List<Card> coveredByCards;
-    int price;
+    public List<Card> coveredCards = new List<Card>();
+    List<Card> coveredByCards = new List<Card>();
 
     private void Start()
     {
-        CoverAllReferenceCards(); 
+        CoverAllReferenceCards();
     }
 
     // subscribe
@@ -29,7 +28,7 @@ public class Card : MonoBehaviour
 
     void ShowCard()
     {
-        if (coveredByCards.Count == 0) ;
+        if (IsCardCovered()) ;
     }
 
     void BoughtByPlayer()
@@ -40,5 +39,21 @@ public class Card : MonoBehaviour
     void CoverAllReferenceCards()
     {
         coveredCards.ForEach(p => p.CoverThisCard(this));
+    }
+
+    void DiscoverAllReferenceCards()
+    {
+        coveredCards.ForEach(p => p.DiscoverThisCard(this));
+    }
+
+    bool IsCardCovered() { return (coveredByCards.Count == 0); }
+
+    private void OnMouseDown()
+    {
+        if (IsCardCovered())
+        {
+            Destroy(gameObject);
+            DiscoverAllReferenceCards();
+        }
     }
 }
