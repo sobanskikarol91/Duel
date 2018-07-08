@@ -54,7 +54,8 @@ public class Card : MonoBehaviour
     {
         if (IsCardCovered())
         {
-            Destroy(gameObject);
+            GameManager.instance.SelectedCard(this);
+            gameObject.SetActive(false);
             DiscoverAllReferenceCards();
         }
     }

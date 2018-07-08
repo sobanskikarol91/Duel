@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    List<Card> cards = new List<Card>();
+    public List<Card> Cards { get; set; }
     List<Wonder> wonders = new List<Wonder>();
     List<Token> tokens = new List<Token>();
-    public Resources Resources { get; set;}
-    int id;
+    public Resources Resources { get; set; }
+    public int Id { get; set; }
 
     private void Start()
     {
+        Cards = new List<Card>();
         Resources = new Resources();
-    }  
+    }
+
 }
