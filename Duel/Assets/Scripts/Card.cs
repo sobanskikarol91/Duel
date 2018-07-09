@@ -7,6 +7,7 @@ public class Card : MonoBehaviour
 {
     [SerializeField] public List<Card> coveredCards = new List<Card>();
     [SerializeField] public Resources price;
+    [SerializeField] public Resources production;
 
     List<Card> coveredByCards = new List<Card>();
 
@@ -55,10 +56,14 @@ public class Card : MonoBehaviour
         if (IsCardCovered())
         {
             // TODO: check if player has enough resources to buy this card
-
             GameManager.instance.SelectedCard(this);
-            gameObject.SetActive(false);
-            DiscoverAllReferenceCards();
+
         }
+    }
+
+    public void BuyCard()
+    {
+        gameObject.SetActive(false);
+        DiscoverAllReferenceCards();
     }
 }

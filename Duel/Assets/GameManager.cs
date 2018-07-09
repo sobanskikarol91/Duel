@@ -9,13 +9,22 @@ public class GameManager : Singleton<GameManager>
 
    [SerializeField] UIManager uiManager;
 
+    void Start()
+    {
+        SetPlayersID();
+        RandomPlayer();
+        uiManager.UpdateStats(CurrentPlayer.Resources);
+    }
+
     public void SelectedCard(Card card)
     {
         // TODO: check if player has enough resources to buy this card
 
-        CurrentPlayer.AddCard(card);
-        uiManager.UpdateStats(CurrentPlayer.Resources);
-        ChangePlayerTurn();
+        if (CurrentPlayer.BuyCard(card))
+        {
+            uiManager.UpdateStats(CurrentPlayer.Resources);
+           // ChangePlayerTurn();
+        }
     }
 
     bool CheckIfPlayerCanBuyCard(Card card)
@@ -38,11 +47,5 @@ public class GameManager : Singleton<GameManager>
     void ChangePlayerTurn()
     {
         CurrentPlayer = CurrentPlayer == players[0] ? players[1] : players[0];
-    }
-
-    void Start()
-    {
-        SetPlayersID();
-        RandomPlayer();
     }
 }

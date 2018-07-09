@@ -10,16 +10,20 @@ public class Player : MonoBehaviour
     public Resources Resources { get; set; }
     public int Id { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         Resources = new Resources(7);
     }
 
-    public void AddCard(Card card)
+    public bool BuyCard(Card card)
     {
-        cards.Add(card);
-        Resources = Resources + card.price;
-        Resources.Info();
-    }
+        if (card.price > Resources) return false;
 
+        Resources -= card.price;
+        cards.Add(card);
+        card.BuyCard();
+        Resources = Resources + card.production;
+        Resources.Info();
+        return true;
+    }
 }
