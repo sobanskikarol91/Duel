@@ -2,12 +2,12 @@ fileFormatVersion: 2
 guid: cdf27e75d2d55404e89c953ddac039a9
 TextureImporter:
   fileIDToRecycleName:
-    21300000: '[www.7wondersduel.com]_759c_ico-science_0'
-    21300002: '[www.7wondersduel.com]_759c_ico-science_1'
-    21300004: '[www.7wondersduel.com]_759c_ico-science_2'
-    21300006: '[www.7wondersduel.com]_759c_ico-science_3'
-    21300008: '[www.7wondersduel.com]_759c_ico-science_4'
-    21300010: '[www.7wondersduel.com]_759c_ico-science_5'
+    21300000: Cog
+    21300002: mortar
+    21300004: Sextant
+    21300006: Sphere
+    21300008: Compas
+    21300010: Weight
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -88,7 +88,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: '[www.7wondersduel.com]_759c_ico-science_0'
+      name: Cog
       rect:
         serializedVersion: 2
         x: 0
@@ -96,7 +96,7 @@ TextureImporter:
         width: 66
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -108,7 +108,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '[www.7wondersduel.com]_759c_ico-science_1'
+      name: mortar
       rect:
         serializedVersion: 2
         x: 79
@@ -116,7 +116,7 @@ TextureImporter:
         width: 59
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,7 +128,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '[www.7wondersduel.com]_759c_ico-science_2'
+      name: Sextant
       rect:
         serializedVersion: 2
         x: 151
@@ -136,7 +136,7 @@ TextureImporter:
         width: 66
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,7 +148,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '[www.7wondersduel.com]_759c_ico-science_3'
+      name: Sphere
       rect:
         serializedVersion: 2
         x: 233
@@ -156,7 +156,7 @@ TextureImporter:
         width: 55
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '[www.7wondersduel.com]_759c_ico-science_4'
+      name: Compas
       rect:
         serializedVersion: 2
         x: 303
@@ -176,7 +176,7 @@ TextureImporter:
         width: 67
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,7 +188,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '[www.7wondersduel.com]_759c_ico-science_5'
+      name: Weight
       rect:
         serializedVersion: 2
         x: 379
@@ -196,7 +196,7 @@ TextureImporter:
         width: 67
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

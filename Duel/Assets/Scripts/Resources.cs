@@ -37,11 +37,11 @@ public class Resources
     public static Resources operator -(Resources x, Resources y)
     {
         int m = x.money - y.money;
-        int w = x.wood - y.wood;
-        int b = x.brick - y.brick;
-        int r = x.rock - y.rock;
-        int p = x.papyrus - y.papyrus;
-        int g = x.glass - y.glass;
+        int w = x.wood;
+        int b = x.brick;
+        int r = x.rock;
+        int p = x.papyrus;
+        int g = x.glass;
         return new Resources(m, w, b, r, p, g);
     }
 

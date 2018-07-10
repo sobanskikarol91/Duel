@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        Resources = new Resources(7);
+         Resources = new Resources(7,2,2,2,2,2);
+        // Resources = new Resources(7);
     }
 
     public bool BuyCard(Card card)
