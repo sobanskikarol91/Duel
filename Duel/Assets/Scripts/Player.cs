@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
         AddCard(card);
 
         Resources -= card.price;
-        card.BuyCard();
         Resources = Resources + card.production;
         Resources.Info();
         return true;

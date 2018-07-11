@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Slot : MonoBehaviour
 {
-    public Card Card { get; set; }
+    public Card card;
     [SerializeField] public bool isVisible = true;
 
     [SerializeField] public List<Slot> coveredCards = new List<Slot>();
@@ -11,6 +11,7 @@ public class Slot : MonoBehaviour
 
     private void Awake()
     {
+        DisplayCardOnBegining();
         CoverAllReferenceCards();
     }
 
@@ -47,8 +48,9 @@ public class Slot : MonoBehaviour
     {
         if (isCardDiscovered())
         {
+            ShowCard(true);
             // TODO: check if player has enough resources to buy this card
-            GameManager.instance.SelectedCard(Card);
+            GameManager.instance.SelectedCard(card);
         }
     }
 
@@ -59,8 +61,12 @@ public class Slot : MonoBehaviour
 
     public void ShowCard(bool state)
     {
-        if (!isCardDiscovered()) return;
+        GetComponent<SpriteRenderer>().sprite = card.cardImg;
+    }
 
-        GetComponent<SpriteRenderer>().sprite = Card.cardImg;
+    void DisplayCardOnBegining()
+    {
+        if (isVisible)
+            GetComponent<SpriteRenderer>().sprite = card.cardImg;
     }
 }
