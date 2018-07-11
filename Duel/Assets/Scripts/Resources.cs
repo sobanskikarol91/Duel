@@ -11,7 +11,6 @@ public class Resources
     public int rock = 0;
     public int papyrus = 0;
     public int glass = 0;
-    public SIGN sign;
 
     public Resources(int money = 0, int wood = 0, int brick = 0, int rock = 0, int papyrus = 0, int glass = 0)
     {

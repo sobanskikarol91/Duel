@@ -8,6 +8,7 @@ public class Card : MonoBehaviour
     [SerializeField] public List<Card> coveredCards = new List<Card>();
     [SerializeField] public Resources price;
     [SerializeField] public Resources production;
+    [SerializeField] public CARD_TYPE type;
 
     List<Card> coveredByCards = new List<Card>();
 
