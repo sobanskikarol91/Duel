@@ -50,8 +50,12 @@ public class Slot : MonoBehaviour
         {
             ShowCard(true);
             // TODO: check if player has enough resources to buy this card
+            DiscoverAllReferenceCards();
             GameManager.instance.SelectedCard(card);
+            Destroy(gameObject);
         }
+
+        Debug.Log("B: " + coveredByCards.Count);
     }
 
     public void BuyCard()
