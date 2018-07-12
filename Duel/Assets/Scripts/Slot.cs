@@ -25,6 +25,8 @@ public class Slot : MonoBehaviour
     public void DiscoverThisCard(Slot byCard)
     {
         coveredByCards.Remove(byCard);
+
+        if (isCardDiscovered()) ShowCard(true);
     }
 
     void BoughtByPlayer()
@@ -48,7 +50,6 @@ public class Slot : MonoBehaviour
     {
         if (isCardDiscovered())
         {
-            ShowCard(true);
             // TODO: check if player has enough resources to buy this card
             DiscoverAllReferenceCards();
             GameManager.instance.SelectedCard(card);
