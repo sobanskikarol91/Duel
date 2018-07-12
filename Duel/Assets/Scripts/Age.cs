@@ -2,14 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Age : MonoBehaviour 
+[System.Serializable]
+public class Age 
 {
-
-    const int cardsAmount = 20;
-    public List<Card> allCards = new List<Card>();
-
-    void RandomCards()
-    {
-
-    }
+    public Slot[] slots;
+    public List<Card> cards = new List<Card>();
 }

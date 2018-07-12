@@ -7,13 +7,16 @@ public class GameManager : Singleton<GameManager>
     public Player[] players = new Player[playersCount];
     public Player CurrentPlayer { get; private set; }
 
-   [SerializeField] UIManager uiManager;
+    [SerializeField] UIManager uiManager;
+    [SerializeField] Round round;
 
     void Start()
     {
+        round.StartNextRound();
         SetPlayersID();
         RandomPlayer();
         uiManager.UpdateStats(CurrentPlayer.Resources);
+  
     }
 
     public void SelectedCard(Card card)
@@ -23,7 +26,7 @@ public class GameManager : Singleton<GameManager>
         if (CurrentPlayer.BuyCard(card))
         {
             uiManager.UpdateStats(CurrentPlayer.Resources);
-           // ChangePlayerTurn();
+            // ChangePlayerTurn();
         }
     }
 
