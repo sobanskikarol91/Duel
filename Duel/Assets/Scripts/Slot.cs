@@ -33,7 +33,6 @@ public class Slot : MonoBehaviour
     public void DiscoverThisCard(Slot byCard)
     {
         coveredByCards.Remove(byCard);
-
         if (isCardDiscovered()) ShowCard(true);
     }
 
@@ -63,8 +62,6 @@ public class Slot : MonoBehaviour
             GameManager.instance.SelectedCard(Card);
             Destroy(gameObject);
         }
-
-        Debug.Log("B: " + coveredByCards.Count);
     }
 
     public void BuyCard()

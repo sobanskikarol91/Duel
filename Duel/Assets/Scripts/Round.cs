@@ -9,7 +9,6 @@ public class Round
     void SetRandomCardsOnSlots(int nr)
     {
         ages[nr].slots.ForEach(t => t.Card = ages[nr].cards.ReturnAndRemoveRandom());
-        Debug.Log(roundNr); ;
     }
 
     public void StartNextRound()

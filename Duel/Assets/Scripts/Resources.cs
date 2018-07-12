@@ -46,7 +46,6 @@ public class Resources
 
     public static bool operator >(Resources x, Resources y)
     {
-        Debug.Log((x.papyrus > y.papyrus) + " " + x.papyrus + " " + y.papyrus);
         return (x.money > y.money || x.wood > y.wood || x.brick > y.brick
            || x.rock > y.rock || x.papyrus > y.papyrus || x.glass > y.glass);
     }
@@ -59,6 +58,6 @@ public class Resources
 
     public void Info()
     {
-        Debug.Log("M: " + money + " W: " + wood + " B: " + brick + " R: " + rock + " P: " + papyrus + " G: " + glass);
+       // Debug.Log("M: " + money + " W: " + wood + " B: " + brick + " R: " + rock + " P: " + papyrus + " G: " + glass);
     }
 }

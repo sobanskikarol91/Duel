@@ -37,15 +37,13 @@ public class Player : MonoBehaviour
 
         if (cardsDict.TryGetValue(c.type, out newGroup))
         {
-            Debug.Log("Added card to exist group" + c.type);
+           // Debug.Log("Added card to exist group" + c.type);
             newGroup.Add(c);
         }
         else
         {
-            Debug.Log("There isn't group for: " + c.type.ToString());
+           // Debug.Log("There isn't group for: " + c.type.ToString());
             cardsDict.Add(c.type, new List<Card>());
         }
-
-        Debug.Log(cardsDict.Count);
     }
 }
