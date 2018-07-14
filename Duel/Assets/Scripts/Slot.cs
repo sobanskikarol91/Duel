@@ -82,6 +82,6 @@ public class Slot : MonoBehaviour
 
     public void ShowCard(bool state)
     {
-        spriteRenderer.sprite = Card.cardImg;
+        //spriteRenderer.sprite = Card.cardImg;
     }
 }

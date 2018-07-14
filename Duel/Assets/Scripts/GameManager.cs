@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     public Player[] _Players { get; } = new Player[2] { new Player(), new Player() };
     public Player CurrentPlayer { get; private set; }
     WonderManager _wonderManager;
-   
+
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class GameManager : Singleton<GameManager>
         CurrentPlayer = _Players[Random.Range(0, 1)];
     }
 
-    void ChangePlayerTurn()
+    public void ChangePlayerTurn()
     {
         CurrentPlayer = CurrentPlayer == _Players[0] ? _Players[1] : _Players[0];
     }
