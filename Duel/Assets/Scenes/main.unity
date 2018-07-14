@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 10865982}
   - component: {fileID: 10865981}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: wonderSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 35872675}
   - component: {fileID: 35872674}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: wonderSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3478,7 +3478,7 @@ GameObject:
   - component: {fileID: 1112042703}
   - component: {fileID: 1112042702}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: wonderSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5250,6 +5250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2110852354}
   - component: {fileID: 2110852353}
+  - component: {fileID: 2110852355}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5268,8 +5269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e66fd1cf7928a4aa90d760c70140d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wonders:
-  - {fileID: 0}
 --- !u!4 &2110852354
 Transform:
   m_ObjectHideFlags: 0
@@ -5283,6 +5282,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2110852355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110852352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f92aa345c4277c448fc36f65d85e43e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wonders:
+  - {fileID: 11400000, guid: fe8cba7a5e484ac49ab52034ede2ab29, type: 2}
+  - {fileID: 11400000, guid: eb1cd9e3d8e7c9748832e427069f17e7, type: 2}
+  - {fileID: 11400000, guid: ee322de9c16beca4aa93576281e5c04c, type: 2}
+  - {fileID: 11400000, guid: ba7141ddf9ec3b24b9cb4c713463d8ee, type: 2}
+  - {fileID: 11400000, guid: e127c105b89313e4ba89b7ade1d805cd, type: 2}
+  - {fileID: 11400000, guid: 102ee3dc429907440aafaa4770cc3615, type: 2}
+  - {fileID: 11400000, guid: a90db0c260d25924cadca2e70604a876, type: 2}
+  - {fileID: 11400000, guid: df267fbc4612e724dbd3232d64d5eb41, type: 2}
+  _wondersImages:
+  - {fileID: 2123583739}
+  - {fileID: 35872674}
+  - {fileID: 10865981}
+  - {fileID: 1112042702}
 --- !u!1 &2123583737
 GameObject:
   m_ObjectHideFlags: 0
@@ -5294,7 +5318,7 @@ GameObject:
   - component: {fileID: 2123583740}
   - component: {fileID: 2123583739}
   m_Layer: 5
-  m_Name: Image
+  m_Name: wonderSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

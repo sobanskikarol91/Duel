@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Wonder : MonoBehaviour
+[CreateAssetMenu(fileName = "Wonder", menuName = "Wonder")]
+public class Wonder : ScriptableObject
 {
-    public void Name()
-    {
-        Debug.Log(name);
-    }
+    public Sprite sprite;
 }
