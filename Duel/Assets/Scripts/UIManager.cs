@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Stats")]
     [SerializeField] Text scoreTxt;
     [SerializeField] Text woodTxt;
     [SerializeField] Text brickTxt;
@@ -14,6 +15,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateStats(Resources resources)
     {
+        /*
         scoreTxt.text = "0";
         woodTxt.text = resources.wood.ToString();
         brickTxt.text = resources.brick.ToString();
@@ -21,5 +23,6 @@ public class UIManager : MonoBehaviour
         papyrusTxt.text = resources.papyrus.ToString();
         glassTxt.text = resources.glass.ToString();
         moneyTxt.text = resources.money.ToString();
+        */
     }
 }

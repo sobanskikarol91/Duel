@@ -8,6 +8,5 @@ public class Card : ScriptableObject
     public Sprite reverseImg;
 
     public Resources price;
-    public Resources production;
     public CARD_TYPE type;
 }

@@ -8,8 +8,8 @@ public class Slot : MonoBehaviour
     List<Slot> coveredByCards = new List<Slot>();
 
     private SpriteRenderer spriteRenderer;
-    private Card card;
 
+    private Card card;
     [HideInInspector] public Card Card { get { return card; } set { card = value; Initial(); } }
 
     private void Awake()
@@ -59,9 +59,20 @@ public class Slot : MonoBehaviour
         {
             // TODO: check if player has enough resources to buy this card
             DiscoverAllReferenceCards();
-            GameManager.instance.SelectedCard(Card);
             Destroy(gameObject);
         }
+    }
+
+    private void OnMouseEnter()
+    {
+        if (isCardDiscovered()) ;
+
+    }
+
+    private void OnMouseExit()
+    {
+        if (isCardDiscovered()) ;
+
     }
 
     public void BuyCard()

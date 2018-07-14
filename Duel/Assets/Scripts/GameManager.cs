@@ -4,36 +4,16 @@ using System.Collections;
 public class GameManager : Singleton<GameManager>
 {
     const int playersCount = 2;
-    public Player[] players = new Player[playersCount];
+     Player[] players = new Player[2] {new Player(), new Player() };
     public Player CurrentPlayer { get; private set; }
 
     [SerializeField] UIManager uiManager;
-    [SerializeField] Round round;
 
     void Start()
     {
-        round.StartNextRound();
         SetPlayersID();
         RandomPlayer();
         uiManager.UpdateStats(CurrentPlayer.Resources);
-  
-    }
-
-    public void SelectedCard(Card card)
-    {
-        // TODO: check if player has enough resources to buy this card
-
-        if (CurrentPlayer.BuyCard(card))
-        {
-            uiManager.UpdateStats(CurrentPlayer.Resources);
-            // ChangePlayerTurn();
-        }
-    }
-
-    bool CheckIfPlayerCanBuyCard(Card card)
-    {
-
-        return true;
     }
 
     void SetPlayersID()
