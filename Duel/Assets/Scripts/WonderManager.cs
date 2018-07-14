@@ -60,6 +60,10 @@ public class WonderManager : MonoBehaviour
             ChangePlayers();
             ChangeCurrentGrid();
         }
+        else if (_choosenWondersCount == 8)
+        {
+            _wondersGrids.ForEach(w => w.SetActive(false));
+        }
     }
 
     void ChangePlayers()
