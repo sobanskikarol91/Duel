@@ -13,18 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardImg: {fileID: 21300000, guid: 9d3f15a2f80bd2a4aa7e84ef9310a8e7, type: 3}
   reverseImg: {fileID: 0}
-  price:
-    money: 0
-    wood: 0
-    brick: 0
-    rock: 0
-    papyrus: 0
-    glass: 0
-  production:
-    money: 0
-    wood: 0
-    brick: 0
-    rock: 0
-    papyrus: 0
-    glass: 0
-  type: 0
+  type: 6

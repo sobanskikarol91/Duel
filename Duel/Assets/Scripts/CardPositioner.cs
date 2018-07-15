@@ -3,26 +3,66 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CardPositioner : MonoBehaviour
+[System.Serializable]
+public class CardPositioner
 {
-    public Dictionary<CARD_TYPE, List<Slot>> _playerCards = new Dictionary<CARD_TYPE, List<Slot>>();
+    public List<DisplayCard> slotOnTable;
+    Dictionary<CARD_TYPE, List<DisplayCard>> _cardSlotDict = new Dictionary<CARD_TYPE, List<DisplayCard>>();
     Card _card;
 
+    #region Convert List of Empty slots to Dictionary
+    public void Init()
+    {
+        ConvertListSlotsToDict();
+    }
+
+    void ConvertListSlotsToDict()
+    {
+        for (int i = 0; i < slotOnTable.Count; i++)
+        {
+            CARD_TYPE type = slotOnTable[i].type;
+
+            if (_cardSlotDict.ContainsKey(type))
+                AddEmptySlotToExistListInDictionary(slotOnTable[i]);
+            else
+                AddSlotAsNewKeyInDirection(slotOnTable[i]);
+        }
+    }
+
+    void AddEmptySlotToExistListInDictionary(DisplayCard slot)
+    {
+        List<DisplayCard> slotList = _cardSlotDict[slot.type];
+        slotList.Add(slot);
+
+        slotList.ForEach(p => Debug.Log(p.type));
+    }
+
+    void AddSlotAsNewKeyInDirection(DisplayCard slot)
+    {
+        _cardSlotDict.Add(slot.type, new List<DisplayCard>());
+    }
+
+    #endregion
+
+    #region Add bought Card to Player's specific cards group
     public void AddCardToPlayerSlot(Card _card)
     {
         this._card = _card;
-        Slot empty = FindEmptySpotInGroup();
-        empty.Card = _card;
+
+        DisplayCard empty = FindEmptySpotInGroup();
+        empty._Card = _card;
+        empty.Display();
     }
 
-    Slot FindEmptySpotInGroup()
+    DisplayCard FindEmptySpotInGroup()
     {
-        List<Slot> _cardGroup = GetAllSlotsForCardType();
-        return _cardGroup.First(p => p.Card = null);
+        List<DisplayCard> _cardGroup = GetAllSlotsForCardType();
+        return _cardGroup.First(p => p._Card == null);
     }
 
-    List<Slot> GetAllSlotsForCardType()
+    List<DisplayCard> GetAllSlotsForCardType()
     {
-        return _playerCards[_card.type];
+        return _cardSlotDict[_card.type];
     }
+    #endregion
 }

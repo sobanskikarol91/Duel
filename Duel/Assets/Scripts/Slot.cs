@@ -55,7 +55,7 @@ public class Slot : MonoBehaviour
     {
         if (isCardDiscovered())
         {
-            // TODO: check if player has enough resources to buy this card
+            GameManager.instance.PlayerHasChoosenCard(card);
             DiscoverAllReferenceCards();
             Destroy(gameObject);
         }
