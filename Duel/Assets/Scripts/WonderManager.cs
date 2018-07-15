@@ -69,7 +69,7 @@ public class WonderManager : MonoBehaviour
 
     void ChangePlayers()
     {
-        GameManager.instance.ChangePlayerTurn();
+        GameManager.instance.ChangeCurrentPlayer();
         _currentPlayer = GameManager.instance._CurrentPlayer;
     }
 

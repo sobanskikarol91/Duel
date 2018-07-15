@@ -8,10 +8,10 @@ public class Player : MonoBehaviour
     public List<Wonder> _Wonders { get; set; } = new List<Wonder>();
     public CardPositioner _cardPositioner;
     public Resources Resources { get; set; }
-    public int Id { get; set;}
+    public int Id;
 
     private void Awake()
     {
-        _cardPositioner.Init();
+        _cardPositioner.Init(this);
     }
 }

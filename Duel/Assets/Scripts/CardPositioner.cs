@@ -9,10 +9,12 @@ public class CardPositioner
     public List<DisplayCard> slotOnTable;
     Dictionary<CARD_TYPE, List<DisplayCard>> _cardSlotDict = new Dictionary<CARD_TYPE, List<DisplayCard>>();
     Card _card;
+    public Player _player;
 
     #region Convert List of Empty slots to Dictionary
-    public void Init()
+    public void Init(Player p)
     {
+        _player = p;
         ConvertListSlotsToDict();
         SortSlotsInLists();
         SetOrderingInLayerSlots();
@@ -68,12 +70,13 @@ public class CardPositioner
 
     public void SortSlotsInLists()
     {
+        int direction = _player.Id == 1 ? 1 : -1;
         foreach (var list in _cardSlotDict)
         {
             list.Value.Sort(
                     delegate (DisplayCard p1, DisplayCard p2)
                     {
-                        return ((-1) * p1.transform.position.y).CompareTo(p2.transform.position.y * (-1));
+                        return ((direction) * p1.transform.position.y).CompareTo(p2.transform.position.y * (direction));
                     }
                 );
         }
@@ -82,11 +85,7 @@ public class CardPositioner
     void SetOrderingInLayerSlots()
     {
         foreach (var list in _cardSlotDict)
-        {
             for (int i = 0; i < list.Value.Count; i++)
-            {
                 list.Value[i].GetComponent<SpriteRenderer>().sortingOrder = i;
-            }
-        }
     }
 }

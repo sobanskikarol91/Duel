@@ -7,9 +7,8 @@ public class DisplayCard : MonoBehaviour
     private Card _card;
     public Card _Card { get { return _card; } set { _card = value; } }
 
-   public void Display()
+    public void Display()
     {
-        Debug.Log(_card == null);
         GetComponent<SpriteRenderer>().sprite = _card.cardImg;
     }
 }
