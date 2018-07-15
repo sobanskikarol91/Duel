@@ -23,13 +23,11 @@ public class Slot : MonoBehaviour
         CoverAllReferenceCards();
     }
 
-    // subscribe
     public void CoverThisCard(Slot coverCard)
     {
         coveredByCards.Add(coverCard);
     }
 
-    // unsubscribe
     public void DiscoverThisCard(Slot byCard)
     {
         coveredByCards.Remove(byCard);
