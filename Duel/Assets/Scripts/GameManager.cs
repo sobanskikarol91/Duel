@@ -32,7 +32,6 @@ public class GameManager : Singleton<GameManager>
         _Players[1].Id = 1;
     }
 
-
     void RandomPlayer()
     {
         _CurrentPlayer = _Players[Random.Range(0, 1)];
@@ -41,5 +40,10 @@ public class GameManager : Singleton<GameManager>
     public void ChangePlayerTurn()
     {
         _CurrentPlayer = _CurrentPlayer == _Players[0] ? _Players[1] : _Players[0];
+    }
+
+    public void PlayerHasChoosenCard(Card c)
+    {
+
     }
 }
