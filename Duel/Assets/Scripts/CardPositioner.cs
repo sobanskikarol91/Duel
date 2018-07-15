@@ -14,7 +14,8 @@ public class CardPositioner
     public void Init()
     {
         ConvertListSlotsToDict();
-        SortSlotInLists();
+        SortSlotsInLists();
+        SetOrderingInLayerSlots();
     }
 
     void ConvertListSlotsToDict()
@@ -65,16 +66,27 @@ public class CardPositioner
     }
     #endregion
 
-    public void SortSlotInLists()
+    public void SortSlotsInLists()
     {
-        foreach (var item in _cardSlotDict)
+        foreach (var list in _cardSlotDict)
         {
-            item.Value.Sort(
+            list.Value.Sort(
                     delegate (DisplayCard p1, DisplayCard p2)
                     {
                         return ((-1) * p1.transform.position.y).CompareTo(p2.transform.position.y * (-1));
                     }
                 );
+        }
+    }
+
+    void SetOrderingInLayerSlots()
+    {
+        foreach (var list in _cardSlotDict)
+        {
+            for (int i = 0; i < list.Value.Count; i++)
+            {
+                list.Value[i].GetComponent<SpriteRenderer>().sortingOrder = i;
+            }
         }
     }
 }
