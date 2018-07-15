@@ -10,14 +10,14 @@ public class Slot : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private Card card;
-    [HideInInspector] public Card Card { get { return card; } set { card = value; Initial(); } }
+    [HideInInspector] public Card Card { get { return card; } set { card = value; Init(); } }
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void Initial()
+    public void Init()
     {
         if (isVisible) ShowCard(true);
         CoverAllReferenceCards();
@@ -82,6 +82,6 @@ public class Slot : MonoBehaviour
 
     public void ShowCard(bool state)
     {
-        //spriteRenderer.sprite = Card.cardImg;
+        spriteRenderer.sprite = Card.cardImg;
     }
 }

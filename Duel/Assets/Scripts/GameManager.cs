@@ -8,12 +8,13 @@ public class GameManager : Singleton<GameManager>
     public Player[] _Players { get; } = new Player[2] { new Player(), new Player() };
     public Player _CurrentPlayer { get; private set; }
     WonderManager _wonderManager;
-
+    [SerializeField] CardManager _cardManager;
 
     void Start()
     {
         Init();
         _wonderManager.Init();
+        _cardManager.Init();
     }
 
     void Init()
