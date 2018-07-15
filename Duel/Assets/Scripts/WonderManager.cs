@@ -8,7 +8,7 @@ public class WonderManager : MonoBehaviour
 {
     public List<Wonder> _wonders;
     public GameObject[] _wondersGrids;
-
+    public WondersOnBar _wondersBar;
     private GameObject _currentWonderGrid;
     private Player _currentPlayer;
 
@@ -33,6 +33,7 @@ public class WonderManager : MonoBehaviour
         _currentPlayer._Wonders.Add(w);
         _choosenWondersCount++;
         StateDependingOnChoosenWondersCount();
+        _wondersBar.SetWonders(_currentPlayer._Wonders);
     }
 
     void StateDependingOnChoosenWondersCount()
@@ -69,6 +70,7 @@ public class WonderManager : MonoBehaviour
     void ChangePlayers()
     {
         GameManager.instance.ChangePlayerTurn();
+        _currentPlayer = GameManager.instance._CurrentPlayer;
     }
 
     public Wonder ReturnRandomWonder()
