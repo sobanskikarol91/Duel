@@ -14,6 +14,7 @@ public class CardPositioner
     public void Init()
     {
         ConvertListSlotsToDict();
+        SortSlotInLists();
     }
 
     void ConvertListSlotsToDict()
@@ -33,8 +34,6 @@ public class CardPositioner
     {
         List<DisplayCard> slotList = _cardSlotDict[slot.type];
         slotList.Add(slot);
-
-        slotList.ForEach(p => Debug.Log(p.type));
     }
 
     void AddSlotAsNewKeyInDirection(DisplayCard slot)
@@ -65,4 +64,17 @@ public class CardPositioner
         return _cardSlotDict[_card.type];
     }
     #endregion
+
+    public void SortSlotInLists()
+    {
+        foreach (var item in _cardSlotDict)
+        {
+            item.Value.Sort(
+                    delegate (DisplayCard p1, DisplayCard p2)
+                    {
+                        return ((-1) * p1.transform.position.y).CompareTo(p2.transform.position.y * (-1));
+                    }
+                );
+        }
+    }
 }
