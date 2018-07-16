@@ -64,7 +64,6 @@ public class Slot : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        Debug.Log(Card.name);
         if (isVisible)
         {
             SlotWindow.ActivePanelOnPos(transform.position);
@@ -81,7 +80,7 @@ public class Slot : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
             GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
-            gameObject.transform.position += new Vector3(0, 0, +0.1f);
+            gameObject.transform.position += new Vector3(0, 0, + 0.1f);
             SlotWindow.DeactivePanel();
         }
     }

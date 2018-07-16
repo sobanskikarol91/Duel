@@ -31,6 +31,7 @@ public static class IEnumeratorMethods
         {
             percent = (Time.time - startTime) / duration;
             currentValue = Vector3.Lerp(origin, destiny, percent);
+
             OnDuring(currentValue);
             yield return null;
         }
