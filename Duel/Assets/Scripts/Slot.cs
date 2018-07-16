@@ -10,6 +10,7 @@ public class Slot : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private Card card;
+    int sortingOrder;
     [HideInInspector] public Card Card { get { return card; } set { card = value; Init(); } }
 
     private void Awake()
@@ -63,14 +64,26 @@ public class Slot : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (isCardDiscovered()) ;
-
+        Debug.Log(Card.name);
+        if (isVisible)
+        {
+            SlotWindow.ActivePanelOnPos(transform.position);
+            sortingOrder = GetComponent<SpriteRenderer>().sortingOrder;
+            gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            gameObject.transform.position += new Vector3(0, 0, -0.1f);
+            GetComponent<SpriteRenderer>().sortingOrder = 10;
+        }
     }
 
     private void OnMouseExit()
     {
-        if (isCardDiscovered()) ;
-
+        if (isVisible)
+        {
+            gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+            GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            gameObject.transform.position += new Vector3(0, 0, +0.1f);
+            SlotWindow.DeactivePanel();
+        }
     }
 
     public void BuyCard()
@@ -80,6 +93,7 @@ public class Slot : MonoBehaviour
 
     public void ShowCard(bool state)
     {
+        isVisible = true;
         spriteRenderer.sprite = Card.cardImg;
     }
 }
