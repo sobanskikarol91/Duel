@@ -92,6 +92,7 @@ public class Slot : MonoBehaviour
 
     public void ShowCard(bool state)
     {
+        Debug.Log(name);
         isVisible = true;
         spriteRenderer.sprite = Card.cardImg;
     }
