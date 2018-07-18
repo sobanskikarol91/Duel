@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class GameManager : Singleton<GameManager>
 {
+    // jaszczurka jedzaca pieniadze
+
     const int playersCount = 2;
     public Player[] _players;
     public Player _CurrentPlayer { get; private set; }
