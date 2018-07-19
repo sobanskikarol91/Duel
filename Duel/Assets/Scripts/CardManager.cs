@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class CardManager : MonoBehaviour
 {
+    [SerializeField] public GameObject[] _decksPrefab; // TODO
     public Deck[] _decks = new Deck[3];
     int ageNr = 0;
 
