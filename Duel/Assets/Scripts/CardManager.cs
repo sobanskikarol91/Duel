@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 public class CardManager : MonoBehaviour
 {
-    [SerializeField] public GameObject[] _decksPrefab; // TODO
     public Deck[] _decks = new Deck[3];
     private Deck _currentDeck;
 
@@ -15,7 +14,6 @@ public class CardManager : MonoBehaviour
         _currentDeck = _decks[ageNr];
         _currentDeck.DealCards();
         EffectOfDealingCards();
-        ageNr++;
     }
 
     // TODO: new class
@@ -31,5 +29,10 @@ public class CardManager : MonoBehaviour
         return _currentDeck.IsEmpty();
     }
 
-
+    public void DealNewCards()
+    {
+        ageNr++;
+        _currentDeck = _decks[ageNr];
+        _currentDeck.DealCards();
+    }
 }

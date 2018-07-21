@@ -26548,7 +26548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06762d01a80d1d645b59b30196433f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _decksPrefab: []
   _decks:
   - _cards:
     - {fileID: 11400000, guid: 588e426e9cff85240a5c7ace46284189, type: 2}
@@ -26601,6 +26600,8 @@ MonoBehaviour:
     - {fileID: 1271709303}
     - {fileID: 27006963}
     - {fileID: 1329721456}
+  - _cards: []
+    _slots: []
 --- !u!1 &2112411338
 GameObject:
   m_ObjectHideFlags: 0

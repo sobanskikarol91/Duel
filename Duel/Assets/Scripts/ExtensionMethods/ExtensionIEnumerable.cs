@@ -29,9 +29,7 @@ public static class ExtensionIEnumerable
     public static void Randomize<T>(this IEnumerable<T> source, Action<T> action)
     {
         foreach (var item in source)
-        {
             action(item);
-        }
     }
 
     public static T Random<T>(this IEnumerable<T> source)
