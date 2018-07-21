@@ -6,7 +6,7 @@ public class Card : ScriptableObject
 {
     public Sprite cardImg;
     public Sprite reverseImg;
-    public Deck _deck;
+    [HideInInspector] Deck _deck;
     public Resources price;
     public CARD_TYPE type;
 

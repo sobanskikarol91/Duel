@@ -16,9 +16,9 @@ public class Deck
     public void Init()
     {
         GetAllSlotsReferences();
-        // SetDeckReferenceToCards();
-        // _slots.Shuffle();
-        //DiscardUnusedCards();
+         SetDeckReferenceToCards();
+         _slots.Shuffle();
+        DiscardUnusedCards();
     }
 
     public void SetDeckReferenceToCards()
