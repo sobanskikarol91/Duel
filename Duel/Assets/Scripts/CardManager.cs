@@ -10,6 +10,7 @@ public class CardManager : MonoBehaviour
 
     public void Init()
     {
+        CreateSlots();
         _decks.ForEach(d => d.Init());
         _currentDeck = _decks[ageNr];
         _currentDeck.DealCards();

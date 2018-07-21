@@ -9,8 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0e332bad1af7ea429b85b128e546ca5, type: 3}
-  m_Name: AgeI4
+  m_Name: Age_I 13
   m_EditorClassIdentifier: 
-  cardImg: {fileID: 21300000, guid: bfb7ec38b4b99fa44afe31dbce2d38b9, type: 3}
-  reverseImg: {fileID: 0}
-  type: 5
+  cardImg: {fileID: 21300030, guid: 1da175dcbecb17440ba89152086f0d7e, type: 3}
+  reverseImg: {fileID: 21300000, guid: bc33462b99d904c4ab2a2e231b70b76f, type: 3}
+  _deck: {fileID: 0}
+  type: 4

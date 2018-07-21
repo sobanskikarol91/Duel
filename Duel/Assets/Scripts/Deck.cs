@@ -3,22 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-[CreateAssetMenu(fileName = "Deck", menuName = "Deck")]
-public class Deck : ScriptableObject
+[System.Serializable]
+public class Deck
 {
     [SerializeField] List<Card> _cards;
-    List<Card> _unusedCards;
     public GameObject _slotsLayoutPrefab;
+    List<Card> _unusedCards;
     GameObject _slotsLayout;
 
-   [HideInInspector] public Slot[] _slots;
+    [HideInInspector] public List<Slot> _slots;
 
     public void Init()
     {
         GetAllSlotsReferences();
-        SetDeckReferenceToCards();
-        _slots.Shuffle();
-        DiscardUnusedCards();
+        // SetDeckReferenceToCards();
+        // _slots.Shuffle();
+        //DiscardUnusedCards();
     }
 
     public void SetDeckReferenceToCards()
@@ -42,7 +42,7 @@ public class Deck : ScriptableObject
 
     public bool IsEmpty()
     {
-        return _cards.Any();
+        return !_cards.Any();
     }
 
     public void EraseCard(Card c)
@@ -57,6 +57,6 @@ public class Deck : ScriptableObject
 
     void GetAllSlotsReferences()
     {
-        _slots = _slotsLayoutPrefab.GetComponentsInChildren<Slot>();
+        _slots = _slotsLayout.GetComponentsInChildren<Slot>().ToList();
     }
 }
