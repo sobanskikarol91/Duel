@@ -11,8 +11,8 @@ public class CardManager : MonoBehaviour
 
     public void Init()
     {
+        _decks.ForEach(d => d.Init());
         _currentDeck = _decks[ageNr];
-        _currentDeck._cards.Shuffle();
         _currentDeck.DealCards();
         EffectOfDealingCards();
         ageNr++;

@@ -21,19 +21,9 @@ public static class ExtensionIEnumerable
         }
     }
 
-    public static void Shuffle<T>(this IEnumerable<T> source)
+    public static void Shuffle<T>(this T[] source)
     {
-        System.Random random = new System.Random();
-
-        int n = source.Count();
-        while (n > 1)
-        {
-            n--;
-            int k = random.Next(n + 1);
-            T value = source.ElementAt(k);
-           // source[k] = source.ElementAt(n);  
-           // source[n] = value;
-        }
+        source.ToList().Shuffle();
     }
 
     public static void Randomize<T>(this IEnumerable<T> source, Action<T> action)
@@ -51,17 +41,7 @@ public static class ExtensionIEnumerable
         int index = UnityEngine.Random.Range(0, source.Count());
         return source.ElementAt(index);
     }
-    /*
-    public static T ReturnAndRemoveRandom<T>(this IEnumerable<T> source)
-    {
-        if (source.Count() == 0) Debug.LogError("List is empty! ");
 
-        int index = UnityEngine.Random.Range(0, source.Count());
-        T safe = source.ElementAt(index);
-        source. (safe);
-        return safe;
-    }
-    */
     public static T ReturnAndRemoveRandom<T>(this List<T> list)
     {
         if (list.Count == 0) Debug.LogError("List is empty! ");
@@ -76,5 +56,24 @@ public static class ExtensionIEnumerable
     {
         foreach (var item in source)
             action(item);
+    }
+
+    public static List<T> RemoveAndGetRange<T>(this List<T> list, int origin, int count)
+    {
+        List<T> removedList = new List<T>();
+
+        for (int i = 0; i < count; i++)
+        {
+            T removed = RemoveAndGetItem(list, origin);
+            removedList.Add(removed);
+        }
+        return removedList;
+    }
+
+    public static T RemoveAndGetItem<T>(this IList<T> list, int iIndexToRemove)
+    {
+        var item = list[iIndexToRemove];
+        list.RemoveAt(iIndexToRemove);
+        return item;
     }
 }

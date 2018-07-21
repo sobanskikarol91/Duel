@@ -39,10 +39,10 @@ public class GameManager : Singleton<GameManager>
     {
         _CurrentPlayer._cardPositioner.AddCardToPlayerSlot(c);
         ChangeCurrentPlayer();
+        c.EraseFromDeck();
 
         if (_cardManager.CheckIfItWasTheLastCard())
             PrepareTurn();
-
     }
 
     void PrepareTurn()
