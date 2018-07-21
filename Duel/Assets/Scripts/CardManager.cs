@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
 public class CardManager : MonoBehaviour
 {
     [SerializeField] public GameObject[] _decksPrefab; // TODO
     public Deck[] _decks = new Deck[3];
+    private Deck _currentDeck;
+
     int ageNr = 0;
 
     public void Init()
     {
-        _decks[ageNr].Shuffle();
-        _decks[ageNr].DealCads();
+        _currentDeck = _decks[ageNr];
+        _currentDeck._cards.Shuffle();
+        _currentDeck.DealCards();
         EffectOfDealingCards();
         ageNr++;
     }
@@ -23,4 +25,11 @@ public class CardManager : MonoBehaviour
            StartCoroutine(
                IEnumeratorMethods.Lerp(new Vector3(0, 0.3f, 0), s.transform.position, 1.1f, t => s.transform.position = t)));
     }
+
+    public bool CheckIfItWasTheLastCard()
+    {
+        return _currentDeck.IsEmpty();
+    }
+
+
 }
