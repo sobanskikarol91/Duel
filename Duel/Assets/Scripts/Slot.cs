@@ -93,6 +93,9 @@ public class Slot : MonoBehaviour
     public void ShowCard(bool state)
     {
         isVisible = true;
+        if (Card = null)
+            Debug.Log("Nie ma karty w slocie!");
+        else
         spriteRenderer.sprite = Card.cardImg;
     }
 }

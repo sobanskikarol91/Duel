@@ -9,6 +9,7 @@ public class GameManager : Singleton<GameManager>
     const int playersCount = 2;
     public Player[] _players;
     public Player _CurrentPlayer { get; private set; }
+    public Transform _slotsPosition;
     WonderManager _wonderManager;
     [SerializeField] CardManager _cardManager;
 

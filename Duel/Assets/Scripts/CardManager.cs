@@ -35,4 +35,13 @@ public class CardManager : MonoBehaviour
         _currentDeck = _decks[ageNr];
         _currentDeck.DealCards();
     }
+
+    void CreateSlots()
+    {
+        for (int i = 0; i < _decks.Length; i++)
+        {
+            GameObject _layout = Instantiate(_decks[i]._slotsLayoutPrefab, GameManager.instance._slotsPosition.position, Quaternion.identity);
+            _decks[i].SetLayoutPrefab(_layout);
+        }
+    }
 }
