@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: b6190d45a75b65c4dad42d5657dd9332
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Age III_0
+    21300002: Age III_1
+    21300004: Age III_2
+    21300006: Age III_3
+    21300008: Age III_4
+    21300010: Age III_5
+    21300012: Age III_6
+    21300014: Age III_7
+    21300016: Age III_8
+    21300018: Age III_9
+    21300020: Age III_10
+    21300022: Age III_11
+    21300024: Age III_12
+    21300026: Age III_13
+    21300028: Age III_14
+    21300030: Age III_15
+    21300032: Age III_16
+    21300034: Age III_17
+    21300036: Age III_18
+    21300038: Age III_19
+    21300040: Age III_20
+    21300042: Age III_21
+    21300044: Age III_22
+    21300046: Age III_23
+    21300048: Age III_24
+    21300050: Age III_25
+    21300052: Age III_26
+    21300054: Age III_27
+    21300056: Age III_28
+    21300058: Age III_29
+    21300060: Age III_30
+    21300062: Age III_31
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Age III_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 4387
+        width: 528
+        height: 815
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2b91a446d6bbd40a217455c3e98f4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_2
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 4383
+        width: 531
+        height: 812
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931ce091a70047644ad248e608b05ece
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_3
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 4383
+        width: 530
+        height: 812
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99bb6e55e0820f4b8771ccfabaee157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_4
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 3517
+        width: 533
+        height: 810
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5668b065903f145b084cef0f2809c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_6
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 3517
+        width: 535
+        height: 812
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b36243f00ebea4181052e432e13466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_7
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 3517
+        width: 531
+        height: 810
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754d21ceee3880a4f8fe43d08374ed6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_8
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 3517
+        width: 536
+        height: 812
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d01bd50dc5ed1d4ba024b05b37f5d4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_10
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 2638
+        width: 531
+        height: 809
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c696e9a2e7ec59b4b91300ac8f6d788d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_12
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 2643
+        width: 531
+        height: 813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84584e59f4865c641bc2af94b011e1cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_13
+      rect:
+        serializedVersion: 2
+        x: 2366
+        y: 2643
+        width: 531
+        height: 810
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e23e89c437d45d4db99c54c148a35ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_14
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1782
+        width: 526
+        height: 833
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7a56e79e0b9cb479e564bc16d84142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_15
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1789
+        width: 534
+        height: 813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c928fe0d14f7f41867bafcf1158869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_16
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1787
+        width: 533
+        height: 810
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070476c914c99cc43b13494f5c78e0b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_17
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 1790
+        width: 543
+        height: 815
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5bf40a138dcb44eac6df7b52c111b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_18
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 1787
+        width: 530
+        height: 810
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8229858af6a1b7a4f90724309024f3f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_19
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 933
+        width: 531
+        height: 808
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c58091feb91ad4ebea3e6875eb019c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_20
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 923
+        width: 538
+        height: 818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5321737f8430bc64e9a4d562c94792af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_21
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 918
+        width: 536
+        height: 813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935748a46fcad404197e5a16e0aece2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_22
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 918
+        width: 532
+        height: 812
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661267790001f75429db5b70efe6fb97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_23
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 918
+        width: 530
+        height: 810
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbb52eb440a9e04ea1a0cb6859778a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 530
+        height: 810
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be6b30dcd919d246ae97901001c308b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_25
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 55
+        width: 530
+        height: 807
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e8ece01e49ddb408d6017d8376469a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_26
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 55
+        width: 532
+        height: 807
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3928313dad167b54dbee5dcc6e3da520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_27
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 46
+        width: 531
+        height: 809
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12188d814a86f36478a9fa64ccb9b6ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_29
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 44
+        width: 533
+        height: 808
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba8ca0d88527ab42867a5ff871e8d74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_0
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 2640
+        width: 524
+        height: 801
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1779e200b148d6498c0dd8c89101897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Age III_5
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 2640
+        width: 522
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406a296fc692b99418666f5f7324476a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: eac72217916eeee4a81ce4ee2183a485
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
