@@ -48,6 +48,6 @@ public class GameManager : Singleton<GameManager>
 
     void PrepareTurn()
     {
-        _cardManager.DealNewCards();
+        _cardManager.DealCardsFromNewAge();
     }
 }

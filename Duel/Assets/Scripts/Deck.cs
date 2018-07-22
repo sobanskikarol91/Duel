@@ -64,4 +64,9 @@ public class Deck
     {
         _slotsLayout.SetActive(false);
     }
+
+    public void EnableDeck()
+    {
+        _slotsLayout.SetActive(true);
+    }
 }

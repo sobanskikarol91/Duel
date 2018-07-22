@@ -11,6 +11,7 @@ public class CardManager : MonoBehaviour
     public void Init()
     {
         CreateSlots();
+        DisableSlotsFromLaterAges();
         _decks.ForEach(d => d.Init());
         _currentDeck = _decks[ageNr];
         _currentDeck.DealCards();
@@ -30,10 +31,11 @@ public class CardManager : MonoBehaviour
         return _currentDeck.IsEmpty();
     }
 
-    public void DealNewCards()
+    public void DealCardsFromNewAge()
     {
         ageNr++;
         _currentDeck = _decks[ageNr];
+        _currentDeck.EnableDeck();
         _currentDeck.DealCards();
     }
 
@@ -44,5 +46,11 @@ public class CardManager : MonoBehaviour
             GameObject _layout = Instantiate(_decks[i]._slotsLayoutPrefab, GameManager.instance._slotsPosition.position, Quaternion.identity);
             _decks[i].SetLayoutPrefab(_layout);
         }
+    }
+
+    void DisableSlotsFromLaterAges()
+    {
+        for (int i = 1; i < _decks.Length; i++)
+            _decks[i].DisableDeck();
     }
 }
