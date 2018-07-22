@@ -411,26 +411,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: symbols_21
-      rect:
-        serializedVersion: 2
-        x: 281
-        y: 861
-        width: 424
-        height: 414
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fec1b870846c7de43b1c2c4f8ca7ac42
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: symbols_24
       rect:
         serializedVersion: 2

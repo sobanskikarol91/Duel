@@ -21,9 +21,19 @@ public static class ExtensionIEnumerable
         }
     }
 
-    public static void Shuffle<T>(this T[] source)
+    public static void Shuffle<T>(this T[] _array)
     {
-        source.ToList().Shuffle();
+        System.Random random = new System.Random();
+
+        int n = _array.Length;
+        while (n > 1)
+        {
+            n--;
+            int k = random.Next(n + 1);
+            T value = _array[k];
+            _array[k] = _array[n];
+            _array[n] = value;
+        }
     }
 
     public static void Randomize<T>(this IEnumerable<T> source, Action<T> action)
