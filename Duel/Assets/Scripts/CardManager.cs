@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 public class CardManager : MonoBehaviour
 {
-    public Deck[] _decks = new Deck[3];
+    public Deck[] _decksSO = new Deck[3];
+    private Deck[] _decks =  new Deck[3];
     private Deck _currentDeck;
 
     int ageNr = 0;
 
     public void Init()
     {
+        CopyDeck();
         CreateSlots();
         DisableSlotsFromLaterAges();
         _decks.ForEach(d => d.Init());
@@ -18,6 +20,11 @@ public class CardManager : MonoBehaviour
         EffectOfDealingCards();
     }
 
+    void CopyDeck()
+    {
+        for (int i = 0; i < _decksSO.Length; i++)
+            _decks[i] = Instantiate(_decksSO[i]);
+    }
     // TODO: new class
     void EffectOfDealingCards()
     {
@@ -43,7 +50,9 @@ public class CardManager : MonoBehaviour
     {
         for (int i = 0; i < _decks.Length; i++)
         {
-            GameObject _layout = Instantiate(_decks[i]._slotsLayoutPrefab, GameManager.instance._slotsPosition.position, Quaternion.identity);
+            Vector3 pos = GameManager.instance._slotsPosition.position;
+            Debug.Log("a");
+            GameObject _layout = Instantiate(_decks[i]._slotsLayoutPrefab, pos, Quaternion.identity);
             _decks[i].SetLayoutPrefab(_layout);
         }
     }

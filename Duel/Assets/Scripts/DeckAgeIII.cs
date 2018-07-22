@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[CreateAssetMenu(fileName = "Deck Age III", menuName = "Deck Age III")]
 public class DeckAgeIII : Deck
 {
     const int guildAmount = 3;

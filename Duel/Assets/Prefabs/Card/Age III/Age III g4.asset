@@ -9,12 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0e332bad1af7ea429b85b128e546ca5, type: 3}
-  m_Name: Age III 2
+  m_Name: Age III g4
   m_EditorClassIdentifier: 
-  cardImg: {fileID: 21300004, guid: b6190d45a75b65c4dad42d5657dd9332, type: 3}
+  cardImg: {fileID: 21300008, guid: b6190d45a75b65c4dad42d5657dd9332, type: 3}
   reverseImg: {fileID: 21300000, guid: 6268ef43fb5598145bf89b8f39e299ab, type: 3}
-  _deck:
-    _cards: []
-    _slotsLayoutPrefab: {fileID: 0}
-    _slots: []
+  _deck: {fileID: 0}
   type: 6

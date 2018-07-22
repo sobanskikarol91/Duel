@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-[System.Serializable]
-public class Deck
+[CreateAssetMenu(fileName = "Deck", menuName = "Deck")]
+public class Deck : ScriptableObject
 {
     [SerializeField] protected List<Card> _cards;
     public GameObject _slotsLayoutPrefab;

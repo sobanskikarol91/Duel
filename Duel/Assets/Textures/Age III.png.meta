@@ -3,14 +3,14 @@ guid: b6190d45a75b65c4dad42d5657dd9332
 TextureImporter:
   fileIDToRecycleName:
     21300000: Age III_0
-    21300002: Age III_1
-    21300004: Age III_2
-    21300006: Age III_3
-    21300008: Age III_4
+    21300002: Age III_G1
+    21300004: Age III_G2
+    21300006: Age III_g3
+    21300008: Age III_g4
     21300010: Age III_5
-    21300012: Age III_6
-    21300014: Age III_7
-    21300016: Age III_8
+    21300012: Age III_g6
+    21300014: Age III_g7
+    21300016: Age III_g8
     21300018: Age III_9
     21300020: Age III_10
     21300022: Age III_11
@@ -114,7 +114,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Age III_1
+      name: Age III_G1
       rect:
         serializedVersion: 2
         x: 111
@@ -134,7 +134,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Age III_2
+      name: Age III_G2
       rect:
         serializedVersion: 2
         x: 677
@@ -154,7 +154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Age III_3
+      name: Age III_g3
       rect:
         serializedVersion: 2
         x: 1315
@@ -174,7 +174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Age III_4
+      name: Age III_g4
       rect:
         serializedVersion: 2
         x: 118
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Age III_6
+      name: Age III_g6
       rect:
         serializedVersion: 2
         x: 685
@@ -214,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Age III_7
+      name: Age III_g7
       rect:
         serializedVersion: 2
         x: 1246
@@ -234,7 +234,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Age III_8
+      name: Age III_g8
       rect:
         serializedVersion: 2
         x: 1861

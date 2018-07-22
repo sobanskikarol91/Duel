@@ -31,7 +31,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d4dcc692277f194c92e88d1ad98a53a, type: 2}
   - {fileID: 11400000, guid: 9500540ac42ff324ea49eea3e38cd0b0, type: 2}
   - {fileID: 11400000, guid: cbfde992d67b41b40b3529841dd1f2bf, type: 2}
+  - {fileID: 11400000, guid: 8d30f78d6038f5d4c9cdfe56d2fc7fcf, type: 2}
+  - {fileID: 11400000, guid: 7f5901668b955e24798c8185b5f3315a, type: 2}
   - {fileID: 11400000, guid: d9a5886eef3033d47ac2cdd163be3249, type: 2}
+  - {fileID: 11400000, guid: 65c744e07a8993e429f050c5d7338407, type: 2}
   _slotsLayoutPrefab: {fileID: 1694978770952268, guid: fd0113102bdb26246babf49d3d204182,
     type: 2}
   _slots:
