@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-[CreateAssetMenu(fileName = "Deck", menuName = "Deck")]
+[CreateAssetMenu(fileName = "Deck", menuName = "Deck/AgeI-II")]
 public class Deck : ScriptableObject
 {
     [SerializeField] protected List<Card> _cards;

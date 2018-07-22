@@ -26414,8 +26414,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _decksSO:
   - {fileID: 11400000, guid: 807df292fe9768b4e84bd3c27360b82d, type: 2}
-  - {fileID: 11400000, guid: 97d45c48d3b810540b79a1a9c8a5ee3a, type: 2}
-  - {fileID: 11400000, guid: e8c4a1d0768ae34419652a8bbbf6ba27, type: 2}
 --- !u!1 &2112411338
 GameObject:
   m_ObjectHideFlags: 0

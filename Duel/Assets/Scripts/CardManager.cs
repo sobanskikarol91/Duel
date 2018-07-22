@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 public class CardManager : MonoBehaviour
 {
-    public Deck[] _decksSO = new Deck[3];
-    private Deck[] _decks =  new Deck[3];
+    public Deck[] _decksSO;
+    private Deck[] _decks;
     private Deck _currentDeck;
 
     int ageNr = 0;
@@ -22,6 +22,7 @@ public class CardManager : MonoBehaviour
 
     void CopyDeck()
     {
+        _decks = new Deck[_decksSO.Length];
         for (int i = 0; i < _decksSO.Length; i++)
             _decks[i] = Instantiate(_decksSO[i]);
     }

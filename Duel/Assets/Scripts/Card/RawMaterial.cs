@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RawMaterial : Card 
+[CreateAssetMenu(fileName = "Materials", menuName = "Card/Materials")]
+public class RawMaterial : Card
 {
-     public PRODUCE Produce { get; }
+    public PRODUCE produce;
+    public int amount = 1;
 }
