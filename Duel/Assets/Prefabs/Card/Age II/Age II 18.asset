@@ -12,50 +12,6 @@ MonoBehaviour:
   m_Name: Age II 18
   m_EditorClassIdentifier: 
   cardImg: {fileID: 21300042, guid: 1fb8fac3ce3ea7944bb797e4082460c2, type: 3}
-  reverseImg: {fileID: 21300000, guid: 7985943e4edff6747b98a4bb77ccb54d, type: 3}
-  _deck:
-    _cards:
-    - {fileID: 11400000, guid: fb6b5fd1a0b0832418b28e076e2f6f69, type: 2}
-    - {fileID: 11400000, guid: bae36cf0215d4164daa9cbf4e9a7f5b7, type: 2}
-    - {fileID: 11400000, guid: 1356cd0e17db98d479f86e67f05bf12c, type: 2}
-    - {fileID: 11400000, guid: 29fd0b86b09265e4b98367bd7cd99e3d, type: 2}
-    - {fileID: 11400000, guid: 94c745fe20cde5845a6a23d66be1b633, type: 2}
-    - {fileID: 11400000, guid: 75a5ae0b29f70bc408876bcb9ec1ed37, type: 2}
-    - {fileID: 11400000, guid: 1bef59a74a73b9e4eaacb96a41f0a457, type: 2}
-    - {fileID: 11400000, guid: 8420a33d559bebf438ac05dd4bc14269, type: 2}
-    - {fileID: 11400000, guid: 1c972f005e7e6224d90b161113396a16, type: 2}
-    - {fileID: 11400000, guid: 2b21168e87906884f988475c1fcc17be, type: 2}
-    - {fileID: 11400000, guid: 386570bfefd122f46885a98b806acbe5, type: 2}
-    - {fileID: 11400000, guid: 6e4ffff93e04a7b4f9e4aa0801880abd, type: 2}
-    - {fileID: 11400000, guid: af12ff9b3d334ee42b218f2b681f9e9e, type: 2}
-    - {fileID: 11400000, guid: d9c3bdccdaa527346a4830f2f54f5c7e, type: 2}
-    - {fileID: 11400000, guid: b4a29af5aa883ee49b6df14da42e9939, type: 2}
-    - {fileID: 11400000, guid: 3e5a4f15d6da5484cabd1dfe4df5f5da, type: 2}
-    - {fileID: 11400000, guid: 8dad73f5b1ace9c48976b14248d87b0c, type: 2}
-    - {fileID: 11400000, guid: 4513145f90f83264aaa936c6f70ede94, type: 2}
-    - {fileID: 11400000}
-    - {fileID: 11400000, guid: 8b3980946a22ae2408ee2a147251339d, type: 2}
-    _slotsLayoutPrefab: {fileID: 1302931739208366, guid: 3e1e00487361f3f4b8fe42414a4649c1,
-      type: 2}
-    _slots:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+  reverseImg: {fileID: 21300016, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
+  _deck: {fileID: 0}
   type: 2

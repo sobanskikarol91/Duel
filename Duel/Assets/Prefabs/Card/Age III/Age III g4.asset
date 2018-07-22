@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Age III g4
   m_EditorClassIdentifier: 
   cardImg: {fileID: 21300008, guid: b6190d45a75b65c4dad42d5657dd9332, type: 3}
-  reverseImg: {fileID: 21300000, guid: 6268ef43fb5598145bf89b8f39e299ab, type: 3}
+  reverseImg: {fileID: 21300012, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
   _deck: {fileID: 0}
   type: 6
