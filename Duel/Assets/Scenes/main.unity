@@ -26467,6 +26467,10 @@ MonoBehaviour:
     _slotsLayoutPrefab: {fileID: 1302931739208366, guid: 3e1e00487361f3f4b8fe42414a4649c1,
       type: 2}
     _slots: []
+  - _cards: []
+    _slotsLayoutPrefab: {fileID: 1422396475127824, guid: 6e911c8298a8c7b43a7bef1c973e6ee9,
+      type: 2}
+    _slots: []
 --- !u!1 &2112411338
 GameObject:
   m_ObjectHideFlags: 0
