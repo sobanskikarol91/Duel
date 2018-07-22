@@ -16,8 +16,8 @@ public class Deck
     public void Init()
     {
         GetAllSlotsReferences();
-         SetDeckReferenceToCards();
-         _slots.Shuffle();
+        SetDeckReferenceToCards();
+        _slots.Shuffle();
         DiscardUnusedCards();
     }
 
@@ -58,5 +58,10 @@ public class Deck
     void GetAllSlotsReferences()
     {
         _slots = _slotsLayout.GetComponentsInChildren<Slot>().ToList();
+    }
+
+    public void DisableDeck()
+    {
+        _slotsLayout.SetActive(false);
     }
 }
