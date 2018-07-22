@@ -10,9 +10,11 @@ public class GameManager : Singleton<GameManager>
     public Player[] _players;
     public Player _CurrentPlayer { get; private set; }
     public Transform _slotsPosition;
+
+    [SerializeField] ConflictPawn _pawn;
+
     WonderManager _wonderManager;
     TokenManager _tokenManager;
-    ConflictPawn _pawn;
     CardManager _cardManager;
 
     void Start()
