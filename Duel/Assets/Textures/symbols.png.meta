@@ -154,9 +154,9 @@ TextureImporter:
       name: symbols_5
       rect:
         serializedVersion: 2
-        x: 885
+        x: 1072
         y: 578
-        width: 1496
+        width: 1309
         height: 4595
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

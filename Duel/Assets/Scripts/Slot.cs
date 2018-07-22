@@ -20,7 +20,8 @@ public class Slot : MonoBehaviour
 
     public void Init()
     {
-        if (isVisible) ShowCard(true);
+        if (isVisible) ShowCard();
+        else HideCard();
         CoverAllReferenceCards();
     }
 
@@ -32,7 +33,7 @@ public class Slot : MonoBehaviour
     public void DiscoverThisCard(Slot byCard)
     {
         coveredByCards.Remove(byCard);
-        if (isCardDiscovered()) ShowCard(true);
+        if (isCardDiscovered()) ShowCard();
     }
 
     void BoughtByPlayer()
@@ -80,7 +81,7 @@ public class Slot : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
             GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
-            gameObject.transform.position += new Vector3(0, 0, + 0.1f);
+            gameObject.transform.position += new Vector3(0, 0, +0.1f);
             SlotWindow.DeactivePanel();
         }
     }
@@ -90,12 +91,13 @@ public class Slot : MonoBehaviour
         DiscoverAllReferenceCards();
     }
 
-    public void ShowCard(bool state)
+    public void ShowCard()
     {
-        isVisible = true;
-        if (Card == null)
-            Debug.Log("Nie ma karty w slocie!");
-        else
         spriteRenderer.sprite = Card.cardImg;
+    }
+
+    void HideCard()
+    {
+        spriteRenderer.sprite = Card.reverseImg;
     }
 }

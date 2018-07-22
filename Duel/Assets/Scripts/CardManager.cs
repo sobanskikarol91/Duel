@@ -51,7 +51,6 @@ public class CardManager : MonoBehaviour
         for (int i = 0; i < _decks.Length; i++)
         {
             Vector3 pos = GameManager.instance._slotsPosition.position;
-            Debug.Log("a");
             GameObject _layout = Instantiate(_decks[i]._slotsLayoutPrefab, pos, Quaternion.identity);
             _decks[i].SetLayoutPrefab(_layout);
         }
