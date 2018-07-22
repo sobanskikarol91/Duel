@@ -16,8 +16,8 @@ public class Deck : ScriptableObject
     public void Init()
     {
         GetAllSlotsReferences();
-        SetDeckReferenceToCards();
         ChooseCardsToDeck();
+        SetDeckReferenceToCards();
         _cards.Shuffle();
     }
 
