@@ -6,7 +6,7 @@ using System.Linq;
 [System.Serializable]
 public class Deck
 {
-    [SerializeField] List<Card> _cards;
+    [SerializeField] protected List<Card> _cards;
     public GameObject _slotsLayoutPrefab;
     List<Card> _unusedCards;
     GameObject _slotsLayout;
@@ -17,8 +17,18 @@ public class Deck
     {
         GetAllSlotsReferences();
         SetDeckReferenceToCards();
-        _slots.Shuffle();
+        ChooseCardsToDeck();
+        _cards.Shuffle();
+    }
+
+    protected virtual void ChooseCardsToDeck()
+    {
         DiscardUnusedCards();
+    }
+
+    void GetAllSlotsReferences()
+    {
+        _slots = _slotsLayout.GetComponentsInChildren<Slot>().ToList();
     }
 
     public void SetDeckReferenceToCards()
@@ -53,11 +63,6 @@ public class Deck
     public void SetLayoutPrefab(GameObject prefab)
     {
         _slotsLayout = prefab;
-    }
-
-    void GetAllSlotsReferences()
-    {
-        _slots = _slotsLayout.GetComponentsInChildren<Slot>().ToList();
     }
 
     public void DisableDeck()
