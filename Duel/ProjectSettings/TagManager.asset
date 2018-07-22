@@ -44,6 +44,9 @@ TagManager:
   - name: Wonder
     uniqueID: 2752241575
     locked: 0
+  - name: Token
+    uniqueID: 2578694987
+    locked: 0
   - name: UI
     uniqueID: 1182124595
     locked: 0

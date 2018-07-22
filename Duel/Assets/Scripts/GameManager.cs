@@ -40,7 +40,7 @@ public class GameManager : Singleton<GameManager>
     public void PlayerHasChoosenCard(Card c)
     {
         _CurrentPlayer._cardPositioner.AddCardToPlayerSlot(c);
-        ChooseState(c);
+        ChooseStateDependsOnCard(c);
         ChangeCurrentPlayer();
         c.EraseFromDeck();
 
@@ -48,10 +48,11 @@ public class GameManager : Singleton<GameManager>
             PrepareTurn();
     }
 
-    void ChooseState(Card c)
+    void ChooseStateDependsOnCard(Card c)
     {
         if (c.type == CARD_TYPE.MILITARY)
             _pawn.MovePawn(_CurrentPlayer.Id, ((Military)c).strength);
+   
     }
 
     void PrepareTurn()
