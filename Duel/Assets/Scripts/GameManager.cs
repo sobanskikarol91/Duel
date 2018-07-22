@@ -11,12 +11,13 @@ public class GameManager : Singleton<GameManager>
     public Player _CurrentPlayer { get; private set; }
     public Transform _slotsPosition;
     WonderManager _wonderManager;
+    [SerializeField] ConflictPawn _pawn;
     [SerializeField] CardManager _cardManager;
 
     void Start()
     {
         Init();
-        _wonderManager.Init();
+        //_wonderManager.Init();
         _cardManager.Init();
     }
 
@@ -39,11 +40,18 @@ public class GameManager : Singleton<GameManager>
     public void PlayerHasChoosenCard(Card c)
     {
         _CurrentPlayer._cardPositioner.AddCardToPlayerSlot(c);
+        ChooseState(c);
         ChangeCurrentPlayer();
         c.EraseFromDeck();
 
         if (_cardManager.CheckIfItWasTheLastCard())
             PrepareTurn();
+    }
+
+    void ChooseState(Card c)
+    {
+        if (c.type == CARD_TYPE.MILITARY)
+            _pawn.MovePawn(_CurrentPlayer.Id, ((Military)c).strength);
     }
 
     void PrepareTurn()
