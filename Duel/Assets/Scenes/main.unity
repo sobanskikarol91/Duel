@@ -17543,6 +17543,7 @@ MonoBehaviour:
     - {fileID: 253145608}
     - {fileID: 401049740}
     _player: {fileID: 0}
+  _conflictTokens: []
   Id: 0
 --- !u!1 &1277602587
 GameObject:
@@ -20245,6 +20246,7 @@ MonoBehaviour:
     - {fileID: 1234350293}
     - {fileID: 99089138}
     _player: {fileID: 0}
+  _conflictTokens: []
   Id: 1
 --- !u!4 &1517988965
 Transform:
@@ -27374,6 +27376,7 @@ GameObject:
   - component: {fileID: 2110852356}
   - component: {fileID: 2110852355}
   - component: {fileID: 2110852357}
+  - component: {fileID: 2110852358}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -27396,7 +27399,6 @@ MonoBehaviour:
   - {fileID: 1275201950}
   - {fileID: 1517988964}
   _slotsPosition: {fileID: 100663299}
-  _pawn: {fileID: 562185181}
 --- !u!4 &2110852354
 Transform:
   m_ObjectHideFlags: 0
@@ -27476,6 +27478,18 @@ MonoBehaviour:
   - {fileID: 689921683}
   - {fileID: 1949054857}
   - {fileID: 244367410}
+--- !u!114 &2110852358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110852352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aac8e5d7e8ca634a865cc3be0e5482e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pawn: {fileID: 562185181}
 --- !u!1 &2112411338
 GameObject:
   m_ObjectHideFlags: 0

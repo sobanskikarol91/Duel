@@ -11,8 +11,7 @@ public class GameManager : Singleton<GameManager>
     public Player _CurrentPlayer { get; private set; }
     public Transform _slotsPosition;
 
-    [SerializeField] ConflictPawn _pawn;
-
+    WarTrackManager _warTrackManager;
     WonderManager _wonderManager;
     TokenManager _tokenManager;
     CardManager _cardManager;
@@ -30,6 +29,7 @@ public class GameManager : Singleton<GameManager>
         _cardManager = GetComponent<CardManager>();
         _tokenManager = GetComponent<TokenManager>();
         _wonderManager = GetComponent<WonderManager>();
+        _warTrackManager = GetComponent<WarTrackManager>();
         RandomPlayer();
     }
 
@@ -57,7 +57,7 @@ public class GameManager : Singleton<GameManager>
     void ChooseStateDependsOnCard(Card c)
     {
         if (c.type == CARD_TYPE.MILITARY)
-            _pawn.MovePawn(_CurrentPlayer.Id, ((Military)c).strength);
+            _warTrackManager.MovePawn(((Military)c).strength);
     }
 
     void PrepareTurn()
