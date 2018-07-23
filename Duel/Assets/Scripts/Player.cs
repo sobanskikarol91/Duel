@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public List<Wonder> _Wonders { get; set; } = new List<Wonder>();
     public CardPositioner _cardPositioner;
     public Resources Resources { get; set; }
-    public ConflictToken[] _conflictTokens;
+    public List<ConflictToken> _conflictTokens;
     public int Id;
 
     private void Awake()
@@ -18,6 +18,6 @@ public class Player : MonoBehaviour
 
     public void Pay(int value)
     {
-
+        Debug.Log("Money erased:" + value);
     }
 }

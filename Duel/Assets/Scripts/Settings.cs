@@ -3,7 +3,6 @@ using System.Collections;
 
 public static class Settings 
 {
-    public static int secondConflictToken = 2;
-    public static int minus5gold = 5;
-
+    public static readonly int FirstConflictToken = 2;
+    public static readonly int SecondConflictToken = 5;
 }

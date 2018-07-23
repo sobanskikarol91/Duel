@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WarTrackManager : MonoBehaviour
 {
     [SerializeField] ConflictPawn _pawn;
 
-    void Init()
+    public void Init()
     {
         CreateTokens();
     }
@@ -16,8 +17,10 @@ public class WarTrackManager : MonoBehaviour
 
         foreach (Player p in _players)
         {
-            ConflictToken minus2gold = new ConflictToken(p.Pay , Settings.secondConflictToken);
-            ConflictToken minus5gold = new ConflictToken(p.Pay, Settings.secondConflictToken);
+            List<ConflictToken> tokens = new List<ConflictToken>();
+            tokens.Add(new ConflictToken(p.Pay, Settings.FirstConflictToken));
+            tokens.Add(new ConflictToken(p.Pay, Settings.SecondConflictToken));
+            p._conflictTokens = tokens;
         }
     }
 
@@ -25,13 +28,17 @@ public class WarTrackManager : MonoBehaviour
     {
         int value = steps * GetDirection();
         _pawn.Move(value);
+        CheckTokenDiscard();
     }
 
     void CheckTokenDiscard()
     {
-        int pos = _pawn.StangingPoint;
+        Player _player = GameManager.instance._NextPlayer;
 
-        float direction = Mathf.Sign(pos);
+        int pos = Mathf.Abs(_pawn.StandingPoint);
+        if (pos > 2) _player._conflictTokens[0].DiscardIt();
+        if (pos > 5) _player._conflictTokens[1].DiscardIt();
+        if (pos == 10) GameManager.instance.MilitaryWin();
     }
 
     int GetDirection()
