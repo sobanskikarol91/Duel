@@ -6,6 +6,7 @@ public class WarTrackManager : MonoBehaviour
 {
     [SerializeField] ConflictPawn _pawn;
 
+    [SerializeField] VisualConflictToken[] _visualTokens;
     public void Init()
     {
         CreateTokens();
@@ -15,11 +16,12 @@ public class WarTrackManager : MonoBehaviour
     {
         Player[] _players = GameManager.instance._players;
 
+        int nr = 0;
         foreach (Player p in _players)
         {
             List<ConflictToken> tokens = new List<ConflictToken>();
-            tokens.Add(new ConflictToken(p.Pay, Settings.FirstConflictToken));
-            tokens.Add(new ConflictToken(p.Pay, Settings.SecondConflictToken));
+            tokens.Add(new ConflictToken(p.Pay, Settings.FirstConflictToken, _visualTokens[nr++]));
+            tokens.Add(new ConflictToken(p.Pay, Settings.SecondConflictToken, _visualTokens[nr++]));
             p._conflictTokens = tokens;
         }
     }

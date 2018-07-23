@@ -7,11 +7,11 @@ public class ConflictToken
     public bool IsDiscarded { get; private set; }
     int goldToDiscard;
     Action<int> ErasePlayerMoney;
-    //GameObject _visualToken;
+    VisualConflictToken _visualToken;
 
-    public ConflictToken(Action<int> eraseMoneyMethod, int value)
+    public ConflictToken(Action<int> eraseMoneyMethod, int value, VisualConflictToken _visual)
     {
-       // _visualToken = token;
+        _visualToken = _visual;
         goldToDiscard = value;
         ErasePlayerMoney = eraseMoneyMethod;
     }
@@ -20,7 +20,7 @@ public class ConflictToken
     {
         if (IsDiscarded) return;
 
-       
+        _visualToken.DestroyIt();
         ErasePlayerMoney(goldToDiscard);
         IsDiscarded = true;
     }
