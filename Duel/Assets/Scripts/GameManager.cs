@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
 
     const int playersCount = 2;
     public Player[] _players;
+    // TODO: Player event
     public Player _CurrentPlayer { get; private set; }
     public Player _NextPlayer { get; private set; }
     public Transform _slotsPosition;
@@ -74,4 +75,6 @@ public class GameManager : Singleton<GameManager>
     {
 
     }
+
+
 }
