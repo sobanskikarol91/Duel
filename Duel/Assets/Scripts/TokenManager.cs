@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class TokenManager : MonoBehaviour
 {
-    [SerializeField]  Sprite[] tokens;
+    [SerializeField]  Sprite[]   tokens;
     [SerializeField] SpriteRenderer[] tokenPositions;
 
 
