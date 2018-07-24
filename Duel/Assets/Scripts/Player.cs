@@ -23,11 +23,17 @@ public class Player : MonoBehaviour
 
     public void AddGold()
     {
-       Resources.gold =  GoldenCardsCount() * Settings.CardCost;
+        Resources.gold = GoldenCardsCount() * Settings.CardCost;
     }
 
     int GoldenCardsCount()
     {
         return cardsDict[CARD_TYPE.COMMERCIAL].Count;
+    }
+
+    public void AddCard(Card c)
+    {
+        List<Card> cardLists = cardsDict[c.type];
+        cardLists.Add(c);
     }
 }
