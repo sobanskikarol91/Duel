@@ -11,5 +11,6 @@ public class ConflictPawn : MonoBehaviour
     {
         StandingPoint = value;
         transform.localPosition += value * offset;
+        GetComponent<AudioSource>().Play();
     }
 }
