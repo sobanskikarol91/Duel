@@ -67,10 +67,10 @@ public class Slot : MonoBehaviour
     {
         if (isVisible)
         {
-            SlotWindow.ActivePanelOnPos(transform.position);
             sortingOrder = GetComponent<SpriteRenderer>().sortingOrder;
             gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             gameObject.transform.position += new Vector3(0, 0, -0.1f);
+            SlotWindow.ActivePanelOnPos(gameObject.transform.position);
             GetComponent<SpriteRenderer>().sortingOrder = 10;
         }
     }

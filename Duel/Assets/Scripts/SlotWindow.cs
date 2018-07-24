@@ -16,7 +16,7 @@ public class SlotWindow : MonoBehaviour
         DeactivePanel();   
     }
 
-    public static void ActivePanelOnPos(Vector2 pos)
+    public static void ActivePanelOnPos(Vector3 pos)
     {
         panel.SetActive(true);
         panel.transform.position = pos;

@@ -7,9 +7,6 @@ public class OnMouseSnd : MonoBehaviour
     public Clip OnClickSnd;
     public Clip OnEnterSnd;
 
-    float timeToPlaySndAgain = 0.5f;
-    bool isReady = true;
-
     void Start()
     {
         _as = GetComponent<AudioSource>();
@@ -17,22 +14,14 @@ public class OnMouseSnd : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        //if (OnEnterSnd == null) return;
-        //if (isReady == false) return;
-        //ExtensionAudio.PlayAudioClip(OnEnterSnd, transform.position);
-
-        //isReady = false;
-        //Invoke("PlayAgainSndAfterTime", timeToPlaySndAgain);
+        if (OnEnterSnd.clip == null) return;
+        ExtensionAudio.PlayAudioClip(OnEnterSnd, transform.position);
     }
 
     private void OnMouseDown()
     {
-        if (OnClickSnd == null) return;
+        if (OnClickSnd.clip == null) return;
         ExtensionAudio.PlayAudioClip(OnClickSnd, transform.position);
     }
 
-    void PlayAgainSndAfterTime()
-    {
-        isReady = true;
-    }
 }

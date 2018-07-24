@@ -13,7 +13,6 @@ public class ProgressToken : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        Debug.Log("a");
         transform.localScale *= zoomMultiply;
         _sr.sortingOrder++;
     }
