@@ -56,21 +56,20 @@ public class GameManager : Singleton<GameManager>
         ChangeCurrentPlayer();
         c.EraseFromDeck();
 
-        if (_cardManager.CheckIfItWasTheLastCard())
-            PrepareTurn();
+            if (_cardManager.CheckIfItWasTheLastCard())
+                PrepareTurn();
     }
 
     void ChooseStateDependsOnCard(Card c)
     {
         if (c.type == CARD_TYPE.MILITARY)
-            _warTrackManager.MovePawn(((Military)c).strength);
+          _warTrackManager.MovePawn(((Military)c).strength);
     }
 
     void PrepareTurn()
     {
         _cardManager.DealCardsFromNewAge();
     }
-
     public void MilitaryWin()
     {
 

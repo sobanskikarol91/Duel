@@ -36,4 +36,9 @@ public class Player : MonoBehaviour
         List<Card> cardLists = cardsDict[c.type];
         cardLists.Add(c);
     }
+
+    void CheckSymbol(Card c)
+    {
+        List<Card> cards = cardsDict[c.type];
+    }
 }
