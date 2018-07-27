@@ -9,6 +9,7 @@ public class Deck : ScriptableObject
     [SerializeField] protected List<Card> _cards;
     public GameObject _slotsLayoutPrefab;
     List<Card> _unusedCards;
+    List<Card> _discardedCards;
     GameObject _slotsLayout;
 
     [HideInInspector] public List<Slot> _slots;
@@ -23,7 +24,7 @@ public class Deck : ScriptableObject
 
     protected virtual void ChooseCardsToDeck()
     {
-        DiscardUnusedCards();
+        RemoveUnusedCards();
     }
 
     void GetAllSlotsReferences()
@@ -36,7 +37,7 @@ public class Deck : ScriptableObject
         _cards.ForEach(c => c._deck = this);
     }
 
-    void DiscardUnusedCards()
+    void RemoveUnusedCards()
     {
         int slotsAmount = _slots.Count();
         int count = _cards.Count - slotsAmount;
@@ -73,5 +74,10 @@ public class Deck : ScriptableObject
     public void EnableDeck()
     {
         _slotsLayout.SetActive(true);
+    }
+
+    public void DiscardCard(Card c)
+    {
+        _discardedCards.Add(c);
     }
 }

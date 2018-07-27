@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class CardManager : MonoBehaviour
+public class DeckManager : Singleton<DeckManager>
 {
     public Deck[] _decksSO;
     private Deck[] _decks;
-    private Deck _currentDeck;
+    public Deck _currentDeck { get; set; }
 
     int ageNr = 0;
 

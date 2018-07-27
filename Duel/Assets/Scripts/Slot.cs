@@ -57,7 +57,8 @@ public class Slot : MonoBehaviour
     {
         if (isCardDiscovered())
         {
-            GameManager.instance.PlayerHasChoosenCard(card);
+            // GameManager.instance.PlayerHasChoosenCard(card);
+            CardStateMachine.DiscardCard(card);
             DiscoverAllReferenceCards();
             Destroy(gameObject);
         }
@@ -70,7 +71,7 @@ public class Slot : MonoBehaviour
             sortingOrder = GetComponent<SpriteRenderer>().sortingOrder;
             gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             gameObject.transform.position += new Vector3(0, 0, -0.1f);
-            SlotWindow.ActivePanelOnPos(gameObject.transform.position);
+            //SlotWindow.ActivePanelOnPos(gameObject.transform.position);
             GetComponent<SpriteRenderer>().sortingOrder = 10;
         }
     }
@@ -82,7 +83,7 @@ public class Slot : MonoBehaviour
             gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
             GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             gameObject.transform.position += new Vector3(0, 0, +0.1f);
-            SlotWindow.DeactivePanel();
+            // SlotWindow.DeactivePanel();
         }
     }
 

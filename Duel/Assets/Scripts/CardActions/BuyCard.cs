@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class SelectedCard : MonoBehaviour
+public class BuyCard : ICardState
 {
     GameManager gameManager;
     Card _card;
@@ -13,7 +13,7 @@ public class SelectedCard : MonoBehaviour
         gameManager = GameManager.instance;
     }
 
-    void PlayerHasSelectedCard(Card c)
+    public void PlayerHasChoosenCard(Card c)
     {
         _card = c;
         TryBuyCard();
@@ -25,7 +25,7 @@ public class SelectedCard : MonoBehaviour
     void TryBuyCard()
     {
         if (HasCardASign() || HasPlayerEnoughResourceForCard())
-            BuyCard();
+            BuyThisCard();
     }
 
     bool HasCardASign()
@@ -44,7 +44,7 @@ public class SelectedCard : MonoBehaviour
         return gameManager._CurrentPlayer.AffordForCard(_card);
     }
 
-    private void BuyCard()
+    private void BuyThisCard()
     {
         gameManager._CurrentPlayer.AddCard(_card);
         isCardBought = true;
@@ -68,5 +68,10 @@ public class SelectedCard : MonoBehaviour
 
         //if (_cardManager.CheckIfItWasTheLastCard())
         //    PrepareTurn();
+    }
+
+    public void SellCard(Card _card)
+    {
+
     }
 }
