@@ -37,8 +37,14 @@ public class Player : MonoBehaviour
         cardLists.Add(c);
     }
 
-    void CheckSymbol(Card c)
+    public bool CheckSymbol(Card card)
     {
-        List<Card> cards = cardsDict[c.type];
+        List<Card> cards = cardsDict[card.type];
+        return cards.Exists(c => c.getForSign == card.signToFreeBuy);
+    }
+
+    public bool AffordForCard(Card c)
+    {
+        return true;
     }
 }

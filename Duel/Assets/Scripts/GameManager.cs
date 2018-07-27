@@ -49,27 +49,13 @@ public class GameManager : Singleton<GameManager>
         _CurrentPlayer = _CurrentPlayer == _players[0] ? _players[1] : _players[0];
     }
 
-    public void PlayerHasChoosenCard(Card c)
-    {
-        _CurrentPlayer._cardPositioner.AddCardToPlayerSlot(c);
-        ChooseStateDependsOnCard(c);
-        ChangeCurrentPlayer();
-        c.EraseFromDeck();
 
-            if (_cardManager.CheckIfItWasTheLastCard())
-                PrepareTurn();
-    }
-
-    void ChooseStateDependsOnCard(Card c)
-    {
-        if (c.type == CARD_TYPE.MILITARY)
-          _warTrackManager.MovePawn(((Military)c).strength);
-    }
 
     void PrepareTurn()
     {
         _cardManager.DealCardsFromNewAge();
     }
+
     public void MilitaryWin()
     {
 

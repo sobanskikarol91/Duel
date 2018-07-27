@@ -9,6 +9,10 @@ public class Card : ScriptableObject
     public Price cost;
     public CARD_TYPE type;
 
+    public SIGN_CARD signToFreeBuy = SIGN_CARD.NONE;
+    public SIGN_CARD getForSign = SIGN_CARD.NONE;
+
+
     public void EraseFromDeck()
     {
         _deck.EraseCard(this);
