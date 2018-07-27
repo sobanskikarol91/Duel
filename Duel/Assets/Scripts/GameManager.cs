@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
     WarTrackManager _warTrackManager;
     WonderManager _wonderManager;
     TokenManager _tokenManager;
-    CardManager _cardManager;
+     DeckManager _cardManager;
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class GameManager : Singleton<GameManager>
 
     void Init()
     {
-        _cardManager = GetComponent<CardManager>();
+        _cardManager = GetComponent<DeckManager>();
         _tokenManager = GetComponent<TokenManager>();
         _wonderManager = GetComponent<WonderManager>();
         _warTrackManager = GetComponent<WarTrackManager>();

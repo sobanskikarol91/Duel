@@ -45,7 +45,6 @@ public class Player : MonoBehaviour
 
     public bool AffordForCard(Card c)
     {
-
         return true;
     }
 }
