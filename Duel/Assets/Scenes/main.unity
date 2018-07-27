@@ -17375,7 +17375,6 @@ GameObject:
   - component: {fileID: 1104015843}
   - component: {fileID: 1104015842}
   - component: {fileID: 1104015841}
-  - component: {fileID: 1104015840}
   m_Layer: 0
   m_Name: Slot6
   m_TagString: Untagged
@@ -17383,20 +17382,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1104015840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114163576849566598, guid: 3e1e00487361f3f4b8fe42414a4649c1,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1104015839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39f7cb3c367722d489c35d1c550a1295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isVisible: 1
-  coveredCards: []
 --- !u!61 &1104015841
 BoxCollider2D:
   m_ObjectHideFlags: 0
