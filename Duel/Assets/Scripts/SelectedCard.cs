@@ -1,24 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class SelectedCard : MonoBehaviour
 {
     GameManager gameManager;
     Card _card;
+    bool isCardBought;
+
     private void Awake()
     {
         gameManager = GameManager.instance;
     }
 
-    public void TryBuyCard(Card c)
+    void PlayerHasSelectedCard(Card c)
     {
-        if (HasCardASign())
-            gameManager._CurrentPlayer.AddCard(_card);
-        else if (HasPlayerEnoughResourceForCard())
-            _card = c;
+        _card = c;
+        TryBuyCard();
+
+        if (isCardBought)
+            ChooseStateDependsOnBoughtCard();
     }
 
-    #region Card for Sign
+    void TryBuyCard()
+    {
+        if (HasCardASign() || HasPlayerEnoughResourceForCard())
+            BuyCard();
+    }
+
     bool HasCardASign()
     {
         return _card.getForSign != SIGN_CARD.NONE ?
@@ -29,28 +38,33 @@ public class SelectedCard : MonoBehaviour
     {
         return gameManager._CurrentPlayer.CheckSymbol(_card);
     }
-    #endregion
 
     bool HasPlayerEnoughResourceForCard()
     {
         return gameManager._CurrentPlayer.AffordForCard(_card);
     }
 
-    void ChooseStateDependsOnCard()
+    private void BuyCard()
     {
-        //if (c.getForSign)
-        //    if (c.type == CARD_TYPE.MILITARY)
-        //    {
-        //        _warTrackManager.MovePawn(((Military)c).strength);
-        //    }
+        gameManager._CurrentPlayer.AddCard(_card);
+        isCardBought = true;
     }
+
+    void ChooseStateDependsOnBoughtCard()
+    {
+        //if(_card.type == CARD_TYPE.MILITARY)
+        //{
+        //    GameManager.instance.pa
+        //}
+    }
+
     void BoughtCard(Card c)
     {
-        Player _player = gameManager._CurrentPlayer;
-        _player._cardPositioner.AddCardToPlayerSlot(c);
-        ChooseStateDependsOnCard(c);
-        gameManager.ChangeCurrentPlayer();
-        c.EraseFromDeck();
+        // Player _player = gameManager._CurrentPlayer;
+        // _player._cardPositioner.AddCardToPlayerSlot(c);
+        //// ChooseStateDependsOnCard(c);
+        // gameManager.ChangeCurrentPlayer();
+        // c.EraseFromDeck();
 
         //if (_cardManager.CheckIfItWasTheLastCard())
         //    PrepareTurn();

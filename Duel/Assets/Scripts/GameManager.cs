@@ -49,8 +49,6 @@ public class GameManager : Singleton<GameManager>
         _CurrentPlayer = _CurrentPlayer == _players[0] ? _players[1] : _players[0];
     }
 
-
-
     void PrepareTurn()
     {
         _cardManager.DealCardsFromNewAge();
