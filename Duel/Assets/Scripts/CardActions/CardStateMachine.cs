@@ -4,7 +4,7 @@ using System.Collections;
 public static class CardStateMachine
 {
     static ICardState _buy = new BuyCard();
-    static ICardState _discard;
+    static ICardState _discard = new DiscardCard();
     static ICardState _buildWonder;
 
     static public void BuyWonder(Card c)

@@ -57,7 +57,7 @@ public class Slot : MonoBehaviour
     {
         if (isCardDiscovered())
         {
-            // GameManager.instance.PlayerHasChoosenCard(card);
+             //GameManager.instance.PlayerHasChoosenCard(card);
             CardStateMachine.DiscardCard(card);
             DiscoverAllReferenceCards();
             Destroy(gameObject);

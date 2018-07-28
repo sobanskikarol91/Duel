@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     Dictionary<CARD_TYPE, List<Card>> cardsDict = new Dictionary<CARD_TYPE, List<Card>>();
     public List<Wonder> _Wonders { get; set; } = new List<Wonder>();
     public CardPositioner _cardPositioner;
-    public Price Resources { get; set; }
+    public Price Resources { get; set; } = new Price();
     public List<ConflictToken> _conflictTokens;
     public int Id;
 
@@ -23,12 +23,19 @@ public class Player : MonoBehaviour
 
     public void AddGold()
     {
-        Resources.gold = GoldenCardsCount() * Settings.CardCost;
+        Resources.gold += GoldenCardsCount() + Settings.CardCost;
+        Debug.Log("Hajs " + Resources.gold);
     }
 
     int GoldenCardsCount()
     {
-        return cardsDict[CARD_TYPE.COMMERCIAL].Count;
+        List<Card> c = new List<Card>();
+        if (cardsDict.TryGetValue(CARD_TYPE.COMMERCIAL, out c))
+        { 
+            return c.Count;
+        }
+        else return 0;
+        // return cardsDict[CARD_TYPE.COMMERCIAL].Count;
     }
 
     public void AddCard(Card c)
