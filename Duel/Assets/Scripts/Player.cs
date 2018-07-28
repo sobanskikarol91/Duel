@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -29,13 +30,8 @@ public class Player : MonoBehaviour
 
     int GoldenCardsCount()
     {
-        List<Card> c = new List<Card>();
-        if (cardsDict.TryGetValue(CARD_TYPE.COMMERCIAL, out c))
-        { 
-            return c.Count;
-        }
-        else return 0;
-        // return cardsDict[CARD_TYPE.COMMERCIAL].Count;
+        return cardsDict.ContainsKey(CARD_TYPE.COMMERCIAL) ?
+            cardsDict[CARD_TYPE.COMMERCIAL].Count : 0;
     }
 
     public void AddCard(Card c)

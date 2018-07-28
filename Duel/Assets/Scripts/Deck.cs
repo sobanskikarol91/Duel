@@ -78,7 +78,7 @@ public class Deck : ScriptableObject
 
     public void DiscardCard(Card c)
     {
-        //_discardedCards.Add(c);
-        //_discardedCards.ForEach(p => Debug.Log(p.name));
+        _discardedCards.Add(c);
+        _discardedCards.ForEach(p => Debug.Log(p.name));
     }
 }
