@@ -9,7 +9,7 @@ public class Deck : ScriptableObject
     [SerializeField] protected List<Card> _cards;
     public GameObject _slotsLayoutPrefab;
     List<Card> _unusedCards = new List<Card>();
-    List<Card> _discardedCards = new List<Card>();
+    public List<Card> _DiscardedCards { get; } = new List<Card>();
     GameObject _slotsLayout;
 
     [HideInInspector] public List<Slot> _slots;
@@ -78,7 +78,7 @@ public class Deck : ScriptableObject
 
     public void DiscardCard(Card c)
     {
-        _discardedCards.Add(c);
-        _discardedCards.ForEach(p => Debug.Log(p.name));
+        _DiscardedCards.Add(c);
+        _DiscardedCards.ForEach(p => Debug.Log(p.name));
     }
 }
