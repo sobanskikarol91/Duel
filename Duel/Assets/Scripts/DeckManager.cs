@@ -62,4 +62,11 @@ public class DeckManager : Singleton<DeckManager>
         for (int i = 1; i < _decks.Length; i++)
             _decks[i].DisableDeck();
     }
+
+    public List<Card> GetDiscardedCards()
+    {
+        List<Card> cards = new List<Card>();
+        _decks.ForEach(d => cards.AddRange(d._DiscardedCards));
+        return cards;
+    }
 }
