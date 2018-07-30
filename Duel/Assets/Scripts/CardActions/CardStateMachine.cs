@@ -1,24 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class CardStateMachine
+public class CardStateMachine : Singleton<CardStateMachine>
 {
-    [SerializeField] static DiscardedCardsUI _discardedCardUI;
-    static ICardState _buy = new BuyCard();
-    static ICardState _discard = new DiscardCard();
-    static ICardState _buildWonder;
+    [SerializeField] DiscardedCardsUI _discardedCardUI;
+    ICardState _buy = new BuyCard();
+    ICardState _discard;
+    ICardState _buildWonder;
 
-    static public void BuyWonder(Card c)
+    private void Start()
+    {
+        _discard = new DiscardCard(_discardedCardUI);
+    }
+
+    public void BuyWonder(Card c)
     {
         _buy.PlayerHasChoosenCard(c);
     }
 
-    static public void DiscardCard(Card c)
+    public void DiscardCard(Card c)
     {
-        _discard.PlayerHasChoosenCard(c);
+         _discard.PlayerHasChoosenCard(c);
     }
 
-    static public void BuyCard(Card c)
+    public void BuyCard(Card c)
     {
         _buildWonder.PlayerHasChoosenCard(c);
     }
