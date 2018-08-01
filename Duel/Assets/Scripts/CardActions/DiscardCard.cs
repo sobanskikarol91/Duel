@@ -12,6 +12,7 @@ public class DiscardCard : ICardState
 
     public void PlayerHasChoosenCard(Card card)
     {
+        DiscardedCardsUI.instance.AddCard(card);
         GameManager.instance._CurrentPlayer.AddGold();
         DeckManager.instance._currentDeck.DiscardCard(card);
         _ui.ShowCardsOnScreen();
