@@ -15,7 +15,6 @@ public class DiscardCard : ICardState
         DiscardedCardsUI.instance.AddCard(card);
         GameManager.instance._CurrentPlayer.AddGold();
         DeckManager.instance._currentDeck.DiscardCard(card);
-        _ui.ShowCardsOnScreen();
         GameManager.instance.ChangeCurrentPlayer();
     }
 }
