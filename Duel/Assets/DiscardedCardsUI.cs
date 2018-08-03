@@ -12,17 +12,16 @@ public class DiscardedCardsUI : Singleton<DiscardedCardsUI>
     public void AddCard(Card _card)
     {
         GameObject cardGO = Instantiate(discardedCardPrefab);
+        Debug.Log(_card);
         cardGO.GetComponent<Image>().sprite = _card.cardImg;
         cardGO.transform.SetParent(cardsHolder);
         cardGO.transform.localScale = Vector3.one;
         cardGO.transform.rotation = Camera.main.transform.rotation;
         cardGO.transform.localPosition = Vector3.zero;
-        discardCardWindow.SetActive(false);
     }
 
     public void ShowCardsOnScreen()
     {
-        Debug.Log("a");
         bool state = discardCardWindow.gameObject.active ? false : true;
         discardCardWindow.gameObject.SetActive(state);
     }
