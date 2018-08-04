@@ -21,28 +21,30 @@ public class CardAvailableManager
     {
         foreach (Slot s in _slot)
         {
-            if (GetCardForSymbol(s) || EnoughResources(s) || MoneyForResources(s))
+            Card c = s.Card;
+            if (GetCardForSymbol(c) || EnoughResources(c) || MoneyForResources(c))
                 AvailableCard(s);
             else
                 NotAvailabeCard(s);
         }
     }
 
-    static bool GetCardForSymbol(Slot s)
+    static bool GetCardForSymbol(Card c)
     {
-        return player.card_signs.Contains(s.Card.getForSign);
+        return player.card_signs.Contains(c.getForSign);
     }
 
-    static bool EnoughResources(Slot s)
+    static bool EnoughResources(Card c)
     {
-        return player.Resources <= s.Card.cost;
+        return player.Resources >= c.cost;
     }
 
-    static bool MoneyForResources(Slot s)
+    static bool MoneyForResources(Card c)
     {
-        Player nextPlayer = GameManager.instance.NextPlayer;
+        Price oponentResources = GameManager.instance.NextPlayer.Resources;
+        int cost = Price.GetPriceDependsOnOponentResources(c.cost, oponentResources);
 
-        return false;
+        return player.Resources.gold >= cost;
     }
 
     static void AvailableCard(Slot s)

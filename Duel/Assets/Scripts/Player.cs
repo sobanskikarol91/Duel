@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public List<Wonder> _Wonders { get; set; } = new List<Wonder>();
     public PlayerDeck _playerDeck;
-    public Price Resources { get; set; } = new Price();
+    public Price Resources { get; set; } = new Price(0,0,0,0,0,1);
     public List<ConflictToken> _conflictTokens;
     public List<SYMBOL_CARD> card_signs;
     public int Id;
