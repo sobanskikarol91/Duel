@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerCard : MonoBehaviour
+public class DisplayCard : MonoBehaviour
 {
     public CARD_TYPE type;
-    public Card _card { get; set; }
+    private Card _card;
+    public Card _Card { get { return _card; } set { _card = value; } }
 
     public void Display()
     {
