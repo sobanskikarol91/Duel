@@ -61,6 +61,7 @@ public class Slot : MonoBehaviour
         {
             CardStateMachine.instance.BuyCard(card);
             DiscoverAllReferenceCards();
+            GameManager.instance.ChangeCurrentPlayer();
             Destroy(gameObject);
         }
     }
@@ -69,11 +70,11 @@ public class Slot : MonoBehaviour
     {
         if (isVisible)
         {
-            sortingOrder = GetComponent<SpriteRenderer>().sortingOrder;
+            sortingOrder = spriteRenderer.sortingOrder;
             gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             //gameObject.transform.position += new Vector3(0, 0, -0.1f);
             //SlotWindow.ActivePanelOnPos(gameObject.transform.position);
-            GetComponent<SpriteRenderer>().sortingOrder = 10;
+            spriteRenderer.sortingOrder = 10;
         }
     }
 
@@ -82,7 +83,7 @@ public class Slot : MonoBehaviour
         if (isVisible)
         {
             gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
-            GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            spriteRenderer.sortingOrder = sortingOrder;
             //gameObject.transform.position += new Vector3(0, 0, +0.1f);
             // SlotWindow.DeactivePanel();
         }
@@ -101,5 +102,10 @@ public class Slot : MonoBehaviour
     void HideCard()
     {
         spriteRenderer.sprite = Card.reverseImg;
+    }
+
+    private void OnDestroy()
+    {
+        CardAvailableManager.DeleteSlot(this);
     }
 }

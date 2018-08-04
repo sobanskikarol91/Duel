@@ -8,13 +8,16 @@ public class CardAvailableManager
 
     public static void AddSlot(Slot s)
     {
-        Debug.Log("Dodaj karte");
         _slot.Add(s);
+    }
+
+    public static void DeleteSlot(Slot s)
+    {
+        _slot.Remove(s);
     }
 
     public static void SetAvailableCards()
     {
-        Debug.Log("Dostepne karty:" + _slot.Count);
         Player player = GameManager.instance._CurrentPlayer;
 
         foreach (Slot s in _slot)
@@ -23,7 +26,6 @@ public class CardAvailableManager
                 NotAvailabeCard(s);
             else
                 AvailableCard(s);
-
         }
     }
 
@@ -34,6 +36,6 @@ public class CardAvailableManager
 
     static void NotAvailabeCard(Slot s)
     {
-        s.GetComponent<SpriteRenderer>().color = new Color32(100,100,100,255);
+        s.GetComponent<SpriteRenderer>().color = new Color32(110, 110, 110, 255);
     }
 }
