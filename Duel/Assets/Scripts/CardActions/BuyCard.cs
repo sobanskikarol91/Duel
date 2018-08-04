@@ -25,7 +25,7 @@ public class BuyCard : ICardState
 
     bool HasCardASign()
     {
-        return _card.getForSign != SIGN_CARD.NONE ?
+        return _card.getForSign != SYMBOL_CARD.NONE ?
         CheckIfPlayerHasCardSign() : false;
     }
 

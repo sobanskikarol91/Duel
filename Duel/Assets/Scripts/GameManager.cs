@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
     public Player[] _players;
     // TODO: Player event
     public Player _CurrentPlayer { get; private set; }
-    public Player _NextPlayer { get; private set; }
+    public Player NextPlayer { get; private set; }
     public Transform _slotsPosition;
 
     WarTrackManager _warTrackManager;
@@ -42,12 +42,12 @@ public class GameManager : Singleton<GameManager>
     {
         int index = Random.Range(0, 1);
         _CurrentPlayer = _players[index];
-        _NextPlayer = _players[index == 0 ? 1 : 0];
+        NextPlayer = _players[index == 0 ? 1 : 0];
     }
 
     public void ChangeCurrentPlayer()
     {
-        _NextPlayer = _CurrentPlayer;
+        NextPlayer = _CurrentPlayer;
         _CurrentPlayer = _CurrentPlayer == _players[0] ? _players[1] : _players[0];
         CardAvailableManager.SetAvailableCards();
     }

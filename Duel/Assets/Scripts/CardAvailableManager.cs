@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class CardAvailableManager
 {
     static List<Slot> _slot = new List<Slot>();
+    static Player player = GameManager.instance._CurrentPlayer;
 
     public static void AddSlot(Slot s)
     {
@@ -18,15 +19,30 @@ public class CardAvailableManager
 
     public static void SetAvailableCards()
     {
-        Player player = GameManager.instance._CurrentPlayer;
-
         foreach (Slot s in _slot)
         {
-            if (player.Resources <= s.Card.cost)
-                NotAvailabeCard(s);
-            else
+            if (GetCardForSymbol(s) || EnoughResources(s) || MoneyForResources(s))
                 AvailableCard(s);
+            else
+                NotAvailabeCard(s);
         }
+    }
+
+    static bool GetCardForSymbol(Slot s)
+    {
+        return player.card_signs.Contains(s.Card.getForSign);
+    }
+
+    static bool EnoughResources(Slot s)
+    {
+        return player.Resources <= s.Card.cost;
+    }
+
+    static bool MoneyForResources(Slot s)
+    {
+        Player nextPlayer = GameManager.instance.NextPlayer;
+
+        return false;
     }
 
     static void AvailableCard(Slot s)

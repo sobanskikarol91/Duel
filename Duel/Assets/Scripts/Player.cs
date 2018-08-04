@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public PlayerDeck _playerDeck;
     public Price Resources { get; set; } = new Price();
     public List<ConflictToken> _conflictTokens;
+    public List<SYMBOL_CARD> card_signs;
     public int Id;
 
     private void Awake()
