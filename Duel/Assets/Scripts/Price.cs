@@ -12,6 +12,7 @@ public class Price
     public int papyrus;
     public int gold;
 
+    public Price() { wood = 0; brick = 0; rock = 0; glass = 0; papyrus = 0; gold = 0; }
     public Price(int wood, int brick, int rock, int glass, int papyrus, int gold)
     {
         this.wood = wood;
@@ -21,6 +22,7 @@ public class Price
         this.papyrus = papyrus;
         this.gold = gold;
     }
+
 
     public static bool operator >=(Price p1, Price p2)
     {
@@ -34,12 +36,12 @@ public class Price
 
     public static bool operator <=(Price p1, Price p2)
     {
-        return p1.wood <= p2.wood &&
-               p1.brick <= p2.brick &&
-               p1.rock <= p2.rock &&
-               p1.glass <= p2.glass &&
-               p1.papyrus <= p2.papyrus &&
-               p1.gold <= p2.gold;
+        return p1.wood < p2.wood ||
+               p1.brick < p2.brick ||
+               p1.rock < p2.rock ||
+               p1.glass < p2.glass ||
+               p1.papyrus < p2.papyrus ||
+               p1.gold < p2.gold;
     }
 
     public static Price operator -(Price p1, Price p2)

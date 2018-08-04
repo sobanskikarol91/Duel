@@ -12,33 +12,32 @@ public class Slot : MonoBehaviour
     private Card card;
     int sortingOrder;
     [HideInInspector] public Card Card { get { return card; } set { card = value; Init(); } }
+    public bool IsCardDiscovered { get { return (coveredByCards.Count == 0); } }
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        CoverAllReferenceCards();
     }
 
     public void Init()
     {
         if (isVisible) ShowCard();
-        else HideCard();
-        CoverAllReferenceCards();
-    }
+        else HideCard(); 
 
-    public void CoverThisCard(Slot coverCard)
-    {
-        coveredByCards.Add(coverCard);
+        if (IsCardDiscovered)
+            CardAvailableManager.AddSlot(this);
     }
 
     public void DiscoverThisCard(Slot byCard)
     {
         coveredByCards.Remove(byCard);
-        if (isCardDiscovered()) ShowCard();
-    }
 
-    void BoughtByPlayer()
-    {
-        coveredCards.ForEach(p => p.DiscoverThisCard(this));
+        if (IsCardDiscovered)
+        {
+            ShowCard();
+            CardAvailableManager.AddSlot(this);
+        }
     }
 
     void CoverAllReferenceCards()
@@ -46,16 +45,19 @@ public class Slot : MonoBehaviour
         coveredCards.ForEach(p => p.CoverThisCard(this));
     }
 
+    public void CoverThisCard(Slot coverCard)
+    {
+        coveredByCards.Add(coverCard);
+    }
+
     void DiscoverAllReferenceCards()
     {
         coveredCards.ForEach(p => p.DiscoverThisCard(this));
     }
 
-    bool isCardDiscovered() { return (coveredByCards.Count == 0); }
-
     private void OnMouseDown()
     {
-        if (isCardDiscovered())
+        if (IsCardDiscovered)
         {
             CardStateMachine.instance.BuyCard(card);
             DiscoverAllReferenceCards();

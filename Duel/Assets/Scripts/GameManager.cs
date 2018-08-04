@@ -16,15 +16,11 @@ public class GameManager : Singleton<GameManager>
     WarTrackManager _warTrackManager;
     WonderManager _wonderManager;
     TokenManager _tokenManager;
-     DeckManager _cardManager;
+    DeckManager _cardManager;
 
     void Start()
     {
         Init();
-        _tokenManager.Init();
-        _warTrackManager.Init();
-        //_wonderManager.Init();
-        _cardManager.Init();
     }
 
     void Init()
@@ -33,7 +29,13 @@ public class GameManager : Singleton<GameManager>
         _tokenManager = GetComponent<TokenManager>();
         _wonderManager = GetComponent<WonderManager>();
         _warTrackManager = GetComponent<WarTrackManager>();
+
         RandomPlayer();
+        _tokenManager.Init();
+        _warTrackManager.Init();
+        //_wonderManager.Init();
+        _cardManager.Init();    
+        CardAvailableManager.SetAvailableCards();
     }
 
     void RandomPlayer()
@@ -47,6 +49,7 @@ public class GameManager : Singleton<GameManager>
     {
         _NextPlayer = _CurrentPlayer;
         _CurrentPlayer = _CurrentPlayer == _players[0] ? _players[1] : _players[0];
+        CardAvailableManager.SetAvailableCards();
     }
 
     void PrepareTurn()
