@@ -12,37 +12,17 @@ public class Slot : MonoBehaviour
     private Card card;
     int sortingOrder;
     [HideInInspector] public Card Card { get { return card; } set { card = value; Init(); } }
-    public bool IsCardDiscovered { get { return (coveredByCards.Count == 0); } }
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        CoverAllReferenceCards();
     }
 
     public void Init()
     {
         if (isVisible) ShowCard();
-        else HideCard(); 
-
-        if (IsCardDiscovered)
-            CardAvailableManager.AddSlot(this);
-    }
-
-    public void DiscoverThisCard(Slot byCard)
-    {
-        coveredByCards.Remove(byCard);
-
-        if (IsCardDiscovered)
-        {
-            ShowCard();
-            CardAvailableManager.AddSlot(this);
-        }
-    }
-
-    void CoverAllReferenceCards()
-    {
-        coveredCards.ForEach(p => p.CoverThisCard(this));
+        else HideCard();
+        CoverAllReferenceCards();
     }
 
     public void CoverThisCard(Slot coverCard)
@@ -50,18 +30,35 @@ public class Slot : MonoBehaviour
         coveredByCards.Add(coverCard);
     }
 
+    public void DiscoverThisCard(Slot byCard)
+    {
+        coveredByCards.Remove(byCard);
+        if (isCardDiscovered()) ShowCard();
+    }
+
+    void BoughtByPlayer()
+    {
+        coveredCards.ForEach(p => p.DiscoverThisCard(this));
+    }
+
+    void CoverAllReferenceCards()
+    {
+        coveredCards.ForEach(p => p.CoverThisCard(this));
+    }
+
     void DiscoverAllReferenceCards()
     {
         coveredCards.ForEach(p => p.DiscoverThisCard(this));
     }
 
+    bool isCardDiscovered() { return (coveredByCards.Count == 0); }
+
     private void OnMouseDown()
     {
-        if (IsCardDiscovered)
+        if (isCardDiscovered())
         {
-            CardStateMachine.instance.BuyCard(card);
+            CardStateMachine.instance.DiscardCard(card);
             DiscoverAllReferenceCards();
-            GameManager.instance.ChangeCurrentPlayer();
             Destroy(gameObject);
         }
     }
@@ -70,11 +67,11 @@ public class Slot : MonoBehaviour
     {
         if (isVisible)
         {
-            sortingOrder = spriteRenderer.sortingOrder;
+            sortingOrder = GetComponent<SpriteRenderer>().sortingOrder;
             gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             //gameObject.transform.position += new Vector3(0, 0, -0.1f);
             //SlotWindow.ActivePanelOnPos(gameObject.transform.position);
-            spriteRenderer.sortingOrder = 10;
+            GetComponent<SpriteRenderer>().sortingOrder = 10;
         }
     }
 
@@ -83,7 +80,7 @@ public class Slot : MonoBehaviour
         if (isVisible)
         {
             gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
-            spriteRenderer.sortingOrder = sortingOrder;
+            GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             //gameObject.transform.position += new Vector3(0, 0, +0.1f);
             // SlotWindow.DeactivePanel();
         }
@@ -102,10 +99,5 @@ public class Slot : MonoBehaviour
     void HideCard()
     {
         spriteRenderer.sprite = Card.reverseImg;
-    }
-
-    private void OnDestroy()
-    {
-        CardAvailableManager.DeleteSlot(this);
     }
 }
