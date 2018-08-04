@@ -35,7 +35,7 @@ public class WarTrackManager : MonoBehaviour
 
     void CheckTokenDiscard()
     {
-        Player _player = GameManager.instance._NextPlayer;
+        Player _player = GameManager.instance.NextPlayer;
 
         int pos = Mathf.Abs(_pawn.StandingPoint);
         if (pos > 2) _player._conflictTokens[0].DiscardIt();

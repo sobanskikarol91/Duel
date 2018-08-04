@@ -8,18 +8,13 @@ public class BuyCard : ICardState
     Card _card;
     bool isCardBought;
 
-    private void Awake()
-    {
-        gameManager = GameManager.instance;
-    }
-
     public void PlayerHasChoosenCard(Card c)
     {
+        gameManager = GameManager.instance;
         _card = c;
-        TryBuyCard();
-
-        if (isCardBought)
-            ChooseStateDependsOnBoughtCard();
+        TryBuyCard();     
+        //if (isCardBought)
+        //    ChooseStateDependsOnBoughtCard();
     }
 
     void TryBuyCard()
@@ -30,23 +25,25 @@ public class BuyCard : ICardState
 
     bool HasCardASign()
     {
-        return _card.getForSign != SIGN_CARD.NONE ?
+        return _card.getForSign != SYMBOL_CARD.NONE ?
         CheckIfPlayerHasCardSign() : false;
     }
 
     bool CheckIfPlayerHasCardSign()
     {
-        return gameManager._CurrentPlayer.CheckSymbol(_card);
+        return gameManager._CurrentPlayer._playerDeck.CheckSymbol(_card);
     }
 
     bool HasPlayerEnoughResourceForCard()
     {
-        return gameManager._CurrentPlayer.AffordForCard(_card);
+        return true;
+        //Price playerResources = gameManager._CurrentPlayer.Resources;
+       // return playerResources >= _card.cost;
     }
 
     private void BuyThisCard()
     {
-        gameManager._CurrentPlayer.AddCard(_card);
+        gameManager._CurrentPlayer.BuyCard(_card);
         isCardBought = true;
     }
 

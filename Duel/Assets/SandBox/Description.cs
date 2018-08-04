@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AgeCreator : MonoBehaviour 
+public class Description : MonoBehaviour 
 {
     void Start()
     {
