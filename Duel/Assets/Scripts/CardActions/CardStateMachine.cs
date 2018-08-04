@@ -15,7 +15,7 @@ public class CardStateMachine : Singleton<CardStateMachine>
 
     public void BuyWonder(Card c)
     {
-        _buy.PlayerHasChoosenCard(c);
+        _buildWonder.PlayerHasChoosenCard(c);
     }
 
     public void DiscardCard(Card c)
@@ -25,6 +25,6 @@ public class CardStateMachine : Singleton<CardStateMachine>
 
     public void BuyCard(Card c)
     {
-        _buildWonder.PlayerHasChoosenCard(c);
+        _buy.PlayerHasChoosenCard(c);
     }
 }

@@ -5,16 +5,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Dictionary<CARD_TYPE, List<Card>> cardsDict = new Dictionary<CARD_TYPE, List<Card>>();
     public List<Wonder> _Wonders { get; set; } = new List<Wonder>();
-    public CardPositioner _cardPositioner;
+    public PlayerDeck _playerDeck;
     public Price Resources { get; set; } = new Price();
     public List<ConflictToken> _conflictTokens;
     public int Id;
 
     private void Awake()
     {
-        _cardPositioner.Init(this);
+        _playerDeck.Init(this);
     }
 
     public void Pay(int value)
@@ -30,24 +29,13 @@ public class Player : MonoBehaviour
 
     int GoldenCardsCount()
     {
-        return cardsDict.ContainsKey(CARD_TYPE.COMMERCIAL) ?
-            cardsDict[CARD_TYPE.COMMERCIAL].Count : 0;
+        return _playerDeck._cards.ContainsKey(CARD_TYPE.COMMERCIAL) ?
+            _playerDeck._cards[CARD_TYPE.COMMERCIAL].Count : 0;
     }
 
-    public void AddCard(Card c)
+    public void BuyCard(Card c)
     {
-        List<Card> cardLists = cardsDict[c.type];
-        cardLists.Add(c);
-    }
-
-    public bool CheckSymbol(Card card)
-    {
-        List<Card> cards = cardsDict[card.type];
-        return cards.Exists(c => c.getForSign == card.signToFreeBuy);
-    }
-
-    public bool AffordForCard(Card c)
-    {
-        return true;
+        //Resources.gold -= c.cost.gold;
+        _playerDeck.AddCardToPlayerSlot(c);
     }
 }
