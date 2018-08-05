@@ -4,19 +4,19 @@ using System;
 
 public class BuyCard : ICardState
 {
-    GameManager gameManager;
+    GameManager gm;
     Card _card;
     bool isCardBought;
 
-  public  BuyCard()
-    {
-        gameManager = GameManager.instance;
-    }
-
     public void PlayerHasChoosenCard()
     {
-        TryBuyCard();     
-        //if (isCardBought)
+        gm = GameManager.instance;
+        _card = gm._SelectedCardWindow.Slot.Card;
+        TryBuyCard();
+
+        if (!isCardBought) return;
+        gm._SelectedCardWindow.Slot.DestroySlot();
+        gm._ResourcesBar.UpdateBar();
         //    ChooseStateDependsOnBoughtCard();
     }
 
@@ -34,44 +34,36 @@ public class BuyCard : ICardState
 
     bool CheckIfPlayerHasCardSign()
     {
-        return gameManager._CurrentPlayer._playerDeck.CheckSymbol(_card);
+        return gm._CurrentPlayer._playerDeck.CheckSymbol(_card);
     }
 
     bool HasPlayerEnoughResourceForCard()
     {
         return true;
         //Price playerResources = gameManager._CurrentPlayer.Resources;
-       // return playerResources >= _card.cost;
+        // return playerResources >= _card.cost;
     }
 
     private void BuyThisCard()
     {
-        gameManager._CurrentPlayer.BuyCard(_card);
+        gm._CurrentPlayer.BuyCard(_card);
         isCardBought = true;
     }
 
     void ChooseStateDependsOnBoughtCard()
     {
-        //if(_card.type == CARD_TYPE.MILITARY)
-        //{
-        //    GameManager.instance.pa
-        //}
+        //TODO:
     }
 
     void BoughtCard(Card c)
     {
-        // Player _player = gameManager._CurrentPlayer;
-        // _player._cardPositioner.AddCardToPlayerSlot(c);
+        //Player _player = gameManager._CurrentPlayer;
+        //_player._cardPositioner.AddCardToPlayerSlot(c);
         //// ChooseStateDependsOnCard(c);
-        // gameManager.ChangeCurrentPlayer();
-        // c.EraseFromDeck();
+        //gameManager.ChangeCurrentPlayer();
+        //c.EraseFromDeck();
 
         //if (_cardManager.CheckIfItWasTheLastCard())
         //    PrepareTurn();
-    }
-
-    public void SellCard(Card _card)
-    {
-
     }
 }

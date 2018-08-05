@@ -22,5 +22,6 @@ public class DiscardCard : ICardState
         DeckManager.instance._currentDeck.DiscardCard(card);
         gm.ChangeCurrentPlayer();
         gm._SelectedCardWindow.Slot.DestroySlot();
+        gm._ResourcesBar.UpdateBar();
     }
 }

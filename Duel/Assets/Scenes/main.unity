@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4774449}
   - component: {fileID: 4774450}
   m_Layer: 5
-  m_Name: Money
+  m_Name: Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,7 +144,7 @@ RectTransform:
   - {fileID: 1479095628}
   - {fileID: 1464999389}
   m_Father: {fileID: 1175746234}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6892,6 +6892,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 1063046196}
   _cardImg: {fileID: 2046564119}
+--- !u!114 &399446480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399446478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f887a566b8d6118489bd323900a173ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: {fileID: 595959357}
+  brick: {fileID: 956343455}
+  rock: {fileID: 1326866401}
+  glass: {fileID: 1810972715}
+  papyrus: {fileID: 963337861}
+  gold: {fileID: 1464999390}
 --- !u!114 &399446483 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114940956071025078, guid: 62a804da228fa1048928b6a25b793190,
@@ -7862,7 +7879,7 @@ RectTransform:
   - {fileID: 2112411339}
   - {fileID: 1810972714}
   m_Father: {fileID: 1175746234}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15247,7 +15264,7 @@ GameObject:
   - component: {fileID: 916045809}
   - component: {fileID: 916045808}
   m_Layer: 5
-  m_Name: ScorePanel
+  m_Name: ResourcesPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15346,7 +15363,7 @@ GameObject:
   - component: {fileID: 923304139}
   - component: {fileID: 923304138}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: BuildWonderBTN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15471,7 +15488,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6b67b763c9f96db42bed521ee98f9535, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -18357,12 +18374,12 @@ RectTransform:
   m_Children:
   - {fileID: 246431290}
   - {fileID: 1434693092}
-  - {fileID: 4774449}
   - {fileID: 1558964564}
-  - {fileID: 1251485008}
   - {fileID: 1460133490}
-  - {fileID: 1671394013}
+  - {fileID: 1251485008}
   - {fileID: 427321278}
+  - {fileID: 1671394013}
+  - {fileID: 4774449}
   m_Father: {fileID: 916045807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20676,7 +20693,7 @@ GameObject:
   - component: {fileID: 1392747962}
   - component: {fileID: 1392747961}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: BuyCardBTN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20738,7 +20755,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1392747959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 399446483}
+        m_MethodName: BuyCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 399446479}
+        m_MethodName: ClosePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1392747959
@@ -20789,8 +20828,8 @@ MonoBehaviour:
     clip: {fileID: 0}
     group: {fileID: 0}
   clicked:
-    clip: {fileID: 8300000, guid: 6b67b763c9f96db42bed521ee98f9535, type: 3}
-    group: {fileID: 0}
+    clip: {fileID: 8300000, guid: 7eeb4cdb3fb8ec1419f761a6a63a1f1d, type: 3}
+    group: {fileID: 243979688247748760, guid: 10a6bcb08940293449109fcaf6a82234, type: 2}
 --- !u!82 &1392747962
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20800,8 +20839,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6b67b763c9f96db42bed521ee98f9535, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -21822,7 +21861,7 @@ RectTransform:
   - {fileID: 1518107257}
   - {fileID: 956343454}
   m_Father: {fileID: 1175746234}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23130,7 +23169,7 @@ RectTransform:
   - {fileID: 1578161460}
   - {fileID: 595959356}
   m_Father: {fileID: 1175746234}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -25819,7 +25858,7 @@ GameObject:
   - component: {fileID: 1850891834}
   - component: {fileID: 1850891833}
   m_Layer: 5
-  m_Name: Button
+  m_Name: DiscardCardBTN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25966,7 +26005,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6b67b763c9f96db42bed521ee98f9535, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -25,6 +25,7 @@ AudioMixerController:
     - 39ecfa04d4fcc8e4c80e0be83a64ed9c
     - fadf44849ddab2b48b3d2f67ec575f68
     - b996caf8d88a98d49aa017cd477d3a39
+    - 15c9a8cec2ab1244f9eff2151f70c855
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -84,6 +85,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 243979688247748760}
   - {fileID: 243439909422652890}
+  - {fileID: 243930661910807808}
   m_Volume: c1cc2e53ae550b441aedacbf7a16fb2a
   m_Pitch: 2bc0826f87eddbb4190a91f0e9a5ca40
   m_Effects:
@@ -179,6 +181,23 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &243930661910807808
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BuildWonder
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 15c9a8cec2ab1244f9eff2151f70c855
+  m_Children: []
+  m_Volume: f9dd2a6532fcd044ea97345f3669580b
+  m_Pitch: ac33fc440c6d4f145a9ae1635a24784c
+  m_Effects:
+  - {fileID: 244342182858206828}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &243979688247748760
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -218,6 +237,19 @@ AudioMixerEffectController:
   m_EffectID: 70a0d2e5e95adf446b6d0c578a275efc
   m_EffectName: Attenuation
   m_MixLevel: ae6bd88bda546aa47832f6f6839c1be6
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244342182858206828
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: b3eb24eebd35d6e4d80671da7c32555d
+  m_EffectName: Attenuation
+  m_MixLevel: c4888b36daff24a499ed77b3303219fc
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
