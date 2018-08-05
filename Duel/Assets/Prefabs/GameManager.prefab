@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114940956071025078}
   - component: {fileID: 114198128489491022}
   - component: {fileID: 114805445201538634}
+  - component: {fileID: 114930036900521456}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -122,6 +123,11 @@ MonoBehaviour:
   - {fileID: 114277722738851470}
   - {fileID: 114568589319399972}
   _slotsPosition: {fileID: 0}
+  _warTrackManager: {fileID: 114206525805098696}
+  _wonderManager: {fileID: 114225717875112798}
+  _tokenManager: {fileID: 114644086958643700}
+  _cardManager: {fileID: 114619359197360696}
+  _selectedCardWindow: {fileID: 114930036900521456}
 --- !u!114 &114198128489491022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,7 +271,8 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  Id: 1
+  card_signs: 
+  Id: 0
 --- !u!114 &114568589319399972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,7 +360,8 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  Id: 2
+  card_signs: 
+  Id: 1
 --- !u!114 &114619359197360696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,6 +413,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec081d16649f8844ab2a2f674eae005b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114930036900521456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350021869950160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e223e51d0b6bc948adea4c19d56ab6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 0}
+  _cardImg: {fileID: 0}
 --- !u!114 &114940956071025078
 MonoBehaviour:
   m_ObjectHideFlags: 1

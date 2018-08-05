@@ -8,10 +8,13 @@ public class BuyCard : ICardState
     Card _card;
     bool isCardBought;
 
-    public void PlayerHasChoosenCard(Card c)
+  public  BuyCard()
     {
         gameManager = GameManager.instance;
-        _card = c;
+    }
+
+    public void PlayerHasChoosenCard()
+    {
         TryBuyCard();     
         //if (isCardBought)
         //    ChooseStateDependsOnBoughtCard();

@@ -8,23 +8,23 @@ public class CardStateMachine : Singleton<CardStateMachine>
     ICardState _discard;
     ICardState _buildWonder;
 
-    private void Start()
+    private void Awake()
     {
         _discard = new DiscardCard(_discardedCardUI);
     }
 
-    public void BuyWonder(Card c)
+    public void BuyWonder()
     {
-        _buildWonder.PlayerHasChoosenCard(c);
+        _buildWonder.PlayerHasChoosenCard();
     }
 
-    public void DiscardCard(Card c)
+    public void DiscardCard()
     {
-         _discard.PlayerHasChoosenCard(c);
+         _discard.PlayerHasChoosenCard();
     }
 
-    public void BuyCard(Card c)
+    public void BuyCard()
     {
-        _buy.PlayerHasChoosenCard(c);
+        _buy.PlayerHasChoosenCard();
     }
 }

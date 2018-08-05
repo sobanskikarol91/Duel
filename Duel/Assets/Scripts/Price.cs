@@ -68,21 +68,26 @@ public class Price
         return new Price(wood, brick, rock, glass, papyrus, gold);
     }
 
-
-    public static Price SetPriceDependsOnOponentResources(Price cost, Price oponent)
+    public static int GetPriceDependsOnOponentResources(Price cost, Price oponent)
     {
         Price result = new Price();
         result.wood = CompareCostWithOponentResources(cost.wood, oponent.wood);
         result.brick = CompareCostWithOponentResources(cost.brick, oponent.brick);
-        result.rock =  CompareCostWithOponentResources(cost.rock, oponent.rock);
+        result.rock = CompareCostWithOponentResources(cost.rock, oponent.rock);
         result.glass = CompareCostWithOponentResources(cost.glass, oponent.glass);
         result.papyrus = CompareCostWithOponentResources(cost.papyrus, oponent.papyrus);
-        Debug.Log(result);
-        return new Price();
+        Debug.Log(result.wood + result.brick + result.rock);
+        Debug.Log(result.GetResourcesSum());
+        return result.GetResourcesSum();
     }
 
     static int CompareCostWithOponentResources(int resAmount, int oponentRes)
     {
         return resAmount == 0 ? 0 : Settings.ResourcesCost * resAmount + oponentRes;
+    }
+
+    public int GetResourcesSum()
+    {
+        return wood + brick + rock + glass + papyrus + gold;
     }
 }
