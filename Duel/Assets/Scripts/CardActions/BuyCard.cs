@@ -8,15 +8,13 @@ public class BuyCard : ICardState
     Card _card;
     bool isCardBought;
 
-  public  BuyCard()
-    {
-        gameManager = GameManager.instance;
-    }
-
     public void PlayerHasChoosenCard()
     {
-        TryBuyCard();     
-        //if (isCardBought)
+        gameManager = GameManager.instance;
+        _card = gameManager._SelectedCardWindow.Slot.Card;
+        TryBuyCard();
+        if (!isCardBought) return;
+        gameManager._SelectedCardWindow.Slot.DestroySlot();
         //    ChooseStateDependsOnBoughtCard();
     }
 
@@ -41,7 +39,7 @@ public class BuyCard : ICardState
     {
         return true;
         //Price playerResources = gameManager._CurrentPlayer.Resources;
-       // return playerResources >= _card.cost;
+        // return playerResources >= _card.cost;
     }
 
     private void BuyThisCard()
@@ -68,10 +66,5 @@ public class BuyCard : ICardState
 
         //if (_cardManager.CheckIfItWasTheLastCard())
         //    PrepareTurn();
-    }
-
-    public void SellCard(Card _card)
-    {
-
     }
 }
