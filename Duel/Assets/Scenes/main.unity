@@ -6838,9 +6838,59 @@ Prefab:
       propertyPath: Id
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114160907332319554, guid: 62a804da228fa1048928b6a25b793190,
+        type: 2}
+      propertyPath: _cardManager
+      value: 
+      objectReference: {fileID: 399446477}
+    - target: {fileID: 114160907332319554, guid: 62a804da228fa1048928b6a25b793190,
+        type: 2}
+      propertyPath: _wonderManager
+      value: 
+      objectReference: {fileID: 2110852355}
+    - target: {fileID: 114160907332319554, guid: 62a804da228fa1048928b6a25b793190,
+        type: 2}
+      propertyPath: _tokenManager
+      value: 
+      objectReference: {fileID: 399446476}
+    - target: {fileID: 114160907332319554, guid: 62a804da228fa1048928b6a25b793190,
+        type: 2}
+      propertyPath: _selectedCardWindow
+      value: 
+      objectReference: {fileID: 399446479}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62a804da228fa1048928b6a25b793190, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &399446476 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114644086958643700, guid: 62a804da228fa1048928b6a25b793190,
+    type: 2}
+  m_PrefabInternal: {fileID: 399446475}
+  m_Script: {fileID: 11500000, guid: 73892ea74438b384a83461d297e9c505, type: 3}
+--- !u!114 &399446477 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114619359197360696, guid: 62a804da228fa1048928b6a25b793190,
+    type: 2}
+  m_PrefabInternal: {fileID: 399446475}
+  m_Script: {fileID: 11500000, guid: 06762d01a80d1d645b59b30196433f79, type: 3}
+--- !u!1 &399446478 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1350021869950160, guid: 62a804da228fa1048928b6a25b793190,
+    type: 2}
+  m_PrefabInternal: {fileID: 399446475}
+--- !u!114 &399446479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399446478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e223e51d0b6bc948adea4c19d56ab6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1063046196}
+  _cardImg: {fileID: 2046564119}
 --- !u!1 &400569258
 GameObject:
   m_ObjectHideFlags: 0
@@ -16868,7 +16918,7 @@ GameObject:
   - component: {fileID: 1063046199}
   - component: {fileID: 1063046198}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: SelectedCardPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -61,7 +61,8 @@ public class Slot : MonoBehaviour
         {
             CardStateMachine.instance.BuyCard(card);
             DiscoverAllReferenceCards();
-            GameManager.instance.ChangeCurrentPlayer();
+            GameManager.instance.PlayerHasSellectedSlot(this);
+            //GameManager.instance.ChangeCurrentPlayer();
             Destroy(gameObject);
         }
     }
