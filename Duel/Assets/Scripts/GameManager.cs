@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] WonderManager _wonderManager;
     [SerializeField] TokenManager _tokenManager;
     [SerializeField] DeckManager _cardManager;
-    [SerializeField] SelectedCardWindow _selectedCardWindow;
+    public SelectedCardWindow _SelectedCardWindow { get; private set; }
 
     void Start()
     {
@@ -26,6 +26,7 @@ public class GameManager : Singleton<GameManager>
 
     void Init()
     {
+        _SelectedCardWindow = GetComponent<SelectedCardWindow>();
         RandomPlayer();
         _tokenManager.Init();
         _warTrackManager.Init();
@@ -60,6 +61,6 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayerHasSellectedSlot(Slot s)
     {
-        _selectedCardWindow.DisplayOnPanel(s);
+        _SelectedCardWindow.DisplayOnPanel(s);
     }
 }

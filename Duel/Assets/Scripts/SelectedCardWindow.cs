@@ -6,8 +6,8 @@ public class SelectedCardWindow : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     [SerializeField] Image _cardImg;
-    Slot slot;
-    Card card;
+    public Slot Slot { get; private set; }
+    public Card Card { get; private set; }
 
     private void Awake()
     {
@@ -16,9 +16,14 @@ public class SelectedCardWindow : MonoBehaviour
 
     public void DisplayOnPanel(Slot s)
     {
-        slot = s;
-        card = slot.Card;
+        Slot = s;
+        Card = Slot.Card;
         panel.SetActive(true);
-        _cardImg.sprite = card.cardImg;
+        _cardImg.sprite = Card.cardImg;
+    }
+
+    public void ClosePanel()
+    {
+        panel.SetActive(false);
     }
 }

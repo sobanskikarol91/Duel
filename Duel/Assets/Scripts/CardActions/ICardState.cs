@@ -1,4 +1,4 @@
 ﻿public interface ICardState
 {
-    void PlayerHasChoosenCard(Card c);
+    void PlayerHasChoosenCard();
 }
