@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4774449}
   - component: {fileID: 4774450}
   m_Layer: 5
-  m_Name: Money
+  m_Name: Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,7 +144,7 @@ RectTransform:
   - {fileID: 1479095628}
   - {fileID: 1464999389}
   m_Father: {fileID: 1175746234}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6892,6 +6892,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 1063046196}
   _cardImg: {fileID: 2046564119}
+--- !u!114 &399446480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399446478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f887a566b8d6118489bd323900a173ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: {fileID: 595959357}
+  brick: {fileID: 956343455}
+  rock: {fileID: 1326866401}
+  glass: {fileID: 1810972715}
+  papyrus: {fileID: 963337861}
+  gold: {fileID: 1464999390}
 --- !u!114 &399446483 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114940956071025078, guid: 62a804da228fa1048928b6a25b793190,
@@ -7862,7 +7879,7 @@ RectTransform:
   - {fileID: 2112411339}
   - {fileID: 1810972714}
   m_Father: {fileID: 1175746234}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15247,7 +15264,7 @@ GameObject:
   - component: {fileID: 916045809}
   - component: {fileID: 916045808}
   m_Layer: 5
-  m_Name: ScorePanel
+  m_Name: ResourcesPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18357,12 +18374,12 @@ RectTransform:
   m_Children:
   - {fileID: 246431290}
   - {fileID: 1434693092}
-  - {fileID: 4774449}
   - {fileID: 1558964564}
-  - {fileID: 1251485008}
   - {fileID: 1460133490}
-  - {fileID: 1671394013}
+  - {fileID: 1251485008}
   - {fileID: 427321278}
+  - {fileID: 1671394013}
+  - {fileID: 4774449}
   m_Father: {fileID: 916045807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21844,7 +21861,7 @@ RectTransform:
   - {fileID: 1518107257}
   - {fileID: 956343454}
   m_Father: {fileID: 1175746234}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23152,7 +23169,7 @@ RectTransform:
   - {fileID: 1578161460}
   - {fileID: 595959356}
   m_Father: {fileID: 1175746234}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
