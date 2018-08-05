@@ -23,7 +23,7 @@ public class Slot : MonoBehaviour
     public void Init()
     {
         if (isVisible) ShowCard();
-        else HideCard(); 
+        else HideCard();
 
         if (IsCardDiscovered)
             CardAvailableManager.AddSlot(this);
@@ -59,9 +59,7 @@ public class Slot : MonoBehaviour
     {
         if (IsCardDiscovered)
         {
-            DiscoverAllReferenceCards();
             GameManager.instance.PlayerHasSellectedSlot(this);
-            //Destroy(gameObject);
         }
     }
 
@@ -106,5 +104,11 @@ public class Slot : MonoBehaviour
     private void OnDestroy()
     {
         CardAvailableManager.DeleteSlot(this);
+    }
+
+    public void DestroySlot()
+    {
+        DiscoverAllReferenceCards();
+        Destroy(gameObject);
     }
 }

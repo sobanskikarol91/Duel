@@ -10,17 +10,17 @@ public class DiscardCard : ICardState
 
     public DiscardCard(DiscardedCardsUI ui)
     {
-        gm = GameManager.instance;
         _ui = ui;
     }
 
     public void PlayerHasChoosenCard()
     {
+        gm = GameManager.instance;
         card = gm._SelectedCardWindow.Card;
         DiscardedCardsUI.instance.AddCard(card);
-        GameManager.instance._CurrentPlayer.AddGold();
+        gm._CurrentPlayer.AddGold();
         DeckManager.instance._currentDeck.DiscardCard(card);
-        GameManager.instance.ChangeCurrentPlayer();
-        
+        gm.ChangeCurrentPlayer();
+        gm._SelectedCardWindow.Slot.DestroySlot();
     }
 }
