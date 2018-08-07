@@ -50,8 +50,8 @@ public class GameManager : Singleton<GameManager>
 
     public void ChangeCurrentPlayer()
     {
-        NextPlayer = _CurrentPlayer;
-        _CurrentPlayer = _CurrentPlayer == _players[0] ? _players[1] : _players[0];
+        //NextPlayer = _CurrentPlayer;
+        //_CurrentPlayer = _CurrentPlayer == _players[0] ? _players[1] : _players[0];
         CardAvailableManager.SetAvailableCards();
     }
 

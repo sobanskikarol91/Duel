@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 
     public void AddGold()
     {
+        Debug.Log(GoldenCardsCount() + " gold");
         Resources.gold += GoldenCardsCount() + Settings.CardCost;
         Debug.Log("Hajs " + Resources.gold);
     }
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
     int GoldenCardsCount()
     {
         return _playerDeck._cards.ContainsKey(CARD_TYPE.COMMERCIAL) ?
-            _playerDeck._cards[CARD_TYPE.COMMERCIAL].Count : 0;
+            _playerDeck._cards[CARD_TYPE.COMMERCIAL].Where( c => c._card != null).Count() : 0;
     }
 
     public void BuyCard(Card c)

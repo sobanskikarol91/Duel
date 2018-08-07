@@ -17,8 +17,7 @@ public class PlayerDeck
         // return cards.Exists(c => c.getForSign == card.signToFreeBuy);
         return false;
     }
-
-
+    
     #region Convert List of Empty slots to Dictionary
     public void Init(Player p)
     {
