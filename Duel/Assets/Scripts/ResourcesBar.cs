@@ -6,7 +6,7 @@ public class ResourcesBar : MonoBehaviour
 {
     GameManager gm;
 
-    private void Start()
+    public void Init()
     {
         gm = GameManager.instance;
     }

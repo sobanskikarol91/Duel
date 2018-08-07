@@ -9,7 +9,7 @@ public class SelectedCardWindow : MonoBehaviour
     public Slot Slot { get; private set; }
     public Card Card { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
         panel.SetActive(false); 
     }

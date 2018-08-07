@@ -18,9 +18,11 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] TokenManager _tokenManager;
     [SerializeField] DeckManager _cardManager;
     public ResourcesBar _ResourcesBar { get; private set; }
-    public SelectedCardWindow _SelectedCardWindow { get; private set; } 
-    void Start()
+    public SelectedCardWindow _SelectedCardWindow { get; private set; }
+
+    protected override void Awake()
     {
+        base.Awake();
         Init();
     }
 
@@ -29,10 +31,12 @@ public class GameManager : Singleton<GameManager>
         _ResourcesBar = GetComponent<ResourcesBar>();
         _SelectedCardWindow = GetComponent<SelectedCardWindow>();
         RandomPlayer();
+
         _tokenManager.Init();
         _warTrackManager.Init();
         //_wonderManager.Init();
-        _cardManager.Init();    
+        _cardManager.Init();
+        _ResourcesBar.Init();
         CardAvailableManager.SetAvailableCards();
         _ResourcesBar.UpdateBar();
     }
