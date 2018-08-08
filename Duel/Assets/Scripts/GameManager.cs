@@ -36,8 +36,8 @@ public class GameManager : Singleton<GameManager>
         _warTrackManager.Init();
         //_wonderManager.Init();
         _cardManager.Init();
-        _ResourcesBar.Init();
         CardAvailableManager.SetAvailableCards();
+        _ResourcesBar.Init();
         _ResourcesBar.UpdateBar();
     }
 

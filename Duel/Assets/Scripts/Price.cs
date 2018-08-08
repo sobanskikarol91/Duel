@@ -76,8 +76,8 @@ public class Price
         result.rock = CompareCostWithOponentResources(cost.rock, oponent.rock);
         result.glass = CompareCostWithOponentResources(cost.glass, oponent.glass);
         result.papyrus = CompareCostWithOponentResources(cost.papyrus, oponent.papyrus);
-        Debug.Log(result.wood + result.brick + result.rock);
-        Debug.Log(result.GetResourcesSum());
+
+
         return result.GetResourcesSum();
     }
 

@@ -18,15 +18,16 @@ public class ResourcesBar : MonoBehaviour
     public Text papyrus;
     public Text gold;
 
+    delegate int Resources(PRODUCE type);
+
     public void UpdateBar()
     {
-        Price r = gm._CurrentPlayer.Resources;
+        Resources playerResources = gm._CurrentPlayer.GetResourceAmount;
 
-        wood.text = r.wood.ToString();
-        brick.text = r.brick.ToString();
-        rock.text = r.rock.ToString();
-        glass.text = r.glass.ToString();
-        papyrus.text = r.papyrus.ToString();
-        gold.text = r.gold.ToString();
+        wood.text = playerResources(PRODUCE.WOOD).ToString();
+        brick.text = playerResources(PRODUCE.BRICK).ToString();
+        rock.text = playerResources(PRODUCE.ROCK).ToString();
+        glass.text = playerResources(PRODUCE.GLASS).ToString();
+        papyrus.text = playerResources(PRODUCE.PAPYRUS).ToString();
     }
 }

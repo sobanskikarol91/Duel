@@ -32,12 +32,28 @@ public class Player : MonoBehaviour
     int GoldenCardsCount()
     {
         return _playerDeck._cards.ContainsKey(CARD_TYPE.COMMERCIAL) ?
-            _playerDeck._cards[CARD_TYPE.COMMERCIAL].Where( c => c._card != null).Count() : 0;
+            _playerDeck._cards[CARD_TYPE.COMMERCIAL].Where(c => c._card != null).Count() : 0;
     }
 
     public void BuyCard(Card c)
     {
         //Resources.gold -= c.cost.gold;
         _playerDeck.AddCardToPlayerSlot(c);
+    }
+
+    public int GetResourceAmount(PRODUCE type)
+    {
+        List<PlayerCard> _playerCards = new List<PlayerCard>();
+
+        if (type == PRODUCE.GLASS || type == PRODUCE.PAPYRUS)
+            _playerDeck._cards.TryGetValue(CARD_TYPE.MANUFACTURE, out _playerCards);
+        else
+            _playerDeck._cards.TryGetValue(CARD_TYPE.RAW_MATERIAL, out _playerCards);
+
+        List<RawMaterial> produceCards = new List<RawMaterial>();
+
+        _playerCards?.ForEach(p => produceCards.Add((RawMaterial)p?._card));
+
+        return produceCards.Where(p => p?.produce == type).Count();
     }
 }

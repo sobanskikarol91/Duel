@@ -14,10 +14,8 @@ public class BuyCard : ICardState
         _card = gm._SelectedCardWindow.Slot.Card;
         TryBuyCard();
 
-        if (!isCardBought) return;
-        gm._SelectedCardWindow.Slot.DestroySlot();
-        gm._ResourcesBar.UpdateBar();
-        //    ChooseStateDependsOnBoughtCard();
+     //   if (isCardBought)
+
     }
 
     void TryBuyCard()
@@ -48,22 +46,13 @@ public class BuyCard : ICardState
     {
         gm._CurrentPlayer.BuyCard(_card);
         isCardBought = true;
+        gm._SelectedCardWindow.Slot.DestroySlot();
+        gm._ResourcesBar.UpdateBar();
     }
+
 
     void ChooseStateDependsOnBoughtCard()
     {
         //TODO:
-    }
-
-    void BoughtCard(Card c)
-    {
-        //Player _player = gameManager._CurrentPlayer;
-        //_player._cardPositioner.AddCardToPlayerSlot(c);
-        //// ChooseStateDependsOnCard(c);
-        //gameManager.ChangeCurrentPlayer();
-        //c.EraseFromDeck();
-
-        //if (_cardManager.CheckIfItWasTheLastCard())
-        //    PrepareTurn();
     }
 }
