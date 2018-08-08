@@ -4,13 +4,6 @@ using UnityEngine.UI;
 
 public class ResourcesBar : MonoBehaviour
 {
-    GameManager gm;
-
-    public void Init()
-    {
-        gm = GameManager.instance;
-    }
-
     public Text wood;
     public Text brick;
     public Text rock;
@@ -18,16 +11,15 @@ public class ResourcesBar : MonoBehaviour
     public Text papyrus;
     public Text gold;
 
-    delegate int Resources(PRODUCE type);
-
     public void UpdateBar()
     {
-        Resources playerResources = gm._CurrentPlayer.GetResourceAmount;
+        Resources _res = GameManager.instance._CurrentPlayer.GetResources();
 
-        wood.text = playerResources(PRODUCE.WOOD).ToString();
-        brick.text = playerResources(PRODUCE.BRICK).ToString();
-        rock.text = playerResources(PRODUCE.ROCK).ToString();
-        glass.text = playerResources(PRODUCE.GLASS).ToString();
-        papyrus.text = playerResources(PRODUCE.PAPYRUS).ToString();
+        wood.text = _res.wood.ToString();
+        brick.text = _res.brick.ToString();
+        rock.text = _res.rock.ToString();
+        glass.text = _res.glass.ToString();
+        papyrus.text = _res.papyrus.ToString();
+        gold.text = _res.gold.ToString();
     }
 }

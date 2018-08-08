@@ -36,15 +36,15 @@ public class CardAvailableManager
 
     static bool EnoughResources(Card c)
     {
-        return player.Resources >= c.cost;
+        return player.GetResources() >= c.cost;
     }
 
     static bool MoneyForResources(Card c)
     {
-        Price oponentResources = GameManager.instance.NextPlayer.Resources;
-        int cost = Price.GetPriceDependsOnOponentResources(c.cost, oponentResources);
+        Resources oponentResources = GameManager.instance.NextPlayer.GetResources();
+        int cost = Resources.GetPriceDependsOnOponentResources(c.cost, oponentResources);
 
-        return player.Resources.gold >= cost;
+        return player.Gold >= cost;
     }
 
     static void AvailableCard(Slot s)

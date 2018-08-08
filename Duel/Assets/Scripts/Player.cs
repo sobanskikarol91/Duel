@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public List<Wonder> _Wonders { get; set; } = new List<Wonder>();
     public PlayerDeck _playerDeck;
-    public Price Resources { get; set; } = new Price(0, 0, 0, 0, 0, 1);
+    public int Gold { get; private set; } = Settings.StartGold;
     public List<ConflictToken> _conflictTokens;
     public List<SYMBOL_CARD> card_signs;
     public int Id;
@@ -25,8 +25,8 @@ public class Player : MonoBehaviour
     public void AddGold()
     {
         Debug.Log(GoldenCardsCount() + " gold");
-        Resources.gold += GoldenCardsCount() + Settings.CardCost;
-        Debug.Log("Hajs " + Resources.gold);
+        Gold += GoldenCardsCount() + Settings.CardCost;
+        Debug.Log("Hajs " + Gold);
     }
 
     int GoldenCardsCount()
@@ -37,11 +37,11 @@ public class Player : MonoBehaviour
 
     public void BuyCard(Card c)
     {
-        //Resources.gold -= c.cost.gold;
+        Gold -= c.cost.gold;
         _playerDeck.AddCardToPlayerSlot(c);
     }
 
-    public int GetResourceAmount(PRODUCE type)
+    public int GetResources(PRODUCE type)
     {
         List<PlayerCard> _playerCards = new List<PlayerCard>();
 
@@ -51,9 +51,19 @@ public class Player : MonoBehaviour
             _playerDeck._cards.TryGetValue(CARD_TYPE.RAW_MATERIAL, out _playerCards);
 
         List<RawMaterial> produceCards = new List<RawMaterial>();
-
         _playerCards?.ForEach(p => produceCards.Add((RawMaterial)p?._card));
-
         return produceCards.Where(p => p?.produce == type).Count();
+    }
+
+    public Resources GetResources()
+    {
+        Resources r = new Resources();
+        r.wood = GetResources(PRODUCE.WOOD);
+        r.brick = GetResources(PRODUCE.BRICK);
+        r.rock = GetResources(PRODUCE.ROCK);
+        r.glass = GetResources(PRODUCE.GLASS);
+        r.papyrus = GetResources(PRODUCE.PAPYRUS);
+        r.gold = Gold;
+        return r;
     }
 }

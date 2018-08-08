@@ -37,7 +37,6 @@ public class GameManager : Singleton<GameManager>
         //_wonderManager.Init();
         _cardManager.Init();
         CardAvailableManager.SetAvailableCards();
-        _ResourcesBar.Init();
         _ResourcesBar.UpdateBar();
     }
 

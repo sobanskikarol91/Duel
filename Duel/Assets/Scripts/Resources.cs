@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
-public class Price
+public class Resources
 {
     public int wood;
     public int brick;
@@ -12,8 +12,8 @@ public class Price
     public int papyrus;
     public int gold;
 
-    public Price() { wood = 0; brick = 0; rock = 0; glass = 0; papyrus = 0; gold = 0; }
-    public Price(int wood, int brick, int rock, int glass, int papyrus, int gold)
+    public Resources() { wood = 0; brick = 0; rock = 0; glass = 0; papyrus = 0; gold = 0; }
+    public Resources(int wood, int brick, int rock, int glass, int papyrus, int gold)
     {
         this.wood = wood;
         this.brick = brick;
@@ -24,7 +24,7 @@ public class Price
     }
 
 
-    public static bool operator >=(Price p1, Price p2)
+    public static bool operator >=(Resources p1, Resources p2)
     {
         return p1.wood >= p2.wood &&
                p1.brick >= p2.brick &&
@@ -34,7 +34,7 @@ public class Price
                p1.gold >= p2.gold;
     }
 
-    public static bool operator <=(Price p1, Price p2)
+    public static bool operator <=(Resources p1, Resources p2)
     {
         return p1.wood < p2.wood ||
                p1.brick < p2.brick ||
@@ -44,7 +44,7 @@ public class Price
                p1.gold < p2.gold;
     }
 
-    public static Price operator -(Price p1, Price p2)
+    public static Resources operator -(Resources p1, Resources p2)
     {
         int wood = p1.wood - p2.wood;
         int brick = p1.brick - p2.brick;
@@ -53,10 +53,10 @@ public class Price
         int papyrus = p1.papyrus - p2.papyrus;
         int gold = p1.gold - p2.gold;
 
-        return new Price(wood, brick, rock, glass, papyrus, gold);
+        return new Resources(wood, brick, rock, glass, papyrus, gold);
     }
 
-    public static Price operator +(Price p1, Price p2)
+    public static Resources operator +(Resources p1, Resources p2)
     {
         int wood = p1.wood + p2.wood;
         int brick = p1.brick + p2.brick;
@@ -65,12 +65,12 @@ public class Price
         int papyrus = p1.papyrus + p2.papyrus;
         int gold = p1.gold + p2.gold;
 
-        return new Price(wood, brick, rock, glass, papyrus, gold);
+        return new Resources(wood, brick, rock, glass, papyrus, gold);
     }
 
-    public static int GetPriceDependsOnOponentResources(Price cost, Price oponent)
+    public static int GetPriceDependsOnOponentResources(Resources cost, Resources oponent)
     {
-        Price result = new Price();
+        Resources result = new Resources();
         result.wood = CompareCostWithOponentResources(cost.wood, oponent.wood);
         result.brick = CompareCostWithOponentResources(cost.brick, oponent.brick);
         result.rock = CompareCostWithOponentResources(cost.rock, oponent.rock);

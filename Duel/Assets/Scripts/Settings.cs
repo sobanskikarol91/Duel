@@ -7,4 +7,5 @@ public static class Settings
     public static int SecondConflictToken { get; } = 5;
     public static int CardCost { get; } = 2;
     public static int ResourcesCost { get; } = 2;
+    public static int StartGold { get; } = 7;
 }

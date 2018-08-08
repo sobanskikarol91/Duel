@@ -14,13 +14,13 @@ public class BuyCard : ICardState
         _card = gm._SelectedCardWindow.Slot.Card;
         TryBuyCard();
 
-     //   if (isCardBought)
+        //   if (isCardBought)
 
     }
 
     void TryBuyCard()
     {
-        if (HasCardASign() || HasPlayerEnoughResourceForCard())
+        if (HasCardASign() || EnoughResources())
             BuyThisCard();
     }
 
@@ -35,11 +35,9 @@ public class BuyCard : ICardState
         return gm._CurrentPlayer._playerDeck.CheckSymbol(_card);
     }
 
-    bool HasPlayerEnoughResourceForCard()
+    bool EnoughResources()
     {
-        return true;
-        //Price playerResources = gameManager._CurrentPlayer.Resources;
-        // return playerResources >= _card.cost;
+        return gm._CurrentPlayer.GetResources() >= _card.cost;
     }
 
     private void BuyThisCard()
