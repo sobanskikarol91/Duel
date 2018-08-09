@@ -36,14 +36,16 @@ public class CardAvailableManager
 
     static bool EnoughResources(Card c)
     {
+        Debug.Log("Koszt:" + (player.GetResources() >= c.cost));
         return player.GetResources() >= c.cost;
     }
 
     static bool MoneyForResources(Card c)
     {
         Resources oponentResources = GameManager.instance.NextPlayer.GetResources();
-        int cost = Resources.GetPriceDependsOnOponentResources(c.cost, oponentResources);
-
+        Resources difference = player.GetResources() - c.cost;
+        int cost = Resources.GetPriceDependsOnOponentResources(difference, oponentResources);
+        Debug.Log("Cost: " + cost);
         return player.Gold >= cost;
     }
 
@@ -54,6 +56,6 @@ public class CardAvailableManager
 
     static void NotAvailabeCard(Slot s)
     {
-        s.GetComponent<SpriteRenderer>().color = new Color32(110, 110, 110, 255);
+        s.GetComponent<SpriteRenderer>().color = Settings.toExpensiveCard;
     }
 }
