@@ -5,4 +5,9 @@ using System.Collections;
 public class Civilian : Card
 {
     public int expierience;
+
+    Civilian()
+    {
+        Type = CARD_TYPE.CIVILIAN;
+    }
 }

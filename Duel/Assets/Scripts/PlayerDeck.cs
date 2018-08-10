@@ -72,9 +72,9 @@ public class PlayerDeck
     List<PlayerCard> GetAllSlotsForCardType()
     {
         List<PlayerCard> c = new List<PlayerCard>();
-        if (!_cards.TryGetValue(_card.type, out c))
-            Debug.Log("Nie ma takiego typu:" + _card.type);
-        return _cards[_card.type];
+        if (!_cards.TryGetValue(_card.Type, out c))
+            Debug.Log("Nie ma takiego typu:" + _card.Type);
+        return _cards[_card.Type];
     }
     #endregion
 

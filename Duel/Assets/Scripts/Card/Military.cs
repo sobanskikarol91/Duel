@@ -5,4 +5,9 @@ using System.Collections;
 public class Military : Card
 {
     public int strength;
+
+    Military()
+    {
+        Type = CARD_TYPE.MILITARY;
+    }
 }

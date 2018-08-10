@@ -5,4 +5,10 @@ using System.Collections;
 public class Science : Card
 {
     public int expierience;
+    public SYMBOL_SCIENCE symbol = SYMBOL_SCIENCE.NONE;
+
+    Science()
+    {
+        Type = CARD_TYPE.SCIENTIFIC;
+    }
 }
