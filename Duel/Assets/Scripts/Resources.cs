@@ -77,7 +77,6 @@ public class Resources
         result.glass = CompareCostWithOponentResources(cost.glass, oponent.glass);
         result.papyrus = CompareCostWithOponentResources(cost.papyrus, oponent.papyrus);
 
-
         return result.GetResourcesSum();
     }
 

@@ -10,12 +10,17 @@ public class ResourceComparer
         return GameManager.instance._CurrentPlayer.GetResources() >= b.cost;
     }
 
-    public static bool MoneyForResources(Buyable b)
+    public static int ChangeResourcesForGold(Buyable b)
     {
         Resources oponentResources = GameManager.instance.NextPlayer.GetResources();
         Resources difference = b.cost - player.GetResources();
         int oponentCost = Resources.GetPriceDependsOnOponentResources(difference, oponentResources);
-        return player.Gold >= oponentCost + difference.gold;
+        return oponentCost + b.cost.gold;
+    }
+
+    public static bool EnoughGoldToResources(Buyable b)
+    {
+        return player.Gold >= ChangeResourcesForGold(b);
     }
 
     protected static void CanBuyEffects(Slot s)
