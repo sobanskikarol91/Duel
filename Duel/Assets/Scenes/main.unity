@@ -15587,8 +15587,8 @@ MonoBehaviour:
     clip: {fileID: 0}
     group: {fileID: 0}
   clicked:
-    clip: {fileID: 8300000, guid: 6b67b763c9f96db42bed521ee98f9535, type: 3}
-    group: {fileID: 0}
+    clip: {fileID: 8300000, guid: d1a411c888a7afc459f9f1f130dccb3e, type: 3}
+    group: {fileID: 243930661910807808, guid: 10a6bcb08940293449109fcaf6a82234, type: 2}
 --- !u!82 &923304139
 AudioSource:
   m_ObjectHideFlags: 0
