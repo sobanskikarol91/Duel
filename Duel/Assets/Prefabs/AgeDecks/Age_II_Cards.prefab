@@ -1366,7 +1366,7 @@ MonoBehaviour:
   isVisible: 1
   coveredCards:
   - {fileID: 114461460889411476}
-  - {fileID: 114948912803857124}
+  - {fileID: 114238253023266396}
 --- !u!114 &114128067901877124
 MonoBehaviour:
   m_ObjectHideFlags: 1
