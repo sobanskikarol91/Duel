@@ -8,14 +8,15 @@ public class BuyCard : ICardState
     Card _card;
     bool isCardBought;
 
-    public void PlayerHasChoosenCard()
+    public BuyCard()
     {
         gm = GameManager.instance;
+    }
+
+    public void PlayerHasChoosenCard()
+    {
         _card = gm._SelectedCardWindow.Slot.Card;
         TryBuyCard();
-
-        //   if (isCardBought)
-
     }
 
     void TryBuyCard()

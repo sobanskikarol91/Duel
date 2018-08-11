@@ -52,7 +52,13 @@ public class Player : MonoBehaviour
 
         List<ProduceCard> produceCards = new List<ProduceCard>();
         _playerCards?.ForEach(p => produceCards.Add((ProduceCard)p?._card));
-        return produceCards.Where(p => p?.produce == type).Count();
+
+        ProduceCard[] typeCards = produceCards.Where(p => p?.produce == type).ToArray();
+
+        int allresources = 0;
+        typeCards.ForEach(c => allresources += c.amount);
+
+        return allresources;
     }
 
     public Resources GetResources()

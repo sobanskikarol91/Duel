@@ -4,12 +4,13 @@ using System.Collections;
 public class CardStateMachine : Singleton<CardStateMachine>
 {
     [SerializeField] DiscardedCardsUI _discardedCardUI;
-    ICardState _buy = new BuyCard();
+    ICardState _buy;
     ICardState _discard;
     ICardState _buildWonder;
 
-    private void Awake()
+    private void Start()
     {
+        _buy = new BuyCard();
         _discard = new DiscardCard(_discardedCardUI);
     }
 
