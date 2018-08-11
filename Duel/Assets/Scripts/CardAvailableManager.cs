@@ -22,7 +22,7 @@ public  class CardAvailableManager : ResourceComparer
         foreach (Slot s in _slot)
         {
             Card c = s.Card;
-            if (GetCardForSymbol(c) || EnoughResources(c) || MoneyForResources(c))
+            if (GetCardForSymbol(c) || EnoughResources(c) )
                 CanBuyEffects(s);
             else
                 ToExpensiveEffects(s);

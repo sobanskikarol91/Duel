@@ -24,14 +24,14 @@ public class Resources
     }
 
 
-    public static bool operator >=(Resources p1, Resources p2)
+    public static bool operator >=(Resources r1, Resources r2)
     {
-        return p1.wood >= p2.wood &&
-               p1.brick >= p2.brick &&
-               p1.rock >= p2.rock &&
-               p1.glass >= p2.glass &&
-               p1.papyrus >= p2.papyrus &&
-               p1.gold >= p2.gold;
+        return r1.wood >= r2.wood &&
+               r1.brick >= r2.brick &&
+               r1.rock >= r2.rock &&
+               r1.glass >= r2.glass &&
+               r1.papyrus >= r2.papyrus &&
+               r1.gold >= r2.gold;
     }
 
     public static bool operator <=(Resources p1, Resources p2)
