@@ -65,6 +65,6 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayerHasSellectedSlot(Slot s)
     {
-        _selectedCardWindow.DisplayOnPanel(s);
+        _selectedCardWindow.DisplayPanel(s);
     }
 }

@@ -20,8 +20,9 @@ public class SelectedCardWindow : MonoBehaviour
         panel.SetActive(false);
     }
 
-    public void DisplayOnPanel(Slot s)
+    public void DisplayPanel(Slot s)
     {
+        InteractableManager.InteractableOff();
         _as.Play();
         Slot = s;
         Card = Slot.Card;
@@ -64,6 +65,7 @@ public class SelectedCardWindow : MonoBehaviour
 
     public void ClosePanelWithSnd()
     {
+        InteractableManager.InteractableOn();
         _as.Play();
         panel.SetActive(false);
     }

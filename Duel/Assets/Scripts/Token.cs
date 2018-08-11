@@ -1,15 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿//using UnityEngine;
+//using System.Collections;
 
-public class Token : MonoBehaviour 
-{
-    void Start()
-    {
+//public class Token :  
+//{
 
-    }
-
-    void Update()
-    {
-
-    }
-}
+//}

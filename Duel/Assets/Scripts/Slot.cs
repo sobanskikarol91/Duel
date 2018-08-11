@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class Slot : MonoBehaviour
+public class Slot : Interactable
 {
     [SerializeField] public bool isVisible = true;
     [SerializeField] public List<Slot> coveredCards = new List<Slot>();
@@ -14,8 +14,9 @@ public class Slot : MonoBehaviour
     [HideInInspector] public Card Card { get { return card; } set { card = value; Init(); } }
     public bool IsCardDiscovered { get { return (coveredByCards.Count == 0); } }
 
-    private void Awake()
+     protected override void Awake()
     {
+        base.Awake();
         spriteRenderer = GetComponent<SpriteRenderer>();
         CoverAllReferenceCards();
     }
@@ -102,8 +103,9 @@ public class Slot : MonoBehaviour
         spriteRenderer.sprite = Card.reverseImg;
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
         CardAvailableManager.DeleteSlot(this);
     }
 

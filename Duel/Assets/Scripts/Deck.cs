@@ -11,7 +11,6 @@ public class Deck : ScriptableObject
     List<Card> _unusedCards = new List<Card>();
     public List<Card> _DiscardedCards { get; } = new List<Card>();
     GameObject _slotsLayout;
-
     [HideInInspector] public List<Slot> _slots;
 
     public void Init()

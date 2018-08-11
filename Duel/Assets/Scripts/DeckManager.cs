@@ -69,4 +69,5 @@ public class DeckManager : Singleton<DeckManager>
         _decks.ForEach(d => cards.AddRange(d._DiscardedCards));
         return cards;
     }
+
 }

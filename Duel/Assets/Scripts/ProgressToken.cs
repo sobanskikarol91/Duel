@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ProgressToken : MonoBehaviour
+public class ProgressToken : Interactable
 {
     float zoomMultiply = 2.1f;
     SpriteRenderer _sr;
