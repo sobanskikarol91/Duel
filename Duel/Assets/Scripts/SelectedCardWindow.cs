@@ -11,7 +11,7 @@ public class SelectedCardWindow : MonoBehaviour
 
     private void Start()
     {
-        panel.SetActive(false); 
+        panel.SetActive(false);
     }
 
     public void DisplayOnPanel(Slot s)
@@ -20,6 +20,7 @@ public class SelectedCardWindow : MonoBehaviour
         Card = Slot.Card;
         panel.SetActive(true);
         _cardImg.sprite = Card.cardImg;
+        _cardImg.color = s.GetComponent<SpriteRenderer>().color;
     }
 
     public void ClosePanel()

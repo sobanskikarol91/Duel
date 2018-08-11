@@ -7,7 +7,6 @@ public class ResourceComparer
 
     public static bool EnoughResources(Buyable b)
     {
-        Debug.Log("Enought: " + b.name + " " + (GameManager.instance._CurrentPlayer.GetResources() >= b.cost));
         return GameManager.instance._CurrentPlayer.GetResources() >= b.cost;
     }
 
@@ -26,7 +25,6 @@ public class ResourceComparer
 
     protected static void ToExpensiveEffects(Slot s)
     {
-        Debug.Log("Too Expensive: " + s.Card.name);
         s.GetComponent<SpriteRenderer>().color = Settings.toExpensiveCard;
     }
 }
