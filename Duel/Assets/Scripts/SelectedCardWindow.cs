@@ -62,6 +62,12 @@ public class SelectedCardWindow : MonoBehaviour
         panel.SetActive(false);
     }
 
+    public void ClosePanelWithSnd()
+    {
+        _as.Play();
+        panel.SetActive(false);
+    }
+
     void ShowSymbol()
     {
         //TODO
