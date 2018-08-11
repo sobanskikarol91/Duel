@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb6b202baffc7c6479fb1d622145e073, type: 3}
-  m_Name: 
+  m_Name: Civilian 4
   m_EditorClassIdentifier: 
   cost:
     wood: 1
@@ -19,7 +19,7 @@ MonoBehaviour:
     papyrus: 1
     gold: 0
   cardImg: {fileID: 21300050, guid: 1fb8fac3ce3ea7944bb797e4082460c2, type: 3}
-  reverseImg: {fileID: 0}
+  reverseImg: {fileID: 21300016, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
   _deck: {fileID: 0}
   signToFreeBuy: 4
   getForSign: 3

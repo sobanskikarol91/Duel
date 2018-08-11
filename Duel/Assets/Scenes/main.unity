@@ -6952,6 +6952,12 @@ Prefab:
       propertyPath: additionalPayment
       value: 
       objectReference: {fileID: 325646426}
+    - target: {fileID: 114619359197360696, guid: 62a804da228fa1048928b6a25b793190,
+        type: 2}
+      propertyPath: _decksSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 97d45c48d3b810540b79a1a9c8a5ee3a,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62a804da228fa1048928b6a25b793190, type: 2}
   m_IsPrefabParent: 0
@@ -17834,7 +17840,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.6050003, y: 4.0200005}
+    oldSize: {x: 2.6100001, y: 4.03}
     newSize: {x: 2.6050003, y: 4.0200005}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17879,7 +17885,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300014, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
+  m_Sprite: {fileID: 21300016, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

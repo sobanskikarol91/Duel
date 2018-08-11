@@ -19,7 +19,7 @@ MonoBehaviour:
     papyrus: 0
     gold: 0
   cardImg: {fileID: 21300042, guid: 1fb8fac3ce3ea7944bb797e4082460c2, type: 3}
-  reverseImg: {fileID: 0}
+  reverseImg: {fileID: 21300016, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
   _deck: {fileID: 0}
   signToFreeBuy: 6
   getForSign: 0
