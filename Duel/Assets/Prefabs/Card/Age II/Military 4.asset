@@ -9,19 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8804631ba20a7114a9b98fc97c80b725, type: 3}
-  m_Name: Military 3
+  m_Name: Military 4
   m_EditorClassIdentifier: 
   cost:
     wood: 0
-    brick: 2
+    brick: 0
     rock: 0
-    glass: 1
+    glass: 0
     papyrus: 0
-    gold: 0
-  cardImg: {fileID: 21300004, guid: 1fb8fac3ce3ea7944bb797e4082460c2, type: 3}
+    gold: 3
+  cardImg: {fileID: 21300008, guid: 1fb8fac3ce3ea7944bb797e4082460c2, type: 3}
   reverseImg: {fileID: 0}
   _deck: {fileID: 0}
-  type: 5
-  signToFreeBuy: 8
-  getForSign: 0
+  signToFreeBuy: 0
+  getForSign: 7
   strength: 2

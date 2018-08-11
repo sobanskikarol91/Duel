@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Manufacture : Card 
+[CreateAssetMenu(fileName = "Manufacture", menuName = "Card/Manufacture")]
+public class Manufacture : ProduceCard 
 {
-    public PRODUCE produce;
-    public int amount = 1;
-
     Manufacture()
     {
         Type = CARD_TYPE.MANUFACTURE;

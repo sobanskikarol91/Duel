@@ -50,8 +50,8 @@ public class Player : MonoBehaviour
         else
             _playerDeck._cards.TryGetValue(CARD_TYPE.RAW_MATERIAL, out _playerCards);
 
-        List<RawMaterial> produceCards = new List<RawMaterial>();
-        _playerCards?.ForEach(p => produceCards.Add((RawMaterial)p?._card));
+        List<ProduceCard> produceCards = new List<ProduceCard>();
+        _playerCards?.ForEach(p => produceCards.Add((ProduceCard)p?._card));
         return produceCards.Where(p => p?.produce == type).Count();
     }
 

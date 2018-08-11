@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Name: Science
   m_EditorClassIdentifier: 
   cost:
-    wood: 0
+    wood: 1
     brick: 0
     rock: 0
-    glass: 0
+    glass: 2
     papyrus: 0
     gold: 0
-  cardImg: {fileID: 0}
+  cardImg: {fileID: 21300010, guid: 1fb8fac3ce3ea7944bb797e4082460c2, type: 3}
   reverseImg: {fileID: 0}
   _deck: {fileID: 0}
-  type: 0
   signToFreeBuy: 0
   getForSign: 0
   expierience: 0
+  symbol: 0

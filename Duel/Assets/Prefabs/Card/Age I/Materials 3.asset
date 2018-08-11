@@ -11,9 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e9e143380892044891043bb9d4004d, type: 3}
   m_Name: Materials 3
   m_EditorClassIdentifier: 
-  cardImg: {fileID: 21300044, guid: 1da175dcbecb17440ba89152086f0d7e, type: 3}
-  reverseImg: {fileID: 21300014, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
-  _deck: {fileID: 0}
   cost:
     wood: 0
     brick: 0
@@ -21,6 +18,10 @@ MonoBehaviour:
     glass: 0
     papyrus: 0
     gold: 1
-  type: 1
+  cardImg: {fileID: 21300044, guid: 1da175dcbecb17440ba89152086f0d7e, type: 3}
+  reverseImg: {fileID: 21300014, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
+  _deck: {fileID: 0}
+  signToFreeBuy: 0
+  getForSign: 0
   produce: 1
   amount: 1
