@@ -23,5 +23,5 @@ MonoBehaviour:
   _deck: {fileID: 0}
   signToFreeBuy: 0
   getForSign: 0
-  produce: 0
+  produce: 1
   amount: 1

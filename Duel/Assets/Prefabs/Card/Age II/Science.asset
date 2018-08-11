@@ -21,7 +21,7 @@ MonoBehaviour:
   cardImg: {fileID: 21300010, guid: 1fb8fac3ce3ea7944bb797e4082460c2, type: 3}
   reverseImg: {fileID: 0}
   _deck: {fileID: 0}
-  signToFreeBuy: 0
+  signToFreeBuy: 15
   getForSign: 0
-  expierience: 0
-  symbol: 0
+  expierience: 1
+  symbol: 4

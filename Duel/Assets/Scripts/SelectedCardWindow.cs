@@ -9,6 +9,9 @@ public class SelectedCardWindow : MonoBehaviour
     public Slot Slot { get; private set; }
     public Card Card { get; private set; }
 
+    [SerializeField] Button buyBTN;
+    [SerializeField] Button buildBtn;
+
     private void Start()
     {
         panel.SetActive(false);
@@ -19,11 +22,29 @@ public class SelectedCardWindow : MonoBehaviour
         Slot = s;
         Card = Slot.Card;
         panel.SetActive(true);
-        _cardImg.sprite = Card.cardImg;
-        _cardImg.color = s.GetComponent<SpriteRenderer>().color;
+
+        SetCard();
+        SetBuyBTN();
+        SetBuildBTN();
     }
 
-    public void ClosePanel()
+    void SetCard()
+    {
+        _cardImg.sprite = Card.cardImg;
+        _cardImg.color = Slot.GetComponent<SpriteRenderer>().color;
+    }
+
+    void SetBuyBTN()
+    {
+        
+    }
+
+    void SetBuildBTN()
+    {
+
+    }
+
+    void ClosePanel()
     {
         panel.SetActive(false);
     }

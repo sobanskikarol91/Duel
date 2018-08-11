@@ -8,20 +8,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e9e143380892044891043bb9d4004d, type: 3}
-  m_Name: Materials 2
+  m_Script: {fileID: 11500000, guid: d6fd5e6293080964696b089ea072c8e7, type: 3}
+  m_Name: Science 2
   m_EditorClassIdentifier: 
   cost:
     wood: 0
-    brick: 0
-    rock: 0
+    brick: 2
+    rock: 1
     glass: 0
     papyrus: 0
-    gold: 1
-  cardImg: {fileID: 21300042, guid: 1da175dcbecb17440ba89152086f0d7e, type: 3}
-  reverseImg: {fileID: 21300014, guid: 48634e6fe6482d94eac5a4f74feb9d8d, type: 3}
+    gold: 0
+  cardImg: {fileID: 21300014, guid: 1fb8fac3ce3ea7944bb797e4082460c2, type: 3}
+  reverseImg: {fileID: 0}
   _deck: {fileID: 0}
   signToFreeBuy: 0
-  getForSign: 0
-  produce: 3
-  amount: 1
+  getForSign: 13
+  expierience: 2
+  symbol: 3
