@@ -20,6 +20,7 @@ public class ResourceComparer
 
     public static bool EnoughGoldToResources(Buyable b)
     {
+        Debug.Log("Player gold: " + player.Gold + " >= " + ChangeResourcesForGold(b));
         return player.Gold >= ChangeResourcesForGold(b);
     }
 

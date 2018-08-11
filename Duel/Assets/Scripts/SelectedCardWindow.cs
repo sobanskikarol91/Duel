@@ -60,14 +60,14 @@ public class SelectedCardWindow : MonoBehaviour
 
     public void ClosePanel()
     {
+        InteractableManager.InteractableOn();
         panel.SetActive(false);
     }
 
     public void ClosePanelWithSnd()
     {
-        InteractableManager.InteractableOn();
         _as.Play();
-        panel.SetActive(false);
+        ClosePanel();
     }
 
     void ShowSymbol()

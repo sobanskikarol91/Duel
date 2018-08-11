@@ -20,8 +20,8 @@ public class DiscardCard : ICardState
         DiscardedCardsUI.instance.AddCard(card);
         gm._CurrentPlayer.AddGold();
         DeckManager.instance._currentDeck.DiscardCard(card);
-        gm.ChangeCurrentPlayer();
         gm._selectedCardWindow.Slot.DestroySlot();
+        gm.ChangeCurrentPlayer();
         gm._ResourcesBar.UpdateBar();
     }
 }

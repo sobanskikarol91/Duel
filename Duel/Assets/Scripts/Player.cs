@@ -24,9 +24,7 @@ public class Player : MonoBehaviour
 
     public void AddGold()
     {
-        Debug.Log(GoldenCardsCount() + " gold");
         Gold += GoldenCardsCount() + Settings.CardCost;
-        Debug.Log("Hajs " + Gold);
     }
 
     int GoldenCardsCount()

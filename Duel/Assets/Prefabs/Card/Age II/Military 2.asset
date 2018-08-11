@@ -14,7 +14,7 @@ MonoBehaviour:
   cost:
     wood: 1
     brick: 1
-    rock: 2
+    rock: 0
     glass: 0
     papyrus: 0
     gold: 0

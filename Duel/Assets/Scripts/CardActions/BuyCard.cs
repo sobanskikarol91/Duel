@@ -47,6 +47,7 @@ public class BuyCard : ICardState
         isCardBought = true;
         gm._selectedCardWindow.Slot.DestroySlot();
         gm._ResourcesBar.UpdateBar();
+        gm.ChangeCurrentPlayer();
     }
 
 

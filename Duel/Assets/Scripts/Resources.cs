@@ -69,7 +69,7 @@ public class Resources
     }
 
     public static int GetPriceDependsOnOponentResources(Resources cost, Resources oponent)
-    {
+    { 
         Resources result = new Resources();
         result.wood = CompareCostWithOponentResources(cost.wood, oponent.wood);
         result.brick = CompareCostWithOponentResources(cost.brick, oponent.brick);
@@ -82,7 +82,7 @@ public class Resources
 
     static int CompareCostWithOponentResources(int resAmount, int oponentRes)
     {
-        return resAmount == 0 ? 0 : Settings.ResourcesCost * resAmount + oponentRes;
+        return resAmount <= 0 ? 0 : Settings.ResourcesCost * resAmount + oponentRes;
     }
 
     public int GetResourcesSum()

@@ -24,7 +24,6 @@ public static class InteractableManager
 
     public static void InteractableOff()
     {
-        Debug.Log(_interactibles.Count);
         _interactibles.ForEach(i => i.SetInteractable(false));
     }
 }

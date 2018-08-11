@@ -12,7 +12,6 @@ public class DiscardedCardsUI : Singleton<DiscardedCardsUI>
     public void AddCard(Card _card)
     {
         GameObject cardGO = Instantiate(discardedCardPrefab);
-        Debug.Log(_card);
         cardGO.GetComponent<Image>().sprite = _card.cardImg;
         cardGO.transform.SetParent(cardsHolder);
         cardGO.transform.localScale = Vector3.one;
