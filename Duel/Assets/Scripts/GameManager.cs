@@ -18,7 +18,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] TokenManager _tokenManager;
     [SerializeField] DeckManager _cardManager;
     public ResourcesBar _ResourcesBar { get; private set; }
-    public SelectedCardWindow _SelectedCardWindow { get; private set; }
+  public SelectedCardWindow _selectedCardWindow;
 
     protected override void Awake()
     {
@@ -29,7 +29,6 @@ public class GameManager : Singleton<GameManager>
     void Init()
     {
         _ResourcesBar = GetComponent<ResourcesBar>();
-        _SelectedCardWindow = GetComponent<SelectedCardWindow>();
         RandomPlayer();
 
         _tokenManager.Init();
@@ -66,6 +65,6 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayerHasSellectedSlot(Slot s)
     {
-        _SelectedCardWindow.DisplayOnPanel(s);
+        _selectedCardWindow.DisplayOnPanel(s);
     }
 }

@@ -16,12 +16,12 @@ public class DiscardCard : ICardState
     public void PlayerHasChoosenCard()
     {
         gm = GameManager.instance;
-        card = gm._SelectedCardWindow.Card;
+        card = gm._selectedCardWindow.Card;
         DiscardedCardsUI.instance.AddCard(card);
         gm._CurrentPlayer.AddGold();
         DeckManager.instance._currentDeck.DiscardCard(card);
         gm.ChangeCurrentPlayer();
-        gm._SelectedCardWindow.Slot.DestroySlot();
+        gm._selectedCardWindow.Slot.DestroySlot();
         gm._ResourcesBar.UpdateBar();
     }
 }

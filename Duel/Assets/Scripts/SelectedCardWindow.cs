@@ -13,6 +13,7 @@ public class SelectedCardWindow : MonoBehaviour
     [SerializeField] Button buyBTN;
     [SerializeField] Button buildBtn;
     [SerializeField] GameObject additionalPayment;
+    [SerializeField] AudioSource _as;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class SelectedCardWindow : MonoBehaviour
 
     public void DisplayOnPanel(Slot s)
     {
+        _as.Play();
         Slot = s;
         Card = Slot.Card;
         panel.SetActive(true);
@@ -55,7 +57,7 @@ public class SelectedCardWindow : MonoBehaviour
 
     }
 
-    void ClosePanel()
+    public void ClosePanel()
     {
         panel.SetActive(false);
     }

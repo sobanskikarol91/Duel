@@ -15,7 +15,7 @@ public class BuyCard : ICardState
 
     public void PlayerHasChoosenCard()
     {
-        _card = gm._SelectedCardWindow.Slot.Card;
+        _card = gm._selectedCardWindow.Slot.Card;
         TryBuyCard();
     }
 
@@ -45,7 +45,7 @@ public class BuyCard : ICardState
     {
         gm._CurrentPlayer.BuyCard(_card);
         isCardBought = true;
-        gm._SelectedCardWindow.Slot.DestroySlot();
+        gm._selectedCardWindow.Slot.DestroySlot();
         gm._ResourcesBar.UpdateBar();
     }
 
