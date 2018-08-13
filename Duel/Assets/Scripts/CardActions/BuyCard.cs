@@ -55,4 +55,9 @@ public class BuyCard : ICardState
     {
         //TODO:
     }
+
+    public void ChangePlayerSetup()
+    {
+        
+    }
 }

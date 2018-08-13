@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 [CreateAssetMenu(fileName = "Wonder", menuName = "Wonder")]
 public class Wonder : ScriptableObject
 {
+    public Skill[] _actions;
     public Sprite sprite;
-    bool MoveAgain;
+    bool moveAgain;
     int exp;
     int addMoney;
 }

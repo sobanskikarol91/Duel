@@ -6,6 +6,12 @@ public class CardAvailableManager : ResourceComparer
 {
     static List<Slot> _slot = new List<Slot>();
 
+    public CardAvailableManager()
+    {
+        // TODO NINJECT
+        _states.Add(new CardForGold());
+        _states.Add(new CardForResources());
+    }
 
     public static void AddSlot(Slot s)
     {
@@ -22,11 +28,12 @@ public class CardAvailableManager : ResourceComparer
         foreach (Slot s in _slot)
         {
             Card c = s.Card;
-            if (GetCardForSymbol(c) || EnoughResources(c) || EnoughGoldToResources(c))
-                CanBuyEffects(s);
-            else
-                ToExpensiveEffects(s);
         }
+    }
+
+    void GetStateForCard(Card c)
+    {
+        _states.ForEach(s => s.)
     }
 
     public static bool GetCardForSymbol(Card c)
