@@ -6,13 +6,6 @@ public class CardAvailableManager : ResourceComparer
 {
     static List<Slot> _slot = new List<Slot>();
 
-    public CardAvailableManager()
-    {
-        // TODO NINJECT
-        _states.Add(new CardForGold());
-        _states.Add(new CardForResources());
-    }
-
     public static void AddSlot(Slot s)
     {
         _slot.Add(s);
