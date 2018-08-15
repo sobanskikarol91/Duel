@@ -57,11 +57,20 @@ public class ResultExpensive : BuyResult
 
 public class ResultGold : BuyResult
 {
-    public ResultGold(SlotCard slot) : base(slot) { }
+    public int AdditionalGold { get; private set; }
+
+    public ResultGold(SlotCard slot, int additionalGold) : base(slot)
+    {
+        AdditionalGold = additionalGold;
+    }
 
     public override void Bought()
     {
-        throw new System.NotImplementedException();
+        GameManager gm = GameManager.instance;
+        slot.DestroySlot();
+        gm._CurrentPlayer.BuyCard();
+        gm._ResourcesBar.UpdateBar();
+        gm.ChangeCurrentPlayer();
     }
 
     public override void Displayed()
@@ -71,6 +80,6 @@ public class ResultGold : BuyResult
 
     public override void Selected()
     {
-        throw new System.NotImplementedException();
+        GameManager.instance._selectedCardWindow.AditionalPayment(AdditionalGold);
     }
 }

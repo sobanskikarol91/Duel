@@ -22,3 +22,24 @@ public class CardAvailableManager
         _slots.ForEach(s => _buyStateCard.DetermineBuyState(s));
     }
 }
+
+//public class WonderAvailableManager
+//{
+//    static List<SlotWonder> _slots = new List<SlotWonder>();
+
+//    public static void AddSlot(SlotWonder s)
+//    {
+//        _slots.Add(s);
+//    }
+
+//    public static void DeleteSlot(SlotWonder s)
+//    {
+//        _slots.Remove(s);
+//    }
+
+//    public static void SetCardStates()
+//    {
+//        BuyStateCard _buyStateCard = new BuyStateCard();
+//        _slots.ForEach(s => _buyStateCard.DetermineBuyState(s));
+//    }
+//}

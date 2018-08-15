@@ -45,7 +45,7 @@ public class SelectedCardWindow : MonoBehaviour
         buyBTN.interactable = true;
 
 
-        Slot.buyResult.Selected();
+        Slot.BuyResult.Selected();
         //if (CardAvailableManager.GetCardForSymbol(Card))
         //    ShowSymbol();
         //else if (ResourceComparer.EnoughResources(Card)) return;
@@ -82,9 +82,9 @@ public class SelectedCardWindow : MonoBehaviour
         //TODO
     }
 
-    private void AditionalPayment()
+    public void AditionalPayment(int payment)
     {
         additionalPayment.SetActive(true);
-       // additionalPayment.GetComponentInChildren<Text>().text = ResourceComparer.ChangeResourcesForGold(Card).ToString();
+        additionalPayment.GetComponentInChildren<Text>().text = payment.ToString();
     }
 }

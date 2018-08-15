@@ -14,7 +14,6 @@ public class SlotCard : Slot<Card>
     protected override void Awake()
     {
         base.Awake();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         CoverAllReferenceCards();
     }
 

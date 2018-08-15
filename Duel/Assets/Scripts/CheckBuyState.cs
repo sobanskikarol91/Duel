@@ -27,11 +27,11 @@ public class CheckGold : CheckState
 {
     public override bool Check(SlotCard s)
     {
-        Result = new ResultGold(s);
         Player player = GameManager.instance._CurrentPlayer;
         // Debug.Log("Player gold: " + player.Gold + " >= " + ChangeResourcesForGold(b));
         bool isEnoughGold = player.Gold >= ChangeResourcesForGold(s.Card);
         int different = player.Gold - ChangeResourcesForGold(s.Card);
+        Result = new ResultGold(s, different);
         return isEnoughGold;
     }
 
@@ -58,3 +58,4 @@ public class CheckSign : CheckState
         return false;
     }
 }
+ 

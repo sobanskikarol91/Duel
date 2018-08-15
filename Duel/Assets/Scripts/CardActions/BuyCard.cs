@@ -13,9 +13,9 @@ public class BuyCard : ICardState
 
     public void PlayerHasChoosenCard()
     {
-        gm._CurrentPlayer.BuyCard();
-        gm._selectedCardWindow.Slot.DestroySlot();
-        gm._ResourcesBar.UpdateBar();
-        gm.ChangeCurrentPlayer();
+        //gm._CurrentPlayer.BuyCard();
+        //gm._selectedCardWindow.Slot.DestroySlot();
+        //gm._ResourcesBar.UpdateBar();
+        //gm.ChangeCurrentPlayer();
     }
 }
