@@ -35,7 +35,7 @@ public class GameManager : Singleton<GameManager>
         _warTrackManager.Init();
         //_wonderManager.Init();
         _cardManager.Init();
-        CardAvailableManager.SetAvailableCards();
+        CardAvailableManager.SetCardStates();
         _ResourcesBar.UpdateBar();
     }
 
@@ -50,7 +50,7 @@ public class GameManager : Singleton<GameManager>
     {
         //NextPlayer = _CurrentPlayer;
         //_CurrentPlayer = _CurrentPlayer == _players[0] ? _players[1] : _players[0];
-        CardAvailableManager.SetAvailableCards();
+       // CardAvailableManager.SetAvailableCards();
     }
 
     void PrepareTurn()

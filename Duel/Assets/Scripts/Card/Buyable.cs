@@ -3,6 +3,6 @@ using System.Collections;
 
 public class Buyable : ScriptableObject 
 {
-    public BuyState buyState;
+    public BuyResult buyState;
     public Resources cost;
 }

@@ -44,13 +44,13 @@ public class SelectedCardWindow : MonoBehaviour
         additionalPayment.SetActive(false);
         buyBTN.interactable = true;
 
-        if (CardAvailableManager.GetCardForSymbol(Card))
-            ShowSymbol();
-        else if (ResourceComparer.EnoughResources(Card)) return;
-        else if (ResourceComparer.EnoughGoldToResources(Card))
-            AditionalPayment();
-        else
-            buyBTN.interactable = false;
+        //if (CardAvailableManager.GetCardForSymbol(Card))
+        //    ShowSymbol();
+        //else if (ResourceComparer.EnoughResources(Card)) return;
+        //else if (ResourceComparer.EnoughGoldToResources(Card))
+        //    AditionalPayment();
+        //else
+        //    buyBTN.interactable = false;
     }
 
     void SetBuildBTN()
@@ -78,6 +78,6 @@ public class SelectedCardWindow : MonoBehaviour
     private void AditionalPayment()
     {
         additionalPayment.SetActive(true);
-        additionalPayment.GetComponentInChildren<Text>().text = ResourceComparer.ChangeResourcesForGold(Card).ToString();
+       // additionalPayment.GetComponentInChildren<Text>().text = ResourceComparer.ChangeResourcesForGold(Card).ToString();
     }
 }

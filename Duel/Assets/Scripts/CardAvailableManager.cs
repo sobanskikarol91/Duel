@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class CardAvailableManager : ResourceComparer
+public class CardAvailableManager
 {
     static List<Slot> _slot = new List<Slot>();
 
@@ -16,21 +16,14 @@ public class CardAvailableManager : ResourceComparer
         _slot.Remove(s);
     }
 
-    public static void SetAvailableCards()
+    public static void SetCardStates()
     {
-        foreach (Slot s in _slot)
-        {
-            Card c = s.Card;
-        }
-    }
+        List<Card> _cards = new List<Card>();
+        //TODO uproscic
 
-    void GetStateForCard(Card c)
-    {
-        _states.ForEach(s => s.)
-    }
+        _slot.ForEach(s => _cards.Add(s.Card));
 
-    public static bool GetCardForSymbol(Card c)
-    {
-        return player.card_signs.Contains(c.getForSign);
+        BuyStateCard _buyStateCard = new BuyStateCard();
+        _cards.ForEach(c => _buyStateCard.DetermineBuyState(c));
     }
 }

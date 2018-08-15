@@ -5,39 +5,27 @@ using System.Collections.Generic;
 
 public abstract class BuyState
 {
-    CheckState[] states;
-    Buyable b;
+    public abstract void SetStates();
+    protected List<CheckState> states = new List<CheckState>();
 
-    public Buy FindCorrectState(CheckState[] states, Buyable b)
+    public void DetermineBuyState(Buyable b)
     {
-        return GetStatesResult();
-    }
-
-    Buy GetStatesResult()
-    {
-        List<CheckState> stateResult = states.Where(s => s.Check(b)).ToList();
-
-        return GetOneCorrectState(stateResult);
-    }
-
-    Buy GetOneCorrectState(List<CheckState> states)
-    {
-        return new Buy();
-        // check all states
+        Debug.Log(states.Count);
+        CheckState stateResult = states.First(s => s.Check(b));
+        b.buyState = stateResult.Result;
     }
 }
 
-public class Buy
+public class BuyStateCard : BuyState
 {
-    //public bool isTrue { get; protected set; }
-}
+    public BuyStateCard()
+    {
+        SetStates();
+    }
 
-public class ResultResources : Buy
-{
-    Resources difference;
-}
-
-public class ResultExpensive : Buy
-{
- 
+    public override void SetStates()
+    {
+        states.Add(new CheckResources());
+        states.Add(new CheckExpensive());
+    }
 }
