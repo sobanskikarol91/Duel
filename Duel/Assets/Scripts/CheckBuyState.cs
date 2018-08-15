@@ -1,12 +1,12 @@
 ﻿public abstract class CheckState
 {
     public BuyResult Result { get; protected set; }
-    public abstract bool Check(Slot s);
+    public abstract bool Check(SlotCard s);
 }
 
 public class CheckResources : CheckState
 {
-    public override bool Check(Slot s)
+    public override bool Check(SlotCard s)
     {
         bool state = GameManager.instance._CurrentPlayer.GetResources() >= s.Card.cost;
         Result = new ResultResources(s);
@@ -16,7 +16,7 @@ public class CheckResources : CheckState
 
 public class CheckExpensive : CheckState
 {
-    public override bool Check(Slot s)
+    public override bool Check(SlotCard s)
     {
         Result = new ResultExpensive(s);
         return true;
@@ -25,7 +25,7 @@ public class CheckExpensive : CheckState
 
 public class CheckGold : CheckState
 {
-    public override bool Check(Slot s)
+    public override bool Check(SlotCard s)
     {
         Result = new ResultGold(s);
         Player player = GameManager.instance._CurrentPlayer;
@@ -47,7 +47,7 @@ public class CheckGold : CheckState
 
 public class CheckSign : CheckState
 {
-    public override bool Check(Slot s)
+    public override bool Check(SlotCard s)
     {
         return s.Card.getForSign != SYMBOL_CARD.NONE ?
         CheckIfPlayerHasCardSign() : false;

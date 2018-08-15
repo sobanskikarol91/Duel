@@ -63,7 +63,7 @@ public class GameManager : Singleton<GameManager>
 
     }
 
-    public void PlayerHasSellectedSlot(Slot s)
+    public void PlayerHasSellectedSlot(SlotCard s)
     {
         _CurrentPlayer.SelectedSlot = s;
         _selectedCardWindow.DisplayPanel(s);

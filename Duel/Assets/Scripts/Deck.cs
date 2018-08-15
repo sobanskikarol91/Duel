@@ -11,7 +11,7 @@ public class Deck : ScriptableObject
     List<Card> _unusedCards = new List<Card>();
     public List<Card> _DiscardedCards { get; } = new List<Card>();
     GameObject _slotsLayout;
-    [HideInInspector] public List<Slot> _slots;
+    [HideInInspector] public List<SlotCard> _slots;
 
     public void Init()
     {
@@ -28,7 +28,7 @@ public class Deck : ScriptableObject
 
     void GetAllSlotsReferences()
     {
-        _slots = _slotsLayout.GetComponentsInChildren<Slot>().ToList();
+        _slots = _slotsLayout.GetComponentsInChildren<SlotCard>().ToList();
     }
 
     public void SetDeckReferenceToCards()

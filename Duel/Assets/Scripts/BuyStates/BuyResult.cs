@@ -3,8 +3,8 @@ using System.Collections;
 
 public abstract class BuyResult : MonoBehaviour
 {
-    protected Slot slot;
-    public BuyResult(Slot slot)
+    protected SlotCard slot;
+    public BuyResult(SlotCard slot)
     {
         this.slot = slot;
     }
@@ -17,7 +17,7 @@ public class ResultResources : BuyResult
 {
     Resources difference;
 
-    public ResultResources(Slot slot) : base(slot) { }
+    public ResultResources(SlotCard slot) : base(slot) { }
 
     public override void Displayed()
     {
@@ -27,7 +27,7 @@ public class ResultResources : BuyResult
 
 public class ResultExpensive : BuyResult
 {
-    public ResultExpensive(Slot slot) : base(slot) { }
+    public ResultExpensive(SlotCard slot) : base(slot) { }
 
     public override void Displayed()
     {
@@ -37,7 +37,7 @@ public class ResultExpensive : BuyResult
 
 public class ResultGold : BuyResult
 {
-    public ResultGold(Slot slot) : base(slot) { }
+    public ResultGold(SlotCard slot) : base(slot) { }
 
     public override void Displayed()
     {

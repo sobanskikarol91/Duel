@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 public class CardAvailableManager
 {
-    static List<Slot> _slots = new List<Slot>();
+    static List<SlotCard> _slots = new List<SlotCard>();
 
-    public static void AddSlot(Slot s)
+    public static void AddSlot(SlotCard s)
     {
         _slots.Add(s);
     }
 
-    public static void DeleteSlot(Slot s)
+    public static void DeleteSlot(SlotCard s)
     {
         _slots.Remove(s);
     }

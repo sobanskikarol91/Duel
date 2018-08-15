@@ -7,7 +7,7 @@ public class SelectedCardWindow : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     [SerializeField] Image _cardImg;
-    public Slot Slot { get; private set; }
+    public SlotCard Slot { get; private set; }
     public Card Card { get; private set; }
 
     [SerializeField] Button buyBTN;
@@ -20,7 +20,7 @@ public class SelectedCardWindow : MonoBehaviour
         panel.SetActive(false);
     }
 
-    public void DisplayPanel(Slot s)
+    public void DisplayPanel(SlotCard s)
     {
         InteractableManager.InteractableOff();
         _as.Play();

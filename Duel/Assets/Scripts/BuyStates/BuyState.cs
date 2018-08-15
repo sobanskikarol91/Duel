@@ -8,7 +8,7 @@ public abstract class BuyState
     public abstract void SetStates();
     protected List<CheckState> states = new List<CheckState>();
 
-    public void DetermineBuyState(Slot b)
+    public void DetermineBuyState(SlotCard b)
     {
         Debug.Log(states.Count());
         CheckState stateResult = states.First(s => s.Check(b) == true);

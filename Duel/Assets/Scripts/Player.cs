@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public PlayerDeck _playerDeck;
     public int Gold { get; private set; } = Settings.StartGold;
     public List<ConflictToken> _conflictTokens;
-    public Slot SelectedSlot { get; set; }
+    public SlotCard SelectedSlot { get; set; }
     // public List<SYMBOL_CARD> card_signs;
     public int Id;
 

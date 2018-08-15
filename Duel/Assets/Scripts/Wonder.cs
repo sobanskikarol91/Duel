@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 [CreateAssetMenu(fileName = "Wonder", menuName = "Wonder")]
-public class Wonder : ScriptableObject
+public class Wonder : Buyable
 {
     public Skill[] _actions;
     public Sprite sprite;
