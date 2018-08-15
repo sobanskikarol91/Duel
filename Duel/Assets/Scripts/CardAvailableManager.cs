@@ -4,26 +4,21 @@ using System.Collections.Generic;
 
 public class CardAvailableManager
 {
-    static List<Slot> _slot = new List<Slot>();
+    static List<Slot> _slots = new List<Slot>();
 
     public static void AddSlot(Slot s)
     {
-        _slot.Add(s);
+        _slots.Add(s);
     }
 
     public static void DeleteSlot(Slot s)
     {
-        _slot.Remove(s);
+        _slots.Remove(s);
     }
 
     public static void SetCardStates()
     {
-        List<Card> _cards = new List<Card>();
-        //TODO uproscic
-
-        _slot.ForEach(s => _cards.Add(s.Card));
-
         BuyStateCard _buyStateCard = new BuyStateCard();
-        _cards.ForEach(c => _buyStateCard.DetermineBuyState(c));
+        _slots.ForEach(s => _buyStateCard.DetermineBuyState(s));
     }
 }

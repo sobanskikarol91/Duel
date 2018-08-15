@@ -6050,6 +6050,11 @@ Prefab:
       propertyPath: s.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114568589319399972, guid: 62a804da228fa1048928b6a25b793190,
+        type: 2}
+      propertyPath: card_signs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4199778128044478, guid: 62a804da228fa1048928b6a25b793190, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.083187826
@@ -17212,7 +17217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.809998, y: -20.590027}
+  m_AnchoredPosition: {x: -18.809937, y: -20.590027}
   m_SizeDelta: {x: 25.86, y: 26.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038681402
@@ -17487,7 +17492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.27156875, y: 0.12327435}
   m_AnchorMax: {x: 0.7284313, y: 0.8256778}
-  m_AnchoredPosition: {x: 0, y: 0.81411743}
+  m_AnchoredPosition: {x: 0, y: 0.81414795}
   m_SizeDelta: {x: 0.000030517578, y: -22.406677}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063046198

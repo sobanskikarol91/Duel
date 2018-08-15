@@ -18,7 +18,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] TokenManager _tokenManager;
     [SerializeField] DeckManager _cardManager;
     public ResourcesBar _ResourcesBar { get; private set; }
-  public SelectedCardWindow _selectedCardWindow;
+    public SelectedCardWindow _selectedCardWindow;
 
     protected override void Awake()
     {
@@ -50,7 +50,7 @@ public class GameManager : Singleton<GameManager>
     {
         //NextPlayer = _CurrentPlayer;
         //_CurrentPlayer = _CurrentPlayer == _players[0] ? _players[1] : _players[0];
-       // CardAvailableManager.SetAvailableCards();
+        CardAvailableManager.SetCardStates();
     }
 
     void PrepareTurn()
@@ -65,6 +65,7 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayerHasSellectedSlot(Slot s)
     {
+        _CurrentPlayer.SelectedSlot = s;
         _selectedCardWindow.DisplayPanel(s);
     }
 }

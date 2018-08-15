@@ -3,23 +3,44 @@ using System.Collections;
 
 public abstract class BuyResult : MonoBehaviour
 {
-    public abstract void DisplayCard();
+    protected Slot slot;
+    public BuyResult(Slot slot)
+    {
+        this.slot = slot;
+    }
+    public abstract void Displayed();
+    //public abstract void Selected();
+    //public abstract void Bought();
 }
 
 public class ResultResources : BuyResult
 {
     Resources difference;
 
-    public override void DisplayCard()
-    {
+    public ResultResources(Slot slot) : base(slot) { }
 
+    public override void Displayed()
+    {
+        slot.spriteRenderer.color = Color.green;
     }
 }
 
 public class ResultExpensive : BuyResult
 {
-    public override void DisplayCard()
-    { 
-        GetComponent<SpriteRenderer>().color = Color.white;
+    public ResultExpensive(Slot slot) : base(slot) { }
+
+    public override void Displayed()
+    {
+        slot.spriteRenderer.color = Color.red;
+    }
+}
+
+public class ResultGold : BuyResult
+{
+    public ResultGold(Slot slot) : base(slot) { }
+
+    public override void Displayed()
+    {
+        slot.spriteRenderer.color = Color.yellow;
     }
 }

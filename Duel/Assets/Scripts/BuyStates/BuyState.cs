@@ -8,11 +8,12 @@ public abstract class BuyState
     public abstract void SetStates();
     protected List<CheckState> states = new List<CheckState>();
 
-    public void DetermineBuyState(Buyable b)
+    public void DetermineBuyState(Slot b)
     {
-        CheckState stateResult = states.First(s => s.Check(b));
+        Debug.Log(states.Count());
+        CheckState stateResult = states.First(s => s.Check(b) == true);
         b.buyState = stateResult.Result;
-        b.buyState.DisplayCard();
+        b.buyState.Displayed();
     }
 }
 
@@ -26,6 +27,7 @@ public class BuyStateCard : BuyState
     public override void SetStates()
     {
         states.Add(new CheckResources());
+        states.Add(new CheckGold());
         states.Add(new CheckExpensive());
     }
 }

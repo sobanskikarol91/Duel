@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class Slot : Interactable
+public class Slot : Slotable
 {
     [SerializeField] public bool isVisible = true;
     [SerializeField] public List<Slot> coveredCards = new List<Slot>();
     List<Slot> coveredByCards = new List<Slot>();
 
-    private SpriteRenderer spriteRenderer;
+
+    int sortingOrder;
 
     private Card card;
-    int sortingOrder;
+    public SpriteRenderer spriteRenderer;
     [HideInInspector] public Card Card { get { return card; } set { card = value; Init(); } }
     public bool IsCardDiscovered { get { return (coveredByCards.Count == 0); } }
 
-     protected override void Awake()
+    protected override void Awake()
     {
         base.Awake();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -70,8 +71,6 @@ public class Slot : Interactable
         {
             sortingOrder = spriteRenderer.sortingOrder;
             gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-            //gameObject.transform.position += new Vector3(0, 0, -0.1f);
-            //SlotWindow.ActivePanelOnPos(gameObject.transform.position);
             spriteRenderer.sortingOrder = 10;
         }
     }
@@ -82,8 +81,6 @@ public class Slot : Interactable
         {
             gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
             spriteRenderer.sortingOrder = sortingOrder;
-            //gameObject.transform.position += new Vector3(0, 0, +0.1f);
-            // SlotWindow.DeactivePanel();
         }
     }
 

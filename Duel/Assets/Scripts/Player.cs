@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
     public PlayerDeck _playerDeck;
     public int Gold { get; private set; } = Settings.StartGold;
     public List<ConflictToken> _conflictTokens;
-    public List<SYMBOL_CARD> card_signs;
+    public Slot SelectedSlot { get; set; }
+    // public List<SYMBOL_CARD> card_signs;
     public int Id;
 
     private void Awake()
@@ -33,8 +34,9 @@ public class Player : MonoBehaviour
             _playerDeck._cards[CARD_TYPE.COMMERCIAL].Where(c => c._card != null).Count() : 0;
     }
 
-    public void BuyCard(Card c)
+    public void BuyCard()
     {
+        Card c = SelectedSlot.Card;
         Gold -= c.cost.gold;
         _playerDeck.AddCardToPlayerSlot(c);
     }
