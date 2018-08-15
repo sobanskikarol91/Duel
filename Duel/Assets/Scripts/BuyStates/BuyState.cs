@@ -12,8 +12,8 @@ public abstract class BuyState
     {
         Debug.Log(states.Count());
         CheckState stateResult = states.First(s => s.Check(b) == true);
-        b.buyState = stateResult.Result;
-        b.buyState.Displayed();
+        b.buyResult = stateResult.Result;
+        b.buyResult.Displayed();
     }
 }
 

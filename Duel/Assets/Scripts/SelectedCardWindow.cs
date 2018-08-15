@@ -44,6 +44,8 @@ public class SelectedCardWindow : MonoBehaviour
         additionalPayment.SetActive(false);
         buyBTN.interactable = true;
 
+
+        Slot.buyResult.Selected();
         //if (CardAvailableManager.GetCardForSymbol(Card))
         //    ShowSymbol();
         //else if (ResourceComparer.EnoughResources(Card)) return;
@@ -68,6 +70,11 @@ public class SelectedCardWindow : MonoBehaviour
     {
         _as.Play();
         ClosePanel();
+    }
+
+    public void DisableBuyButton()
+    {
+        buyBTN.interactable = false;
     }
 
     void ShowSymbol()
