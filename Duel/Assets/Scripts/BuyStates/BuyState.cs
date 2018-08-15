@@ -10,9 +10,9 @@ public abstract class BuyState
 
     public void DetermineBuyState(Buyable b)
     {
-        Debug.Log(states.Count);
         CheckState stateResult = states.First(s => s.Check(b));
         b.buyState = stateResult.Result;
+        b.buyState.DisplayCard();
     }
 }
 
