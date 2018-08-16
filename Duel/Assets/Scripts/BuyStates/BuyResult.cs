@@ -1,84 +1,90 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class BuyResult : MonoBehaviour
+public interface IResult : IDisplayed, ISelected
 {
-    protected SlotCard slot;
-    public BuyResult(SlotCard slot)
+
+}
+
+
+public interface IDisplayed
+{
+    void Displayed();
+}
+
+public interface ISelected
+{
+    void Selected();
+}
+
+public interface IBought
+{
+    void Bought();
+}
+
+public class ResultResources :  IResult
+{
+    Resources difference;
+    Slot slot;
+
+    public ResultResources(Slot slot)
     {
         this.slot = slot;
     }
-    public abstract void Displayed();
-    public abstract void Selected();
-    public abstract void Bought();
-}
 
-public class ResultResources : BuyResult
-{
-    Resources difference;
-
-    public ResultResources(SlotCard slot) : base(slot) { }
-
-    public override void Bought()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Displayed()
+    public void Displayed()
     {
         slot.spriteRenderer.color = Color.green;
     }
 
-    public override void Selected()
+    public void Selected()
     {
-        
+      
     }
 }
 
-public class ResultExpensive : BuyResult
+public class ResultExpensive : IResult
 {
-    public ResultExpensive(SlotCard slot) : base(slot) { }
+    public ResultExpensive(Slot slot) { }
+    Slot slot;
 
-    public override void Bought()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void Displayed()
-    {
-        slot.spriteRenderer.color = Color.red;
-    }
-
-    public override void Selected()
+    public void Selected()
     {
         GameManager.instance._selectedCardWindow.DisableBuyButton();
     }
+
+    public void Displayed()
+    {
+        slot.spriteRenderer.color = Color.red;
+    }
 }
 
-public class ResultGold : BuyResult
+public class ResultGold : IResult
 {
     public int AdditionalGold { get; private set; }
+    Slot slot;
 
-    public ResultGold(SlotCard slot, int additionalGold) : base(slot)
+    public ResultGold(SlotCard slot, int additionalGold)
     {
+        this.slot = slot;
         AdditionalGold = additionalGold;
     }
 
-    public override void Bought()
+    void Bought()
     {
         GameManager gm = GameManager.instance;
-        slot.DestroySlot();
+        //slot.DestroySlot();
         gm._CurrentPlayer.BuyCard();
         gm._ResourcesBar.UpdateBar();
         gm.ChangeCurrentPlayer();
     }
 
-    public override void Displayed()
+    public void Displayed()
     {
         slot.spriteRenderer.color = Color.yellow;
     }
 
-    public override void Selected()
+    public void Selected()
     {
         GameManager.instance._selectedCardWindow.AditionalPayment(AdditionalGold);
     }

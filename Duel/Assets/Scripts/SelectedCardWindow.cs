@@ -45,7 +45,7 @@ public class SelectedCardWindow : MonoBehaviour
         buyBTN.interactable = true;
 
 
-        Slot.BuyResult.Selected();
+        //Slot.BuyResult.Selected();
         //if (CardAvailableManager.GetCardForSymbol(Card))
         //    ShowSymbol();
         //else if (ResourceComparer.EnoughResources(Card)) return;

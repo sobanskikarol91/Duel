@@ -6,14 +6,16 @@ using System.Collections.Generic;
 public abstract class BuyState
 {
     public abstract void SetStates();
-    protected List<CheckState> states = new List<CheckState>();
+    protected List<ICheckBuyable> states = new List<ICheckBuyable>();
 
-    public void DetermineBuyState(SlotCard b)
+    public void DetermineBuyState(Slot s)
     {
-        Debug.Log(states.Count());
-        CheckState stateResult = states.First(s => s.Check(b) == true);
-        b.BuyResult = stateResult.Result;
-        b.BuyResult.Displayed();
+        Debug.Log("States:" + states.Count());
+        ICheckBuyable stateResult = states.First(d => d.Check(s) != null);
+
+        IResult res = stateResult.Check(s);
+
+        res.Displayed();
     }
 }
 
@@ -27,7 +29,7 @@ public class BuyStateCard : BuyState
     public override void SetStates()
     {
         states.Add(new CheckResources());
-        states.Add(new CheckGold());
+       // states.Add(new CheckGold());
         states.Add(new CheckExpensive());
     }
 }

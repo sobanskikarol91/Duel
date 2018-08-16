@@ -5,7 +5,7 @@ public abstract class Slot : Interactable
 {
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public Buyable Card { get { return card; } set { card = value; Init(); } }
-    [HideInInspector] public BuyResult BuyResult { get; set; }
+    [HideInInspector] public IResult BuyResult { get; set; }
     public abstract void Init();
     
     private Buyable card;
