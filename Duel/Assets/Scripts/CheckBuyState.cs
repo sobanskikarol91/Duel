@@ -4,6 +4,18 @@
     public abstract bool Check(SlotCard s);
 }
 
+
+interface ICheckCard
+{
+    bool Check(SlotCard s);
+}
+
+interface ICheckBuyable
+{
+    bool Check(Buyable s);
+}
+
+
 public class CheckResources : CheckState
 {
     public override bool Check(SlotCard s)
@@ -45,12 +57,12 @@ public class CheckGold : CheckState
     }
 }
 
-public class CheckSign : CheckState
+public class CheckSign : ICheckCard
 {
-    public override bool Check(SlotCard s)
+    public bool Check(SlotCard s)
     {
         return s.Card.getForSign != SYMBOL_CARD.NONE ?
-        CheckIfPlayerHasCardSign() : false;
+         CheckIfPlayerHasCardSign() : false;
     }
 
     bool CheckIfPlayerHasCardSign()
@@ -58,4 +70,3 @@ public class CheckSign : CheckState
         return false;
     }
 }
- 

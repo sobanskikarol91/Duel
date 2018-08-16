@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class SlotCard : Slot<Card>
+public class SlotCard : Slot
 {
     [SerializeField] public bool isVisible = true;
     [SerializeField] public List<SlotCard> coveredCards = new List<SlotCard>();
     List<SlotCard> coveredByCards = new List<SlotCard>();
     int sortingOrder;
 
+    [HideInInspector] public new Card Card { get { return card; } set { card = value; Init(); } }
+    private Card card;
 
     public bool IsCardDiscovered { get { return (coveredByCards.Count == 0); } }
 

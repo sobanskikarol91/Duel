@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Slot<CardType> : Interactable where CardType : Buyable
+public abstract class Slot : Interactable
 {
     [HideInInspector] public SpriteRenderer spriteRenderer;
-    [HideInInspector] public CardType Card { get { return card; } set { card = value; Init(); } }
+    [HideInInspector] public Buyable Card { get { return card; } set { card = value; Init(); } }
     [HideInInspector] public BuyResult BuyResult { get; set; }
     public abstract void Init();
     
-    private CardType card;
+    private Buyable card;
 
     protected override void Awake()
     {
